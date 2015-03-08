@@ -30,6 +30,7 @@ Para el Sprint 2 se asignaron las siguientes tareas:
     <li>Vista y Controlador del sistema de ingreso de productos</li>
     <li>Vista y Controlador del sistema de autenticación </li>
 </ul>
+Please contact me.
 Para mayor informacion <a href="https://trello.com/b/BVEV2YU6/sprint-2">Board Sprint 2</a>
 </p>
 
