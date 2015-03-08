@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/V-Market.iml" filepath="$PROJECT_DIR$/V-Market.iml" />
+      <module fileurl="file://$PROJECT_DIR$/V-Market-grailsPlugins.iml" filepath="$PROJECT_DIR$/V-Market-grailsPlugins.iml" />
     </modules>
   </component>
 </project>
