@@ -63,24 +63,26 @@
                 </li>
             </ul>
 
-            <!-- AQUI VA LO CORRESPONDIENTE A LA PARTE DERECHA DEL ENCABEZADO
-            que deberia cambiar segun la vista-->
+            <!-- todo lo que esta alineado a la derecha (navbar-right) cambia dependiendo
+             de si el usuario esta o no loggeado-->
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+            </ul>
+
+            <p class="nav navbar-text navbar-right" > o </p>
 
             <form class="navbar-form navbar-right">
-
-
                 <div class="form-group">
                     <input type="text" placeholder="Email" class="form-control">
                 </div>
                 <div class="form-group">
                     <input type="password" placeholder="Password" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-success">Inscribirse</button>
-
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-log-in"></span> Ingresa
+                </button>
             </form>
-
-            <!-- AQUI termina la modificacion -->
-
 
         </div><!--/.navbar-collapse -->
     </div>

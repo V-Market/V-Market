@@ -64,6 +64,12 @@
                 </li>
             </ul>
 
+            <ul class="nav navbar-nav navbar-right">
+                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+            </ul>
+
+            <p class="nav navbar-text navbar-right" > o </p>
+
             <form class="navbar-form navbar-right">
                 <div class="form-group">
                     <input type="text" placeholder="Email" class="form-control">
@@ -71,8 +77,11 @@
                 <div class="form-group">
                     <input type="password" placeholder="Password" class="form-control">
                 </div>
-                <button type="submit" class="btn btn-success">Inscribite</button>
+                <button type="submit" class="btn btn-success">
+                    <span class="glyphicon glyphicon-log-in"></span> Ingresa
+                </button>
             </form>
+
         </div><!--/.navbar-collapse -->
     </div>
 </nav>
