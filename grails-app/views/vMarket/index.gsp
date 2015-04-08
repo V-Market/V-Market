@@ -15,11 +15,11 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
-    <link rel="stylesheet" href="../css/bootstrap.min.css" >
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
 
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
-    <script src="../js/jquery-1.11.2.min.js"></script>
-    <script src="../js/bootstrap.min.js"></script>
+    <g:javascript src="jquery-1.11.2.min.js" />
+    <g:javascript src="bootstrap.min.js" />
 
 </head>
 <body>
