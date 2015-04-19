@@ -1,0 +1,20 @@
+.profile{
+    text-align: center;
+    width:100%;
+    height:100%;
+    background-color: #bebebe;
+}
+
+.p{
+    padding:0px 0px 0px 0px;
+    margin:0;
+    font-family: FontAwesome;
+    font-size: medium;
+    color: #9d9d9d;
+
+}
+
+.profileContent{
+    padding-top: 85px;
+    position: inherit;
+}
