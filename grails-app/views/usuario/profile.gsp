@@ -51,12 +51,12 @@
 
         <g:if test="${session.user}">
             <g:form class="navbar-form navbar-right">
-                <div>
-                    <p class="p">Hola, ${session.user}
+                <div class="navbar-right">
                     <g:actionSubmit value="LogOut" name="submitButton" action="logout" class="btn btn-success"/>
-                    </p>
                 </div>
+
             </g:form>
+            <div class="navbar-text navbar-right">Hola, ${session.user}</div>
         </g:if>
         <g:else>
             <ul class="nav navbar-nav navbar-right">
@@ -78,15 +78,16 @@
 </nav>
 <g:if test="${session.user}">
 <div class="profile">
-    <div>${session.user.urlImageProfile}djfd</div>
 <div class="profileContent">
-    <img src="${session.user.urlImageProfile}"  alt="${session.user.name}", width="150" height="150">
+    <img src="${session.user.urlImageProfile}"  alt="${session.user.name}" class="img-circle" width="150" height="150">
 </div>
     <h2>${session.user.userName}</h2>
 </div>
 </g:if>
 <g:else>
-    <div class="profile"></div>
+    <div class="profile">
+        <div class="messageError">${params.flashMessage}</div>
+    </div>
 </g:else>
 </body>
 </html>

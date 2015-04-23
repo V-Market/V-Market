@@ -108,22 +108,20 @@ class UsuarioController {
     def authenticate(){
         if(request.method=="POST") {
             def user = Usuario.findByUserNameAndPassword(params.login , params.password);
-            //def user = Usuario.findbyLoginAndPassword(params.login, params.password);
             if (user) {
                 session.user = user;
                 redirect(controller: "usuario", action: "profile")
-                //redirect(controller: params.controllerPre , view: params.actionPre)
             } else {
-                //flash.message = "Sorry, ${params.login}. Please try again"
+                flash.message = "Sorry, ${params.login}. Please try again"
                 session.user = null
-                redirect(controller: "usuario", action: "profile")
+                params.flashMessage = flash.message
+                forward(controller: "usuario", action: "profile", params: params)
             }
         }
     }
 
-    def logout(){
+    def logout() {
         session.user = null
-        redirect(controller: "usuario", action: "profile" )
-        //redirect(controller: params.controllerPre , view: params.actionPre)
+        redirect(controller: "usuario", action: "profile")
     }
 }
