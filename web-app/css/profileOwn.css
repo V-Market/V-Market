@@ -1,0 +1,27 @@
+.profilep{
+    text-align: left; float: left;
+}
+
+.defaultProfilePanel{
+    background-color: inherit; border-radius: 20px; border: 0;
+}
+
+.panelProfileBody{
+    text-align:  center; padding:30px;
+}
+
+.panelProfileBody2{
+    padding-left: 30px; padding-top: 0;
+}
+
+.statistics{
+    float:right; height: 70%;
+}
+
+.statisticsDefaultPanel{
+    background-color: inherit;
+}
+
+.statisticsBodyPanel{
+    text-align:  center; margin-top:30px; background-color: inherit;border-radius: 20px; height: 100%;
+}
