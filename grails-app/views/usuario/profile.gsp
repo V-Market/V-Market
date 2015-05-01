@@ -10,6 +10,7 @@
 <head>
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'custom.css')}" />
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'profileOwn.css')}" />
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
     <g:javascript src="jquery-1.11.2.min.js" />
     <g:javascript src="bootstrap.min.js" />
@@ -78,10 +79,36 @@
 </nav>
 <g:if test="${session.user}">
 <div class="profile">
-<div class="profileContent">
-    <img src="${session.user.urlImageProfile}"  alt="${session.user.name}" class="img-circle" width="150" height="150">
-</div>
-    <h2>${session.user.userName}</h2>
+    <div class="profileContent">
+        <div class="container">
+            <div class="row">Bienvenido a V-Market</div>
+            <div class="row">
+                <div class="col-md-3 profilep">
+                    <div class="panel panel-default defaultProfilePanel">
+                        <div class="panel-body panelProfileBody">
+                            <img src="${session.user.urlImageProfile}"  alt="${session.user.name}" class="img-rounded" width="200" height="200">
+                        </div>
+                        <div class="panel-body panelprofilebody2">
+                            <div class="text1">${session.user.name}</div>
+                            <div class="text2">${session.user.userName.toLowerCase()}</div>
+                            <div class="h_line"></div>
+                            <div class="text3"><span class="glyphicon glyphicon-home"></span>   ${session.user.ciudad},${session.user.pais}</div>
+                            <div class="text3"><span class="glyphicon glyphicon-envelope"></span>   ${session.user.email}</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-md-9 statistics" >
+                    <div class="panel panel-default statisticsdefaultpanel">
+                        <div class="panel-body statisticsBodyPanel">
+                        <div class="textTemporal">Aqui van las estadisticas</div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+            <div class="row">Historial de Compras</div>
+        </div>
+    </div>
 </div>
 </g:if>
 <g:else>
