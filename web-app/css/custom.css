@@ -3,7 +3,8 @@
     text-align: center;
     width:100%;
     height:100%;
-    background-color: #bebebe;
+    background: #bebebe no-repeat;
+    position: inherit;
 }
 
 .p{

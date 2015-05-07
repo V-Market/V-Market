@@ -2,15 +2,12 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b0df2c-1e1b-417d-b462-b5aaa5ed91a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/Usuario$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/v/market/Usuario$__clinit__closure1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/Usuario.class" afterPath="$PROJECT_DIR$/target/classes/v/market/Usuario.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/v/market/Usuario.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/v/market/Usuario.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V-Market.iml" afterPath="$PROJECT_DIR$/V-Market.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/custom.css" afterPath="$PROJECT_DIR$/web-app/css/custom.css" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/profile.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/profile.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/usuario/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/usuario/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/profileOwn.css" afterPath="$PROJECT_DIR$/web-app/css/profileOwn.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/web.xml.tmp" afterPath="$PROJECT_DIR$/target/work/web.xml.tmp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/resources/web.xml" afterPath="$PROJECT_DIR$/target/work/resources/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="V.iws" />
@@ -41,7 +38,7 @@
       <file leaf-file-name="Usuario.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Usuario.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="1.0869565" vertical-offset="59" max-vertical-offset="850">
+            <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="850">
               <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
               <folding />
             </state>
@@ -58,21 +55,21 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profile.gsp" pinned="false" current-in-tab="true">
+      <file leaf-file-name="profile.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/profile.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.3119266" vertical-offset="34" max-vertical-offset="2125">
-              <caret line="12" column="93" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
+            <state vertical-scroll-proportion="-1.8367347" vertical-offset="318" max-vertical-offset="2176">
+              <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="profileOwn.css" pinned="false" current-in-tab="false">
+      <file leaf-file-name="profileOwn.css" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/web-app/css/profileOwn.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-              <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+            <state vertical-scroll-proportion="0.7017544" vertical-offset="383" max-vertical-offset="867">
+              <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
               <folding />
             </state>
           </provider>
@@ -81,8 +78,8 @@
       <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/web-app/css/custom.css">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1020">
-              <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
               <folding />
             </state>
           </provider>
@@ -92,7 +89,7 @@
         <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
           <provider selected="true" editor-type-id="text-editor">
             <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="1071">
-              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="88" />
+              <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="89" />
               <folding />
             </state>
           </provider>
@@ -114,10 +111,10 @@
             <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="748">
               <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
               <folding>
-                <marker date="1429823365598" expanded="true" signature="856:928" placeholder="..." />
-                <marker date="1429823365598" expanded="true" signature="971:1257" placeholder="..." />
-                <marker date="1429823365598" expanded="true" signature="1051:1230" placeholder="..." />
-                <marker date="1429823365598" expanded="true" signature="1317:1581" placeholder="..." />
+                <marker date="1430509031138" expanded="true" signature="856:928" placeholder="..." />
+                <marker date="1430509031138" expanded="true" signature="971:1257" placeholder="..." />
+                <marker date="1430509031138" expanded="true" signature="1051:1230" placeholder="..." />
+                <marker date="1430509031138" expanded="true" signature="1317:1581" placeholder="..." />
               </folding>
             </state>
           </provider>
@@ -163,8 +160,8 @@
         <option value="$PROJECT_DIR$/grails-app/controllers/v/market/UsuarioController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/v/market/Usuario.groovy" />
         <option value="$PROJECT_DIR$/web-app/css/custom.css" />
-        <option value="$PROJECT_DIR$/web-app/css/profileOwn.css" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/profile.gsp" />
+        <option value="$PROJECT_DIR$/web-app/css/profileOwn.css" />
       </list>
     </option>
   </component>
@@ -190,7 +187,7 @@
     <ConfirmationsSetting value="0" id="Remove" />
   </component>
   <component name="ProjectView">
-    <navigator currentView="ProjectPane" proportions="" version="1">
+    <navigator proportions="" version="1">
       <flattenPackages />
       <showMembers />
       <showModules />
@@ -201,20 +198,7 @@
       <autoscrollFromSource />
       <sortByType />
     </navigator>
-    <panes>
-      <pane id="Scope" />
-      <pane id="PackagesPane" />
-      <pane id="ProjectPane">
-        <subPane>
-          <PATH>
-            <PATH_ELEMENT>
-              <option name="myItemId" value="V" />
-              <option name="myItemType" value="com.intellij.ide.projectView.impl.nodes.ProjectViewProjectNode" />
-            </PATH_ELEMENT>
-          </PATH>
-        </subPane>
-      </pane>
-    </panes>
+    <panes />
   </component>
   <component name="PropertiesComponent">
     <property name="GoToClass.includeLibraries" value="false" />
@@ -519,11 +503,13 @@
       <workItem from="1429663222181" duration="25697000" />
       <workItem from="1430101021189" duration="612000" />
       <workItem from="1430495646743" duration="6033000" />
+      <workItem from="1430509629337" duration="4000" />
+      <workItem from="1430942099557" duration="5431000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="48012000" />
+    <option name="totallyTimeSpent" value="53447000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="744" extended-state="6" />
@@ -548,7 +534,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.32755905" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -556,13 +542,13 @@
       <window_info id="Bean Validation" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Web" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="true" content_ui="tabs" />
       <window_info id="IDEtalk Messages" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="14" side_tool="false" content_ui="tabs" />
-      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Favorites" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="true" content_ui="tabs" />
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
       <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32755905" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
+      <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32913387" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
     <layout-to-restore>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -646,7 +632,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="978" max-vertical-offset="1785">
           <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -654,7 +639,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="898" max-vertical-offset="1785">
           <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -663,10 +647,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="748">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
           <folding>
-            <marker date="1429823365598" expanded="true" signature="856:928" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="971:1257" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="1051:1230" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="1317:1581" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="856:928" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="971:1257" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="1051:1230" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="1317:1581" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -731,7 +715,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="978" max-vertical-offset="1785">
           <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -739,7 +722,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="898" max-vertical-offset="1785">
           <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -748,10 +730,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="748">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
           <folding>
-            <marker date="1429823365598" expanded="true" signature="856:928" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="971:1257" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="1051:1230" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="1317:1581" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="856:928" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="971:1257" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="1051:1230" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="1317:1581" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -814,7 +796,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1785">
           <caret line="20" column="43" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -845,7 +826,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1785">
           <caret line="20" column="43" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="43" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -939,7 +919,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="898" max-vertical-offset="1785">
           <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -947,7 +926,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="978" max-vertical-offset="1785">
           <caret line="71" column="0" selection-start-line="71" selection-start-column="0" selection-end-line="71" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -956,10 +934,10 @@
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="748">
           <caret line="3" column="0" selection-start-line="3" selection-start-column="0" selection-end-line="3" selection-end-column="43" />
           <folding>
-            <marker date="1429823365598" expanded="true" signature="856:928" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="971:1257" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="1051:1230" placeholder="..." />
-            <marker date="1429823365598" expanded="true" signature="1317:1581" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="856:928" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="971:1257" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="1051:1230" placeholder="..." />
+            <marker date="1430509031138" expanded="true" signature="1317:1581" placeholder="..." />
           </folding>
         </state>
       </provider>
@@ -988,20 +966,12 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="1071">
-          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="88" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Usuario.groovy">
       <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
         <state />
       </provider>
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="1.0869565" vertical-offset="59" max-vertical-offset="850">
+        <state vertical-scroll-proportion="0.0" vertical-offset="59" max-vertical-offset="850">
           <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
           <folding />
         </state>
@@ -1015,26 +985,34 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/css/custom.css">
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="536" max-vertical-offset="1020">
-          <caret line="53" column="26" selection-start-line="53" selection-start-column="26" selection-end-line="53" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/css/profileOwn.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="544">
-          <caret line="10" column="1" selection-start-line="10" selection-start-column="1" selection-end-line="10" selection-end-column="1" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="9" max-vertical-offset="1071">
+          <caret line="21" column="19" selection-start-line="21" selection-start-column="19" selection-end-line="21" selection-end-column="89" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/usuario/profile.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.3119266" vertical-offset="34" max-vertical-offset="2125">
-          <caret line="12" column="93" selection-start-line="12" selection-start-column="93" selection-end-line="12" selection-end-column="93" />
+        <state vertical-scroll-proportion="-1.8367347" vertical-offset="318" max-vertical-offset="2176">
+          <caret line="24" column="7" selection-start-line="24" selection-start-column="7" selection-end-line="24" selection-end-column="7" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/custom.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="1037">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="7" selection-end-column="1" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/web-app/css/profileOwn.css">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7017544" vertical-offset="383" max-vertical-offset="867">
+          <caret line="39" column="19" selection-start-line="39" selection-start-column="19" selection-end-line="39" selection-end-column="19" />
           <folding />
         </state>
       </provider>

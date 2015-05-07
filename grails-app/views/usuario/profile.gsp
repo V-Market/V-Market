@@ -24,7 +24,7 @@
 
 </head>
 
-<body>
+<body class="body">
 <!-- CABEZA DE LA PAGINA -->
 <nav class="navbar navbar-inverse navbar-fixed-top">
     <div class="container">
@@ -100,13 +100,16 @@
                 <div class="col-md-9 statistics" >
                     <div class="panel panel-default statisticsdefaultpanel">
                         <div class="panel-body statisticsBodyPanel">
-                        <div class="textTemporal">Aqui van las estadisticas</div>
+                            <img src="http://www.janzengroup.net/stats/images/example-freqcharts.JPG"  alt="${session.user.name}" class="img-rounded" width="800" height="400">
                         </div>
                     </div>
                 </div>
-
             </div>
-            <div class="row">Historial de Compras</div>
+            <div class="row">
+                <div class="col-md-12 panel panel-default statisticsDefaultPanel">
+                    Historial de Compras
+                </div>
+            </div>
         </div>
     </div>
 </div>
