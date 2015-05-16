@@ -1,6 +1,6 @@
 package v.market
 
-class Usuario {
+class User {
 
     String name
     String lastname
@@ -10,10 +10,10 @@ class Usuario {
     String ciudad
     String pais
     Date birthday
-    String gender;
+    String gender
     int age
     String telefono
-    String urlImageProfile;
+    String urlImageProfile
 
 
     static constraints = {
@@ -28,10 +28,6 @@ class Usuario {
         telefono()
         ciudad()
         pais()
-
-
-
-
     }
 
     public String toString(){

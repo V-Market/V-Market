@@ -46,9 +46,8 @@
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
-                <li class="divider-vertical"></li>
-                <li class="active"><a href="#">Link</a></li>
-                <li><a href="#">Link</a></li>
+                <li class=""><a href="#">Contacto</a></li>
+                <!--li><a href="#">Link</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
@@ -60,7 +59,7 @@
                         <li class="divider"></li>
                         <li><a href="#">One more separated link</a></li>
                     </ul>
-                </li>
+                </li-->
             </ul>
 
             <!-- todo lo que esta alineado a la derecha (navbar-right) cambia dependiendo
@@ -72,17 +71,13 @@
 
             <p class="nav navbar-text navbar-right" > o </p>
 
-            <form class="navbar-form navbar-right">
+            <g:form class = "navbar-form navbar-right">
                 <div class="form-group">
-                    <input type="text" placeholder="Email" class="form-control">
+                    <g:textField name="username" class="form-control" placeholder="User name"/>
+                    <g:passwordField name="password" class="form-control" placeholder="Password" />
+                    <g:actionSubmit value="Ingresa" name="submitButton" action="doLogin" class="btn btn-success" />
                 </div>
-                <div class="form-group">
-                    <input type="password" placeholder="Password" class="form-control">
-                </div>
-                <button type="submit" class="btn btn-success">
-                    <span class="glyphicon glyphicon-log-in"></span> Ingresa
-                </button>
-            </form>
+            </g:form>
 
         </div><!--/.navbar-collapse -->
     </div>
