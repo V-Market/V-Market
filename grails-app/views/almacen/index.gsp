@@ -86,12 +86,12 @@
 </nav>
 
 
-<div id="list-product" class="profile" role="main" >
+<div id="list-almacen" class="profile" role="main" >
     <div class="profileContent" >
         <div class="container">
 
-            <div class="panel-body myproductpanel">
-                <div class="text1">Lista de productos<span class="glyphicons glyphicons-asterisk"></span> </div>
+            <div class="panel-body myalmacenpanel">
+                <div class="text1">Almacenes<span class="glyphicons glyphicons-asterisk"></span> </div>
             </div>
 
 
@@ -100,7 +100,7 @@
             </g:if>--%>
             <%--<ul class="list-group ">--%>
             <div id="list" style="max-height: 300px;" class="overflow-y-scroll">
-                <g:each in="${productInstanceList}" status="i" var="productInstance">
+                <g:each in="${almacenInstanceList}" status="i" var="almacenInstance">
                 <%--<li class="list-group-item list-group-item-transparent">--%>
 
 
@@ -109,37 +109,50 @@
                         </div>
 
                         <div class="col-md-3 profilep">
-                            <div class="panel-body panelProductBody">
-                                <img src="${productInstance.urlImageProduct}" class="img-responsive img-rounded" alt="Product image" width="200" height="150">
+                            <div class="panel-body panelAlmacenBody">
+                                <img src="${almacenInstance.urlImageProfile}" class="img-responsive img-rounded" alt="Product image" width="200" height="150">
                             </div>
                         </div>
 
                         <div class="col-md-8 profilep">
                             <table class="table table-hover">
+
                                 <tbody>
                                 <tr>
-                                    <td>Nombre</td>
-                                    <td><g:link action="show" id="${productInstance.id}">${fieldValue(bean: productInstance, field: "name")}</g:link></td>
+                                    <td>NIT</td>
+                                    <td><span class="property-value" aria-labelledby="nit-label"><g:fieldValue bean="${almacenInstance}" field="nit"/></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Descripción</td>
-                                    <td><span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${productInstance}" field="description"/></span></td>
+                                    <td>Nombre Comercial</td>
+                                    <td><g:link action="show" id="${almacenInstance.id}">${fieldValue(bean: almacenInstance, field: "name")}</g:link></td>
                                 </tr>
                                 <tr>
-                                    <td>Marca</td>
-                                    <td><span class="property-value" aria-labelledby="trademark-label"><g:fieldValue bean="${productInstance}" field="trademark"/></span></td>
+                                    <td>Razón Social</td>
+                                    <td><span class="property-value" aria-labelledby="razonSocial-label"><g:fieldValue bean="${almacenInstance}" field="razonSocial"/></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Identificación</td>
-                                    <td><span class="property-value" aria-labelledby="id-label"><g:fieldValue bean="${productInstance}" field="id"/></span></td>
+                                    <td>Tipo de Productos</td>
+                                    <td><span class="property-value" aria-labelledby="tipoProducto-label"><g:fieldValue bean="${almacenInstance}" field="tipoProducto"/></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Precio</td>
-                                    <td><span class="property-value" aria-labelledby="prize-label"><g:fieldValue bean="${productInstance}" field="prize"/></span></td>
+                                    <td>Dirección</td>
+                                    <td><span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${almacenInstance}" field="address"/></span></td>
                                 </tr>
                                 <tr>
-                                    <td>Disponible en</td>
-                                    <td><span class="property-value" aria-labelledby="shops-label"><g:fieldValue bean="${productInstance}" field="shops"/></span></td>
+                                    <td>Teléfono</td>
+                                    <td><span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${almacenInstance}" field="telefono"/></span></td>
+                                </tr>
+                                <tr>
+                                    <td>E-mail</td>
+                                    <td><span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${almacenInstance}" field="email"/></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Ciudad</td>
+                                    <td><span class="property-value" aria-labelledby="ciudad-label"><g:fieldValue bean="${almacenInstance}" field="ciudad"/></span></td>
+                                </tr>
+                                <tr>
+                                    <td>País</td>
+                                    <td><span class="property-value" aria-labelledby="pais-label"><g:fieldValue bean="${almacenInstance}" field="pais"/></span></td>
                                 </tr>
                                 </tbody>
                             </table>
@@ -157,7 +170,7 @@
             </div>
             <%--</ul>--%>
             <div class="pagination">
-                <g:paginate total="${productInstanceCount ?: 0}" />
+                <g:paginate total="${almacenInstanceCount ?: 0}" />
             </div>
         </div>
     </div>

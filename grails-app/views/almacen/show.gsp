@@ -86,53 +86,60 @@
 </nav>
 
 
-<div id="show-product" class="profile scaffold-show" role="main">
+<div id="show-almacen" class="profile scaffold-show" role="main">
     <div class="profileContent">
         <div class="container">
             <div class="row">
-                <h1> Producto<span class="glyphicons glyphicons-shopping-bag"></span></h1>
+                <h1> Almacén<span class="glyphicons glyphicons-shopping-bag"></span></h1>
             </div>
             <div class="row">
                 <div class="col-md-1 profilep">
 
                 </div>
                 <div class="col-md-3 profilep">
-                    <div  class="panel-body panelProductBody">
-                        <img src="${productInstance.urlImageProduct}" class="img-responsive img-rounded" alt="Product image" width="200" height="150">
+                    <div  class="panel-body panelAlmacenBody">
+                        <img src="${almacenInstance.urlImageProfile}" class="img-responsive img-rounded" alt="Almacen image" width="200" height="150">
                     </div>
                 </div>
                 <div class="col-md-8 profilep">
                     <table class="table table-hover">
-                        <%--<thead>
-                        <tr>
-                            <th>Firstname</th>
-                            <th>Lastname</th>
-                        </tr>
-                        </thead>--%>
+
                         <tbody>
                         <tr>
-                            <td>Nombre</td>
-                            <td><span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${productInstance}" field="name"/></span></td>
+                            <td>NIT</td>
+                            <td><span class="property-value" aria-labelledby="nit-label"><g:fieldValue bean="${almacenInstance}" field="nit"/></span></td>
                         </tr>
                         <tr>
-                            <td>Descripción</td>
-                            <td><span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${productInstance}" field="description"/></span></td>
+                            <td>Nombre Comercial</td>
+                            <td><span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${almacenInstance}" field="name"/></span></td>
                         </tr>
                         <tr>
-                            <td>Marca</td>
-                            <td><span class="property-value" aria-labelledby="trademark-label"><g:fieldValue bean="${productInstance}" field="trademark"/></span></td>
+                            <td>Razón Social</td>
+                            <td><span class="property-value" aria-labelledby="razonSocial-label"><g:fieldValue bean="${almacenInstance}" field="razonSocial"/></span></td>
                         </tr>
                         <tr>
-                            <td>Identificación</td>
-                            <td><span class="property-value" aria-labelledby="id-label"><g:fieldValue bean="${productInstance}" field="id"/></span></td>
+                            <td>Tipo de Productos</td>
+                            <td><span class="property-value" aria-labelledby="tipoProducto-label"><g:fieldValue bean="${almacenInstance}" field="tipoProducto"/></span></td>
                         </tr>
                         <tr>
-                            <td>Precio</td>
-                            <td><span class="property-value" aria-labelledby="prize-label"><g:fieldValue bean="${productInstance}" field="prize"/></span></td>
+                            <td>Dirección</td>
+                            <td><span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${almacenInstance}" field="address"/></span></td>
                         </tr>
                         <tr>
-                            <td>Disponible en</td>
-                            <td><span class="property-value" aria-labelledby="shops-label"><g:fieldValue bean="${productInstance}" field="shops"/></span></td>
+                            <td>Teléfono</td>
+                            <td><span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${almacenInstance}" field="telefono"/></span></td>
+                        </tr>
+                        <tr>
+                            <td>E-mail</td>
+                            <td><span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${almacenInstance}" field="email"/></span></td>
+                        </tr>
+                        <tr>
+                            <td>Ciudad</td>
+                            <td><span class="property-value" aria-labelledby="ciudad-label"><g:fieldValue bean="${almacenInstance}" field="ciudad"/></span></td>
+                        </tr>
+                        <tr>
+                            <td>País</td>
+                            <td><span class="property-value" aria-labelledby="pais-label"><g:fieldValue bean="${almacenInstance}" field="pais"/></span></td>
                         </tr>
                         </tbody>
                     </table>
@@ -140,22 +147,19 @@
             </div>
 
         </div>
-        <g:form url="[resource:productInstance, action:'delete']" method="DELETE">
+        <g:form url="[resource:almacenInstance, action:'delete']" method="DELETE">
             <fieldset class="buttons">
-                <g:link class="edit" action="edit" resource="${productInstance}"><g:message code="default.button.edit.label" default="Editar" /></g:link>
-                <g:actionSubmit class="list" action="index" value="${message(code: 'See product list', default: 'Lista de productos')}" onclick="return confirm('${message(code: 'See list', default: '¿Salir de descripción de producto?')}');" />
+                <g:link class="edit" action="edit" resource="${almacenInstance}"><g:message code="default.button.edit.label" default="Editar" /></g:link>
+                <g:actionSubmit class="list" action="index" value="${message(code: 'See almacen list', default: 'Lista de almacenes')}" onclick="return confirm('${message(code: 'See list', default: '¿Salir de descripción del almacén?')}');" />
                 <g:actionSubmit class="delete" action="delete" value="${message(code: 'default.button.delete.label', default: 'Eliminar')}" onclick="return confirm('${message(code: 'default.button.delete.confirm.message', default: '¿Está seguro?')}');" />
             </fieldset>
         </g:form>
-
 
         <footer>
             <p>© V-Market 2015</p>
         </footer>
 
     </div>
-
 </div>
-
 </body>
 </html>
