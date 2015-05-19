@@ -46,7 +46,7 @@
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
-                <li class=""><a href="#">Contacto</a></li>
+                <li class=""><g:link controller="VMarket" action="contact">Contacto</g:link></li>
                 <!--li><a href="#">Link</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -84,7 +84,16 @@
 </nav>
 
 <!-- AQUI debe ir el contenido de cada vista !!!!!!!!!-->
-
+<div class="container">
+    <br/><br/>
+    <div class="row">
+        <div class="col-sm-12">
+            <g:if test="${flash.message}">
+                <h1 class="text-center">${flash.message}</h1>
+            </g:if>
+        </div>
+    </div>
+</div>
 
 <footer>
     <p>© V-Market 2015</p>
