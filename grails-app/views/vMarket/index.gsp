@@ -16,6 +16,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'custom.css')}" />
 
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
     <g:javascript src="jquery-1.11.2.min.js" />

@@ -1,6 +1,6 @@
 package v.market
 
-
+import java.text.SimpleDateFormat
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -109,5 +109,42 @@ class UserController {
     def logout(){
         session.user = null
         redirect(controller: "auth",action: "index")
+    }
+
+    def register(){
+        if(!params.display_name.equals(null)) {
+            def usuario = User.findByUserName(params.display_name)
+            if (usuario) {
+                flash.message = "El username ${params.display_name}, no está disponible."
+                session.user = null
+                params.flashMessage = flash.message
+            } else {
+                usuario = User.findByEmail(params.email)
+                if (usuario) {
+                    flash.message = "ya existe un usuario registrado con el email: ${params.email}."
+                    session.user = null
+                    params.flashMessage = flash.message
+                }
+                else{
+                    if(!params.password.equals(params.password_confirmation)){
+                        flash.message = "Password y Confirm Password deben coincidir"
+                        session.user = null
+                        params.flashMessage = flash.message
+                    }
+                    else {
+                        usuario = new User(params)
+                        usuario.name = params.first_name
+                        usuario.lastname = params.last_name
+                        usuario.userName = params.display_name
+                        usuario.email = params.email
+                        usuario.password = params.password
+                        SimpleDateFormat formatter = new SimpleDateFormat("yyyy-MM-dd");
+                        usuario.birthday = formatter.parse(params.birthday)
+                        usuario.gender = params.gender
+                        save(usuario)
+                    }
+                }
+            }
+        }
     }
 }

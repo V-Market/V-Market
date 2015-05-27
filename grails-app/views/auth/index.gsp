@@ -6,7 +6,7 @@
 --%>
 
 <!DOCTYPE html>
-<html>
+<html >
 <head>
     <title>V-Market</title>
 
@@ -15,16 +15,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'custom.css')}" />
 
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
     <g:javascript src="jquery-1.11.2.min.js" />
     <g:javascript src="bootstrap.min.js" />
 
 </head>
-<body>
+
+<body class="background">
 
 <!-- CABEZA DE LA PAGINA -->
-<nav class="navbar navbar-inverse navbar-fixed-top">
+<nav class="navbar navbar-inverse navbar-fixed-top background-color">
     <div class="container">
         <!--El header es el "fondo" del encabezado (navbar-header)-->
         <div class="navbar-header">
@@ -40,13 +42,26 @@
             <!--El header contiene el boton "inicio"-->
             <a class="navbar-brand" href="#">V-Market <span class="glyphicon glyphicon-asterisk"></span>
             </a>
+
         </div>
+        <li class="dropdown navbar-left">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
+            <ul class="dropdown-menu" role="menu">
+                <li><a href="#">Action</a></li>
+                <li><a href="#">Another action</a></li>
+                <li><a href="#">Something else here</a></li>
+                <li class="divider"></li>
+                <li><a href="#">Separated link</a></li>
+                <li class="divider"></li>
+                <li><a href="#">One more separated link</a></li>
+            </ul>
+        </li>
 
         <!-- contenido del encabezado (navbar), el cual es colapsable -->
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
-                <li class=""><g:link controller="VMarket" action="contact">Contacto</g:link></li>
+                <!--<li class=""><a href="#">Contacto</a></li>
                 <!--li><a href="#">Link</a></li>
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
@@ -66,16 +81,14 @@
              de si el usuario esta o no loggeado-->
 
             <ul class="nav navbar-nav navbar-right">
-                <li><a href="#"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
+                <li><a href="user/register"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
             </ul>
 
             <p class="nav navbar-text navbar-right" > o </p>
 
             <g:form class = "navbar-form navbar-right">
                 <div class="form-group">
-                    <g:textField name="username" class="form-control" placeholder="User name"/>
-                    <g:passwordField name="password" class="form-control" placeholder="Password" />
-                    <g:actionSubmit value="Ingresa" name="submitButton" action="doLogin" class="btn btn-success" />
+                    <g:actionSubmit value="Ingresar" name="submitButton" action="doLogin" class="btn btn-success" />
                 </div>
             </g:form>
 
@@ -84,16 +97,6 @@
 </nav>
 
 <!-- AQUI debe ir el contenido de cada vista !!!!!!!!!-->
-<div class="container">
-    <br/><br/>
-    <div class="row">
-        <div class="col-sm-12">
-            <g:if test="${flash.message}">
-                <h1 class="text-center">${flash.message}</h1>
-            </g:if>
-        </div>
-    </div>
-</div>
 
 <footer>
     <p>© V-Market 2015</p>

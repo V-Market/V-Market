@@ -54,3 +54,22 @@
     font-family: FontAwesome;
     vertical-align: middle;
 }
+
+.background{
+    background-image: url('https://ununsplash.imgix.net/photo-1417870839255-a23faa90c6b0?fit=crop&fm=jpg&h=700&q=75&w=1050');
+    position: relative;
+    width: 100%;
+    -webkit-background-size: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+
+
+}
+
+.background-color{
+    border-top: thin;
+    border-color: #080808;
+    background-color: #e0e0e0;
+    box-shadow: 0 0 100px #fff;
+}

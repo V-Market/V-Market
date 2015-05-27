@@ -12,6 +12,10 @@ class UrlMappings {
             action = "index"
         }
 
+        "/layout" {
+            view = "layouts/template"
+        }
+
         "500"(view:'/error')
     }
 }
