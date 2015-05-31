@@ -112,6 +112,7 @@ class UserController {
     }
 
     def register(){
+
         if(!params.display_name.equals(null)) {
             def usuario = User.findByUserName(params.display_name)
             if (usuario) {

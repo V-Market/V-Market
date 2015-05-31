@@ -16,6 +16,7 @@
 
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'custom.css')}" />
+    <link rel="stylesheet" type="text/css" href="http://fonts.googleapis.com/css?family=Atomic+Age" />
 
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
     <g:javascript src="jquery-1.11.2.min.js" />
@@ -23,7 +24,7 @@
 
 </head>
 
-<body class="background">
+<body class="wrapper">
 
 <!-- CABEZA DE LA PAGINA -->
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">
@@ -44,37 +45,19 @@
             </a>
 
         </div>
-        <li class="dropdown navbar-left">
-            <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-            <ul class="dropdown-menu" role="menu">
-                <li><a href="#">Action</a></li>
-                <li><a href="#">Another action</a></li>
-                <li><a href="#">Something else here</a></li>
-                <li class="divider"></li>
-                <li><a href="#">Separated link</a></li>
-                <li class="divider"></li>
-                <li><a href="#">One more separated link</a></li>
-            </ul>
-        </li>
 
         <!-- contenido del encabezado (navbar), el cual es colapsable -->
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
                 <!--<li class=""><a href="#">Contacto</a></li>
-                <!--li><a href="#">Link</a></li>
+                <!--li><a href="#">Link</a></li>-->
                 <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Dropdown <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Action</a></li>
-                        <li><a href="#">Another action</a></li>
-                        <li><a href="#">Something else here</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">Separated link</a></li>
-                        <li class="divider"></li>
-                        <li><a href="#">One more separated link</a></li>
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias <span class="caret"></span></a>
+                    <ul class="dropdown-menu dropdown-menu-custom" role="menu">
+                        <div class="categories"><center> Categoria 1 | categoria 2 | Categoria 3 | categoria 4 | Categoria 5 | categoria 6 | categoria 7 | Categoria 8 | categoria 9 | Categoria 10 </center></div>
                     </ul>
-                </li-->
+                </li>
             </ul>
 
             <!-- todo lo que esta alineado a la derecha (navbar-right) cambia dependiendo
@@ -96,11 +79,16 @@
     </div>
 </nav>
 
+<div class="background">
+    <div class="Title">V-Market</div>
+    <footer class="ourFooter">
+        <p>© V-Market 2015</p>
+    </footer>
+</div>
+
 <!-- AQUI debe ir el contenido de cada vista !!!!!!!!!-->
 
-<footer>
-    <p>© V-Market 2015</p>
-</footer>
+
 
 </div>
 </body>
