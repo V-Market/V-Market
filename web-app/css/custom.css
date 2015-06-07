@@ -55,54 +55,122 @@
     vertical-align: middle;
 }
 
-.background {
-    background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url('../images/fondoIndex3.jpg');
+.wrapper{
     position: absolute;
+    width: 100%;
+    height: 100%;
+    background-size: cover ;
+    padding:0;
+    margin:0;
+    overflow: hidden;
+}
+.background {
+    background-image: url('../images/fondoIndex3.jpg');
+    position: relative;
     width: 100%;
     height: 100%;
     -moz-background-size: cover;
     -o-background-size: cover;
     background-size: cover;
-    -webkit-transition: all 2s ease;
-    -moz-transition: 2s;
-    -ms-transition: 2s;
-    -o-transition: 2s;
-    transition: all 2s ease;
+    -webkit-transition: all 1s ease;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: all 1s ease;
+    -webkit-filter: grayscale(80%);
 
 }
 
 .background:hover{
-    background-position: 100%;
-    height: 50%;
+    -webkit-filter: grayscale(30%);
 }
 
 
 
 .background-color{
-    border-top: thin;
-    border-color: #080808;
-    background-color: #e0e0e0;
-    box-shadow: 0 0 100px #fff;
+    border: none;
+    background-color: transparent;
+    transition: background 0.750s linear;
 }
 
-.Title{
-    position: absolute;
-    top: 35%;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    font-size: 150px;
-    text-align: center;
-    color: #ffffff;
-    font-family: 'Atomic Age';
+.p-custom{
+    font-size:50px;
+    position: relative;
+    top: 30%;
+    opacity: 0;
+    transition: 2s;
+    font-size: 0;
+}
+
+.glyphicon-size{
+    position:absolute;
+    z-index: 1;
+    transition: 2s;
+    top: 35%
+
+}
+
+
+
+.glyphicon-size:hover{
+    transition: 2s;
+    padding:0;
+
+
+}
+
+.glyphicon-size:hover .p-custom{
+    opacity: 1;
+    font-size: 20px;
+
+}
+.Title {
+    position: relative;
+    font-size: 80px;
+    color: #000000 ;
+    background-color: transparent;
+    text-shadow: -2px 0 2px white;
+    font-family: 'Parisienne', cursive;
+    box-shadow: #2b542c;
+    top: 50%;
+    bottom:0;
+    -webkit-animation: izquierdaEntra 0.75s;
+}
+
+.Title3 {
+    position: relative;
+    font-size: 80px;
+    color: #000000 ;
+    background-color: transparent;
+    text-shadow: -2px 0 2px white;
+    font-family: 'Parisienne', cursive;
+    box-shadow: #2b542c;
+    top: 50%;
+    bottom:0;
+    -webkit-animation: derechaEntra 0.75s;
+}
+.Title4 {
+    position: relative;
+    font-size: 80px;
+    color: #000000 ;
+    background-color: #ffffff;
+    text-shadow: -2px 0 2px #fefefe;
+    font-family: 'lexia', serif;
+    box-shadow: #2b542c;
+    bottom:0;
+    -webkit-animation: derechaEntra 0.75s;
 }
 
 .ourFooter{
-    position: absolute;
+    position: relative;
     width: 100%;
+    height: 8%;
     background-size: cover;
-    background-color: #080808;
+    background-color: #484847;
     bottom: 0;
+    color:#ffffff;
+    font-family: "lexia", serif;
+    display: block;
 }
 
 .dropdown-menu-custom{
@@ -124,5 +192,290 @@
     border: 2px solid gray;
     border-radius: 10px;
 
+}
 
+.categorias{
+    background-color: #ffffff;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 1s ease;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: all 1s ease;
+}
+
+.whoarewe{
+    background-color: #000000;
+    position: relative;
+    width: 100%;
+    height: 100%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 1s ease;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: all 1s ease;
+    text-align: center;
+}
+
+.contacto{
+    background-color: #262626;
+    position: relative;
+    width: 100%;
+    height: 10%;
+    -moz-background-size: cover;
+    -o-background-size: cover;
+    background-size: cover;
+    -webkit-transition: all 1s ease;
+    -moz-transition: 1s;
+    -ms-transition: 1s;
+    -o-transition: 1s;
+    transition: all 1s ease;
+}
+
+.opacity0{
+    opacity: 0;
+}
+
+.default{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000;
+}
+
+@-webkit-keyframes izquierdaEntra {
+   0%{ -webkit-transform: translateX(-100%)} 100%{-webkit-transform: translateX(0); opacity:1}
+}
+
+@-webkit-keyframes derechaEntra {
+    0%{ -webkit-transform: translateX(100%)}  100%{-webkit-transform: translateX(0); opacity:1}
+}
+
+@-webkit-keyframes izquierdaSale {
+    0%{ -webkit-transform: translateX(0)} 100%{-webkit-transform: translateX(-100%);}
+}
+
+@-webkit-keyframes derechaSale {
+    0%{ -webkit-transform: translateX(0)}  100%{-webkit-transform: translateX(100%);}
+}
+
+.defaultSaleIzquierda{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000;
+    -webkit-animation:  izquierdaSale 0.75s;
+}
+
+.defaultSaleDerecha{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000;
+    -webkit-animation: derechaSale 0.75s;
+}
+
+.defaultEntraIzquierda{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000;
+    -webkit-animation: izquierdaEntra 0.75s;
+}
+
+
+.defaultEntraDerecha{
+    z-index: 1;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: #000000;
+    -webkit-animation: derechaEntra 0.75s;
+}
+
+
+
+
+.defaultHide{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    opacity: 0;
+}
+
+#refrigerados{
+
+    background-color: #a94442;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+
+}
+
+#fritos{
+
+    background-image: url('http://mamacitagrill.com/wp-content/uploads/2013/03/hamburger.jpg');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+
+}
+
+#carnes{
+    background-image: url('https://s3.amazonaws.com/peerfit.wpcontent/2013/07/Red-Meat.jpg');
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+
+}
+
+#saludyaseo{
+    background-color: #2b542c;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+
+}
+
+#licores{
+    background-color: #204d74;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+
+}
+
+#frutasyverduras{
+
+    background-color: #f0ad4e;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+}
+
+
+#alimentosvarios{
+    background-color: greenyellow;
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-size: cover;
+    color: #ffffff;
+    font-size: 100px;
+    text-align: center;
+
+}
+
+.Title2{
+    position: absolute;
+    width: 50%;
+    height: 100%;
+    background-color: bisque;
+    color: #000000;
+    font-family:'Indie Flower', cursive;
+}
+
+#button{
+
+}
+
+.row-image{
+    margin: 35px 0 0 0;
+    padding: 0;
+    list-style: none;
+    position: relative;
+    width: 100%;
+}
+
+.col-xs-3{
+    padding:0;
+    margin:0;
+}
+.col-xs-3 img{
+    display: block;
+    position: relative;
+    width: 100%;
+    transition: all 0.2s linear;
+
+}
+.top{
+    padding:5%;
+}
+
+.mask{
+    width: auto;
+    height: auto;
+    min-width: 100%;
+    min-height: 100%;
+    position: absolute;
+    overflow: hidden;
+    top: 0;
+    left: 0
+}
+
+.col-xs-3 .mask {
+    opacity: 0;
+    background-color: rgba(255, 255, 255, 0.7);
+    transition: all 0.4s ease-in-out;
+}
+
+.col-xs-3:hover img {
+    opacity:0.5;
+}
+
+.col-xs-3:hover .mask {
+    opacity: 1;
+    box-shadow: 0 0 5px #000;
+
+}
+
+.mask h2{
+    background-color: #000000;
+    font-family: "lexia", serif;
+    color:#ffffff;
+    font-size: 28px;
+}
+
+.mask p{
+    font-family: "lexia", serif;
+    font-size: 20px;
+    padding:5px;
+}
+
+.mask .a img{
+    width: auto;
+    height: auto;
 }
