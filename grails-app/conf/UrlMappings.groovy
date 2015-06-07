@@ -8,14 +8,19 @@ class UrlMappings {
         }
 
         "/" {
-            controller = "auth"
+            controller = "VMarket"
             action = "index"
         }
+
+        "500"(view:'/error')
+
+        "/login/$action?"(controller: "login")
+        "/logout/$action?"(controller: "logout")
 
         "/layout" {
             view = "layouts/template"
         }
 
-        "500"(view:'/error')
+
     }
 }

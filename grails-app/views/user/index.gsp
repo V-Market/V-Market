@@ -24,13 +24,13 @@
 			<thead>
 					<tr>
 					
+						<g:sortableColumn property="username" title="${message(code: 'user.username.label', default: 'Username')}" />
+					
+						<g:sortableColumn property="password" title="${message(code: 'user.password.label', default: 'Password')}" />
+					
 						<g:sortableColumn property="name" title="${message(code: 'user.name.label', default: 'Name')}" />
 					
 						<g:sortableColumn property="lastname" title="${message(code: 'user.lastname.label', default: 'Lastname')}" />
-					
-						<g:sortableColumn property="userName" title="${message(code: 'user.userName.label', default: 'User Name')}" />
-					
-						<g:sortableColumn property="password" title="${message(code: 'user.password.label', default: 'Password')}" />
 					
 						<g:sortableColumn property="email" title="${message(code: 'user.email.label', default: 'Email')}" />
 					
@@ -42,13 +42,13 @@
 				<g:each in="${userInstanceList}" status="i" var="userInstance">
 					<tr class="${(i % 2) == 0 ? 'even' : 'odd'}">
 					
-						<td><g:link action="show" id="${userInstance.id}">${fieldValue(bean: userInstance, field: "name")}</g:link></td>
-					
-						<td>${fieldValue(bean: userInstance, field: "lastname")}</td>
-					
-						<td>${fieldValue(bean: userInstance, field: "userName")}</td>
+						<td><g:link action="show" id="${userInstance.id}">${fieldValue(bean: userInstance, field: "username")}</g:link></td>
 					
 						<td>${fieldValue(bean: userInstance, field: "password")}</td>
+					
+						<td>${fieldValue(bean: userInstance, field: "name")}</td>
+					
+						<td>${fieldValue(bean: userInstance, field: "lastname")}</td>
 					
 						<td>${fieldValue(bean: userInstance, field: "email")}</td>
 					

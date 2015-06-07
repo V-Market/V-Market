@@ -1,40 +1,28 @@
 package v.market
 
-class User {
+class User extends SecUser{
 
+    String passwordConfirm
     String name
     String lastname
-    String userName
-    String password
     String email
-    String ciudad
-    String pais
-    Date birthday
     String gender
+    Date birthday
     int age
-    String telefono
-    String urlImageProfile
 
+    //static transients = ['springSecurityService', 'passwordConfirm']
 
     static constraints = {
-        name()
-        lastname()
-        userName(blank: false, unique: true)
-        password(password : true , blank: false)
-        email(email: true)
-        gender()
+        passwordConfirm(blank: false)
+        name(blank: false)
+        lastname(blank: false)
+        email(blank: false, email: true)
+        gender(blank: false)
+        birthday(blank: false)
         age()
-        birthday()
-        telefono()
-        ciudad()
-        pais()
     }
 
     public String toString(){
         return name;
-    }
-
-    public String getUrl(){
-        return url;
     }
 }

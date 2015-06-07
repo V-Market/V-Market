@@ -1,6 +1,23 @@
 <%@ page import="v.market.User" %>
 
 
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'username', 'error')} required">
+	<label for="username">
+		<g:message code="user.username.label" default="Username" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:textField name="username" required="" value="${userInstance?.username}"/>
+
+</div>
+
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
+	<label for="password">
+		<g:message code="user.password.label" default="Password" />
+		<span class="required-indicator">*</span>
+	</label>
+	<g:field type="password" name="password" required="" value="${userInstance?.password}"/>
+
+</div>
 
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'name', 'error')} required">
 	<label for="name">
@@ -17,24 +34,6 @@
 		<span class="required-indicator">*</span>
 	</label>
 	<g:textField name="lastname" required="" value="${userInstance?.lastname}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'userName', 'error')} required">
-	<label for="userName">
-		<g:message code="user.userName.label" default="User Name" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="userName" required="" value="${userInstance?.userName}"/>
-
-</div>
-
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'password', 'error')} required">
-	<label for="password">
-		<g:message code="user.password.label" default="Password" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field type="password" name="password" required="" value="${userInstance?.password}"/>
 
 </div>
 
@@ -56,14 +55,7 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'age', 'error')} required">
-	<label for="age">
-		<g:message code="user.age.label" default="Age" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:field name="age" type="number" value="${userInstance.age}" required=""/>
 
-</div>
 
 <div class="fieldcontain ${hasErrors(bean: userInstance, field: 'birthday', 'error')} required">
 	<label for="birthday">
@@ -74,39 +66,39 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'telefono', 'error')} required">
-	<label for="telefono">
-		<g:message code="user.telefono.label" default="Telefono" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'accountExpired', 'error')} ">
+	<label for="accountExpired">
+		<g:message code="user.accountExpired.label" default="Account Expired" />
+		
 	</label>
-	<g:textField name="telefono" required="" value="${userInstance?.telefono}"/>
+	<g:checkBox name="accountExpired" value="${userInstance?.accountExpired}" />
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'ciudad', 'error')} required">
-	<label for="ciudad">
-		<g:message code="user.ciudad.label" default="Ciudad" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'accountLocked', 'error')} ">
+	<label for="accountLocked">
+		<g:message code="user.accountLocked.label" default="Account Locked" />
+		
 	</label>
-	<g:textField name="ciudad" required="" value="${userInstance?.ciudad}"/>
+	<g:checkBox name="accountLocked" value="${userInstance?.accountLocked}" />
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'pais', 'error')} required">
-	<label for="pais">
-		<g:message code="user.pais.label" default="Pais" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'enabled', 'error')} ">
+	<label for="enabled">
+		<g:message code="user.enabled.label" default="Enabled" />
+		
 	</label>
-	<g:textField name="pais" required="" value="${userInstance?.pais}"/>
+	<g:checkBox name="enabled" value="${userInstance?.enabled}" />
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'urlImageProfile', 'error')} required">
-	<label for="urlImageProfile">
-		<g:message code="user.urlImageProfile.label" default="Url Image Profile" />
-		<span class="required-indicator">*</span>
+<div class="fieldcontain ${hasErrors(bean: userInstance, field: 'passwordExpired', 'error')} ">
+	<label for="passwordExpired">
+		<g:message code="user.passwordExpired.label" default="Password Expired" />
+		
 	</label>
-	<g:textField name="urlImageProfile" required="" value="${userInstance?.urlImageProfile}"/>
+	<g:checkBox name="passwordExpired" value="${userInstance?.passwordExpired}" />
 
 </div>
 
