@@ -171,7 +171,31 @@
 
             <!-- todo lo que esta alineado a la derecha (navbar-right) cambia dependiendo
              de si el usuario esta o no loggeado-->
+        <sec:ifNotLoggedIn>
+            <ul class="nav navbar-nav navbar-right">
+                <li><g:link controller="user" action="register"> <span class="glyphicon glyphicon-user"></span> Registrate</g:link></li>
+            </ul>
 
+            <p class="nav navbar-text navbar-right" > o </p>
+
+            <ul class="nav navbar-nav navbar-right">
+                <li><g:link controller="login"><span class="glyphicon glyphicon-log-in"></span> Ingresa</g:link></li>
+            </ul>
+        </sec:ifNotLoggedIn>
+        <sec:ifLoggedIn>
+            <ul class="nav navbar-nav navbar-right">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                        <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><a href="#">Ver perfil</a></li>
+                        <li><a href="#">Carrito</a></li>
+                        <li class="divider"></li>
+                        <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
+                    </ul>
+                </li>
+            </ul>
+        </sec:ifLoggedIn><!--
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="user/register"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
             </ul>
@@ -183,10 +207,12 @@
                     <g:actionSubmit value="Ingresar" name="submitButton" action="doLogin" class="btn btn-success" />
                 </div>
             </g:form>
-
-        </div><!--/.navbar-collapse -->
+-->
+        </div><!--/.navbar-collapse-->
     </div>
 </nav>
+
+
 
 <div class="categorias">
     <div class="wrapper">
