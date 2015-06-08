@@ -4,6 +4,8 @@
 
 .defaultProfilePanel{
     background-color: inherit; border-radius: 20px; border: 0;
+    -webkit-box-shadow:0 1px 1px rgba(0,0,0,0);
+    box-shadow: 0 1px 1px rgba(0,0,0,0);
 }
 
 .panelProfileBody{
@@ -15,13 +17,30 @@
 }
 
 .statistics{
-    float:right; height: 70%;
+    float:right;
+    height: 75%;
 }
 
 .statisticsDefaultPanel{
     background-color: inherit;
+    display: table-cell;
 }
 
 .statisticsBodyPanel{
-    text-align:  center; margin-top:30px; background-color: inherit;border-radius: 20px; height: 100%;
+    text-align:  center; margin-top:0; background-color: inherit;border-radius: 20px; height: 100%;
+    overflow: hidden; display: table-row;
+}
+
+#img{
+    display: inline-block;
+}
+
+.body{
+    padding:0;
+    padding-left: 8%;
+    text-align: center;
+    width:100%;
+    height:100%;
+    background: #bebebe no-repeat;
+    position: fixed;
 }
