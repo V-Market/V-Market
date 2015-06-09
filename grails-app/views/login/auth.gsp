@@ -7,7 +7,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1">
 
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
-    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'styles.css')}" />
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'custom.css')}" />
 
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
     <g:javascript src="jquery-1.11.2.min.js" />
@@ -25,7 +25,7 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!--El header contiene el boton "inicio"-->
+        <!--El header contiene el boton "inicio"-->
             <g:link controller="VMarket" action="index" class="navbar-brand">
                 V-Market <span class="glyphicon glyphicon-asterisk"></span>
             </g:link>
@@ -53,7 +53,7 @@
 <div class="container vertical-center">
     <div class="card card-container">
         <!-- <img class="profile-img-card" src="//lh3.googleusercontent.com/-6V8xOA6M7BA/AAAAAAAAAAI/AAAAAAAAAAA/rzlHcD0KYwo/photo.jpg?sz=120" alt="" /> -->
-        <img id="profile-img" class="profile-img-card" src="//ssl.gstatic.com/accounts/ui/avatar_2x.png" />
+        <img id="profile-img" class="profile-img-card" src="${resource(dir: 'images', file: 'avatar_user.png')}" />
         <p id="profile-name" class="profile-name-card"></p>
 
         <form class="form-signin" action='${postUrl}' method='POST' id='loginForm'>

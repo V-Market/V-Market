@@ -24,109 +24,97 @@
     <g:javascript src="bootstrap.min.js" />
 
     <script>
-    var init = true;
-    var index = 0;
-    var divs = ['.categorias','.background','.whoarewe','.contacto'];
-    var categories = [${categories}];
-    var indexC = 0;
-    var events = [];
-    var semaforo = false;
-    var current = 0;
-    $(document).ready(function() {
-       if(init){
-           init = false;
-           index = 0;
-           scrollToID(divs[0], 750);
-         }
-
-        $(".standard").click(function(){
-            var index = $(this).attr('data-button');
-            if(index == current) return;
-            $(categories[current]).removeClass();
-            $(categories[index]).removeClass();
-            if(index>current) {
-                $(categories[current]).addClass('defaultSaleDerecha');
-                $(categories[index]).addClass('defaultEntraIzquierda');
-            }else{
-                $(categories[current]).addClass('defaultSaleIzquierda');
-                $(categories[index]).addClass('defaultEntraDerecha');
+        var init = true;
+        var index = 0;
+        var divs = ['.categorias','.background','.whoarewe','.contacto'];
+        var categories = [${categories}];
+        var indexC = 0;
+        var events = [];
+        var semaforo = false;
+        var current = 0;
+        $(document).ready(function() {
+            if(init){
+                init = false;
+                index = 0;
+                scrollToID(divs[0], 750);
             }
-
-
-            view = categories[index];
-            current = index;
-            var intervalo = setInterval(function(){
-                if(view!=null){
-
-                    for(var j=0;j<categories.length;j++){
-                        if(categories[j]==view){
-                            $(view).removeClass().addClass('default');
-                            continue;
-                        }
-                        $(categories[j]).removeClass();
-                        $(categories[j]).addClass('defaultHide');
-                    }
-
-                    view = null;
+            $(".standard").click(function(){
+                var index = $(this).attr('data-button');
+                if(index == current) return;
+                $(categories[current]).removeClass();
+                $(categories[index]).removeClass();
+                if(index>current) {
+                    $(categories[current]).addClass('defaultSaleDerecha');
+                    $(categories[index]).addClass('defaultEntraIzquierda');
+                }else{
+                    $(categories[current]).addClass('defaultSaleIzquierda');
+                    $(categories[index]).addClass('defaultEntraDerecha');
                 }
-                window.clearInterval(intervalo);
-            }, 1000);
-
+                view = categories[index];
+                current = index;
+                var intervalo = setInterval(function(){
+                    if(view!=null){
+                        for(var j=0;j<categories.length;j++){
+                            if(categories[j]==view){
+                                $(view).removeClass().addClass('default');
+                                continue;
+                            }
+                            $(categories[j]).removeClass();
+                            $(categories[j]).addClass('defaultHide');
+                        }
+                        view = null;
+                    }
+                    window.clearInterval(intervalo);
+                }, 1000);
+            });
+            $('a[href^="#"]').click(function(){
+                scrollToID(divs[0], 750, 0,0);
+                index = 0;
+            });
         });
-        $('a[href^="#"]').click(function(){
-            scrollToID(divs[0], 750, 0,0);
-            index = 0;
-        });
-    });
-
-
-    window.onkeydown = function h(e){
-        var view;
-        switch (e.keyCode) {
-            case 38:
+        window.onkeydown = function h(e){
+            var view;
+            switch (e.keyCode) {
+                case 38:
                     if(index !=0) {
                         index = index - 1 ;
                         scrollToID(divs[index], 750, divs[index+1], index+1);
                     }
-                if(index == 0) {
-                    $('.background-color').css('background-color', 'transparent');
-                }
-                if(index%2==0) {
-                    var a = $('.Title3').removeClass();
-                    a.addClass('Title');
-                }else{
-                    var a = $('.Title').removeClass();
-                    a.addClass('Title3');
-                }
-
-                break;
-            case 40:
-
-                if(index != 4) {
-                    index = index + 1;
-                    scrollToID(divs[index], 750, divs[index-1], index-1);
-                }
-                if(index == 1) {
-                    $('.background-color').css('background-color', 'white');
-                }
-                if(index%2==0) {
-                    var a = $('.Title3').removeClass();
-                    a.addClass('Title');
-                }else{
-                    var a = $('.Title').removeClass();
-                    a.addClass('Title3');
-                }
-
-                break;
+                    if(index == 0) {
+                        $('.background-color').css('background-color', 'transparent');
+                    }
+                    if(index%2==0) {
+                        var a = $('.Title3').removeClass();
+                        a.addClass('Title');
+                    }else{
+                        var a = $('.Title').removeClass();
+                        a.addClass('Title3');
+                    }
+                    break;
+                case 40:
+                    if(index != 4) {
+                        index = index + 1;
+                        scrollToID(divs[index], 750, divs[index-1], index-1);
+                    }
+                    if(index == 1) {
+                        $('.background-color').css('background-color', 'white');
+                    }
+                    if(index%2==0) {
+                        var a = $('.Title3').removeClass();
+                        a.addClass('Title');
+                    }else{
+                        var a = $('.Title').removeClass();
+                        a.addClass('Title3');
+                    }
+                    break;
+            }
+        };
+        function scrollToID(id, speed, before, index){
+            var offSet = 50;
+            var targetOffset = $(id).offset().top - offSet;
+            $(id).css('opacity','1');
+            $('html,body').animate({scrollTop:targetOffset}, speed);
         }
-    };
-
-    function scrollToID(id, speed, before, index){
-        var offSet = 50;
-        var targetOffset = $(id).offset().top - offSet;
-        $(id).css('opacity','1');
-        $('html,body').animate({scrollTop:targetOffset}, speed);
-    }
     </script>
 
 </head>
@@ -169,45 +157,43 @@
                 </li>
             </ul>
 
-            <!-- todo lo que esta alineado a la derecha (navbar-right) cambia dependiendo
+        <!-- todo lo que esta alineado a la derecha (navbar-right) cambia dependiendo
              de si el usuario esta o no loggeado-->
-        <sec:ifNotLoggedIn>
-            <ul class="nav navbar-nav navbar-right">
-                <li><g:link controller="user" action="register"> <span class="glyphicon glyphicon-user"></span> Registrate</g:link></li>
-            </ul>
+            <sec:ifNotLoggedIn>
+                <ul class="nav navbar-nav navbar-right">
+                    <li><g:link controller="user" action="register"> <span class="glyphicon glyphicon-user"></span> Registrate</g:link></li>
+                </ul>
 
-            <p class="nav navbar-text navbar-right" > o </p>
+                <p class="nav navbar-text navbar-right" > o </p>
 
-            <ul class="nav navbar-nav navbar-right">
-                <li><g:link controller="login"><span class="glyphicon glyphicon-log-in"></span> Ingresa</g:link></li>
-            </ul>
-        </sec:ifNotLoggedIn>
-        <sec:ifLoggedIn>
-            <ul class="nav navbar-nav navbar-right">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                        <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><a href="#">Ver perfil</a></li>
-                        <li><a href="#">Carrito</a></li>
-                        <li class="divider"></li>
-                        <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
-                    </ul>
-                </li>
-            </ul>
-        </sec:ifLoggedIn><!--
+                <ul class="nav navbar-nav navbar-right">
+                    <li><g:link controller="login"><span class="glyphicon glyphicon-log-in"></span> Ingresa</g:link></li>
+                </ul>
+            </sec:ifNotLoggedIn>
+            <sec:ifLoggedIn>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><a href="#">Ver perfil</a></li>
+                            <li><a href="#">Carrito</a></li>
+                            <li class="divider"></li>
+                            <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
+                        </ul>
+                    </li>
+                </ul>
+            </sec:ifLoggedIn><!--
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="user/register"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
             </ul>
-
             <p class="nav navbar-text navbar-right" > o </p>
-
             <g:form class = "navbar-form navbar-right">
-                <div class="form-group">
-                    <g:actionSubmit value="Ingresar" name="submitButton" action="doLogin" class="btn btn-success" />
-                </div>
-            </g:form>
--->
+            <div class="form-group">
+            <g:actionSubmit value="Ingresar" name="submitButton" action="doLogin" class="btn btn-success" />
+            </div>
+        </g:form>
+        -->
         </div><!--/.navbar-collapse-->
     </div>
 </nav>
@@ -230,7 +216,7 @@
                 </div>
             </g:else>
         </g:each>
-        </div>
+    </div>
 </div>
 <div class="background" onscroll="categorias(this)">
     <div class="Title">V-Market</div>
@@ -298,7 +284,7 @@
 <div class="contacto">
     <div style="font-family: 'lexia', bold; font-size: 45px; color:#ffffff; padding-left: 40px  ">
         <div class="row">
-        <div class="col-md-6">V-Market</div>
+            <div class="col-md-6">V-Market</div>
             <div class="col-md-6" style="text-align: right; padding-right: 40px">
                 <img src="${resource(dir: 'images',file:'facebook.png')}" width="25px" height="25px"/>
                 <img src="${resource(dir: 'images',file:'twittericon.jpg')}" width="25px" height="25px"/>
