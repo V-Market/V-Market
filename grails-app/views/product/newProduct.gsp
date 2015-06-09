@@ -16,7 +16,7 @@
     <g:javascript src="bootstrap.min.js" />
     <g:javascript src="context.js" />
 
-    <title>Registrate</title>
+    <title>Nuevo Producto</title>
 
 </head>
 

@@ -9,8 +9,7 @@ class User extends SecUser{
     String gender
     Date birthday
     int age
-
-    //static transients = ['springSecurityService', 'passwordConfirm']
+    byte[] userImage
 
     static constraints = {
         passwordConfirm(blank: false)
@@ -20,6 +19,7 @@ class User extends SecUser{
         gender(blank: false)
         birthday(blank: false)
         age()
+        userImage(nullable:true, maxSize:1073741824)
     }
 
     public String toString(){

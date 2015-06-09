@@ -51,6 +51,7 @@ class ProductController {
     }
 
     def newProduct(){
+
         respond new Product(params)
     }
 
@@ -160,7 +161,10 @@ class ProductController {
         }
     }
 
-    def one_product(){
-
+    def _one_product(Product productInstance){
+        respond productInstance
+    }
+    def list_product(){
+        respond Product.all
     }
 }
