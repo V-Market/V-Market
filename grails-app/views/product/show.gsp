@@ -65,7 +65,7 @@
                         </div>
                         <div class="col-md-3 profilep">
                             <div  class="panel-body panelProductBody">
-                                <img src="${productInstance.urlImageProduct}" class="img-responsive img-rounded" alt="Product image" width="200" height="150">
+                                <img  src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" width='300' />
                             </div>
                         </div>
                         <div class="col-md-8 profilep">
