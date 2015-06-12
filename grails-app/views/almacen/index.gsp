@@ -154,6 +154,21 @@
                                     <td>País</td>
                                     <td><span class="property-value" aria-labelledby="pais-label"><g:fieldValue bean="${almacenInstance}" field="pais"/></span></td>
                                 </tr>
+                                <tr>
+                                    <td>Latitud</td>
+                                    <td><span class="property-value" aria-labelledby="pais-label"><g:fieldValue bean="${almacenInstance}" field="lat"/></span></td>
+                                </tr>
+                                <tr>
+                                    <td>Longitud</td>
+                                    <td><span class="property-value" aria-labelledby="pais-label"><g:fieldValue bean="${almacenInstance}" field="lng"/></span></td>
+                                </tr>
+                                <tr>
+                                <g:form>
+                                    <td>
+                                    <g:actionSubmit name="edit" value="Ver coordenadas" class="btn btn-success" action="addmapcoordinates" />
+                                    </td>
+                                </g:form>
+                                </tr>
                                 </tbody>
                             </table>
                         </div>

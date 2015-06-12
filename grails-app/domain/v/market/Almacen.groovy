@@ -13,6 +13,10 @@ class Almacen {
     String tipoProducto
     String urlImageProfile
 
+    String streetAddress;
+    String lat;
+    String lng;
+
     static constraints = {
         nit(blank: false, unique: true)
         name(blank: false)
@@ -24,6 +28,9 @@ class Almacen {
         pais()
         tipoProducto()
         urlImageProfile()
+        streetAddress(nullable: true);
+        lng(nullable: true);
+        lat(nullable: true);
     }
 
     public String toString(){
@@ -31,6 +38,6 @@ class Almacen {
     }
 
     public String getUrl(){
-        return url;
+        return urlImageProfile;
     }
 }

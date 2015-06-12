@@ -288,7 +288,8 @@
 <div class="contacto">
     <div style="font-family: 'lexia', bold; font-size: 45px; color:#ffffff; padding-left: 40px  ">
         <div class="row">
-            <div class="col-md-6">V-Market</div>
+            <div class="col-md-4">V-Market</div>
+            <div class="col-md-2" style="position: absolute; left:30%; top:25%; font-family: 'lexia', serif; line-height: 1.6em; font-weight: 100; font-size: 18px; letter-spacing: 3px">helpdeskvmarket@gmail.com</div>
             <div class="col-md-6" style="text-align: right; padding-right: 40px">
                 <img src="${resource(dir: 'images',file:'facebook.png')}" width="25px" height="25px"/>
                 <img src="${resource(dir: 'images',file:'twittericon.jpg')}" width="25px" height="25px"/>

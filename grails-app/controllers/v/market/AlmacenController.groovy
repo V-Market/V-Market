@@ -7,7 +7,7 @@ import grails.transaction.Transactional
 @Transactional(readOnly = true)
 class AlmacenController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE", savecoordinate: 'POST']
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -35,14 +35,15 @@ class AlmacenController {
         }
 
         almacenInstance.save flush: true
-
-        request.withFormat {
+        session.almacenId = almacenInstance.getId()
+        redirect(action: 'addmapcoordinates')
+        /*request.withFormat {
             form multipartForm {
                 flash.message = message(code: 'default.created.message', args: [message(code: 'almacen.label', default: 'Almacen'), almacenInstance.id])
                 redirect almacenInstance
             }
             '*' { respond almacenInstance, [status: CREATED] }
-        }
+        }*/
     }
 
     def edit(Almacen almacenInstance) {
@@ -99,5 +100,30 @@ class AlmacenController {
             }
             '*' { render status: NOT_FOUND }
         }
+    }
+
+    def addmapcoordinates(){
+        def almacenId = session.almacenId
+        def almacen = Almacen.findById(almacenId);
+        [almacen:almacen]
+    }
+
+    def savecoordinate(){
+       // def almacenId = params.almacenId;
+        //def almacenLat = params.almacenLat;
+        //def almacenLng = params.almacenLng;
+        //def almacen = Almacen.findById(almacenId);
+
+        def almacen = Almacen.findById(session.almacenId);
+        almacen.lat = params.almacenLat
+        almacen.lng = params.almacenLng
+        if(!almacen.save(flush: true)){
+            flash.message = "Error al guardar";
+            almacen.errors.each {
+                println it
+            }
+        }
+        redirect(action: 'index')
+        //chain(action: 'show', model: almacen);
     }
 }
