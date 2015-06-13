@@ -10,7 +10,7 @@
 <%--<g:form role="form">--%>
     <div class="center">
         <a href="">
-            <img src="${productInstance.urlImageProduct}" class=" img-rounded center-block" alt="Product image" width=auto height="150" />
+            <img  src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" width='260' height="200"/>
         </a>
     </div>
     <br>

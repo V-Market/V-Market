@@ -65,6 +65,10 @@ class ProductController {
             }
     }
 
+    def search(){
+        respond Product.list(params), model:[productInstanceCount: Product.count()]
+    }
+
     def showImage() {
         def productInstance = Product.get(params.id)
         response.outputStream << productInstance.imageByte // write the image to the outputstream
