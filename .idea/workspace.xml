@@ -2,133 +2,33 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b0df2c-1e1b-417d-b462-b5aaa5ed91a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractAssetFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/AbstractGrailsTemplateGenerator$1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/AbstractGrailsTemplateGenerator$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/AbstractGrailsTemplateGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/AbstractGrailsTemplateGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AbstractProcessor.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/Almacen$__clinit__closure1.class" afterPath="$PROJECT_DIR$/target/classes/v/market/Almacen$__clinit__closure1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/Almacen.class" afterPath="$PROJECT_DIR$/target/classes/v/market/Almacen.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_$tt__delete_closure11.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_$tt__delete_closure11.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_$tt__update_closure10.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_$tt__update_closure10.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_notFound_closure8.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_notFound_closure8.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_notFound_closure8_closure12.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_notFound_closure8_closure12.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_notFound_closure8_closure13.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_notFound_closure8_closure13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_tt__delete_closure11_closure18.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_tt__delete_closure11_closure18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_tt__save_closure9_closure14.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_tt__save_closure9_closure14.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_tt__update_closure10_closure16.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_tt__update_closure10_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_notFound_closure8_closure15.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController$_notFound_closure8_closure15.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/AlmacenController.class" afterPath="$PROJECT_DIR$/target/classes/v/market/AlmacenController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetCompiler.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetCompiler.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetHelper.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetHelper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetMethodTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetMethodTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineBootStrap.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineBootStrap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetPipelineFilter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetPipelineFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetPipelineGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetProcessorService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetProcessorService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetResourceLocator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/AssetResourceLocator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/AssetUrlMappings.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/AssetUrlMappings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/AssetsTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorListWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/AuthorWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/CacheGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/CacheGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/CacheManager.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/CacheManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/CacheTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/CacheTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/CachingLinkGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/CachingLinkGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogListWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ChangeLogWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ChangelogXml2Groovy.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ChangelogXml2Groovy.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ColumnWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/ColumnWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigLoader.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/ConfigLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/CssAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/CssAssetFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/CssMinifyPostProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/CssMinifyPostProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/CssProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/CssProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DatabaseMigrationGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DatabaseMigrationGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DbdocController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DbdocController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DbdocUrlMappings.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DbdocUrlMappings.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultCacheConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultCacheConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/DefaultGrailsTemplateGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/scaffolding/DefaultGrailsTemplateGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultSecurityConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultSecurityConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/DefaultWebXmlConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/DefaultWebXmlConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/DirectiveProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/DirectiveProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DslBuilder.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/DslBuilder.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/webxml/FilterManager.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/webxml/FilterManager.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/ForkedTomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/ForkedTomcatServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/web/GenericResponseWrapper$3.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/web/GenericResponseWrapper$3.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/web/GenericResponseWrapper.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/web/GenericResponseWrapper.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormColumn.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormColumn.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabase.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabase.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseSnapshotGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseSnapshotGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseTypeConverter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDatabaseTypeConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDiff.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GormDiff.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/web/authentication/rememberme/GormPersistentTokenRepository.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/web/authentication/rememberme/GormPersistentTokenRepository.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/userdetails/GormUserDetailsService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/userdetails/GormUserDetailsService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/GrailsCacheAdminService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/GrailsCacheAdminService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange$1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChange.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChangeLogParser.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsChangeLogParser.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsClassLoaderResourceAccessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsClassLoaderResourceAccessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsDiffStatusListener.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsDiffStatusListener.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition$1.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition$1.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GrailsPrecondition.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GroovyAwareStringChangeLogSerializer.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/GroovyAwareStringChangeLogSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLListWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/HTMLWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/Hibernate4GrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/Hibernate4GrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/HibernateAwareTypeConverter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/HibernateAwareTypeConverter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/HtmlAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/HtmlAssetFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/InlineExplodedTomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/InlineExplodedTomcatServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/InterceptedUrl.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/InterceptedUrl.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryConfig.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryConfig.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryPluginResources.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryPluginResources.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryProvider.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/org/codehaus/groovy/grails/plugins/jquery/JQueryProvider.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryResourceTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryResourceTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JQueryTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JQueryTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/JqueryGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/JqueryGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/JsAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/JsAssetFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/LinkGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/grails/LinkGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/LoginController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/LoginController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/LogoutController.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/LogoutController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/ManifestAssetFile.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/ManifestAssetFile.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/MemoryDocVisitor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/MemoryDocVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MigrationUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MySQLCompatibleChangeLogSerializer.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MySQLCompatibleChangeLogSerializer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MysqlAwareCreateTableGenerator.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/MysqlAwareCreateTableGenerator.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/NoopVisitor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/NoopVisitor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/web/filter/PageFragmentCachingFilter$2.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/web/filter/PageFragmentCachingFilter$2.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/web/filter/PageFragmentCachingFilter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/cache/web/filter/PageFragmentCachingFilter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingChangesWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingChangesWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingSQLWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/PendingSQLWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/RecentChangesWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ReflectionUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/ReflectionUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/ScaffoldingGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/ScaffoldingGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ScriptUtils.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/ScriptUtils.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/SecurityTagLib.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/SecurityTagLib.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/Slf4jLogger.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/Slf4jLogger.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/SpringSecurityCoreGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/SpringSecurityCoreGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/SpringSecurityService.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/springsecurity/SpringSecurityService.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableListWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableListWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableWriter.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/grails/plugin/databasemigration/dbdoc/TableWriter.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatDevelopmentRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatDevelopmentRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatExecutionContext.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatExecutionContext.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/TomcatGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/TomcatGrailsPlugin.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatLoader.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatLoader.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServer.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServer.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServerFactory.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/TomcatServerFactory.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatWarRunner.class" afterPath="$PROJECT_DIR$/target/work/plugin-build-classes/org/grails/plugins/tomcat/fork/TomcatWarRunner.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/UglifyJsProcessor.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/asset/pipeline/processors/UglifyJsProcessor.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/plugin-classes/WebxmlGrailsPlugin.class" afterPath="$PROJECT_DIR$/target/work/plugin-classes/WebxmlGrailsPlugin.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__createProduct_closure16.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__createProduct_closure16.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__delete_closure18.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__delete_closure18.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__update_closure17.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__update_closure17.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure12.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure12.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure12_closure19.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure12_closure19.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure12_closure20.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure12_closure20.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__delete_closure18_closure25.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__delete_closure18_closure25.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__delete_closure18_closure26.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__delete_closure18_closure26.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__update_closure17_closure23.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__update_closure17_closure23.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__update_closure17_closure24.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__update_closure17_closure24.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/v/market/AlmacenController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/v/market/AlmacenController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V-Market.iml" afterPath="$PROJECT_DIR$/V-Market.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/almacen/_form.gsp" afterPath="$PROJECT_DIR$/grails-app/views/almacen/_form.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" afterPath="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/almacen/addMapCoordinates.gsp" afterPath="$PROJECT_DIR$/grails-app/views/almacen/addMapCoordinates.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/almacen/create.gsp" afterPath="$PROJECT_DIR$/grails-app/views/almacen/create.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/almacen/edit.gsp" afterPath="$PROJECT_DIR$/grails-app/views/almacen/edit.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/almacen/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/almacen/index.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/vMarket/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/vMarket/index.gsp" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/almacen/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/almacen/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/web.xml.tmp" afterPath="$PROJECT_DIR$/target/work/web.xml.tmp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/work/resources/web.xml" afterPath="$PROJECT_DIR$/target/work/resources/web.xml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="V.iws" />
@@ -156,84 +56,67 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="ProductController.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-0.0" vertical-offset="1972" max-vertical-offset="2975">
-              <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
-      <file leaf-file-name="newProduct.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/product/newProduct.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.142857" vertical-offset="101" max-vertical-offset="2703">
-              <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="43" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Almacen.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
           <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
             <state />
           </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.1698112" vertical-offset="410" max-vertical-offset="833">
-              <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
+            <state vertical-scroll-proportion="-0.6226415" vertical-offset="86" max-vertical-offset="476">
+              <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BuildConfig.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
+      <file leaf-file-name="User.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/User.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1411">
-              <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.943396" vertical-offset="95" max-vertical-offset="578">
+              <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="52" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="DataSource.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/DataSource.groovy">
+      <file leaf-file-name="profile.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/user/profile.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="1071">
-              <caret line="25" column="0" selection-start-line="25" selection-start-column="0" selection-end-line="25" selection-end-column="0" />
+            <state vertical-scroll-proportion="-4.3061223" vertical-offset="1608" max-vertical-offset="2533">
+              <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="googlemaps.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-app/css/googlemaps.css">
+      <file leaf-file-name="UserController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/UserController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="578" max-vertical-offset="1071">
-              <caret line="46" column="0" selection-start-line="46" selection-start-column="0" selection-end-line="46" selection-end-column="0" />
+            <state vertical-scroll-proportion="-5.7391305" vertical-offset="2282" max-vertical-offset="2941">
+              <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="149" selection-end-column="5" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="custom.css" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/web-app/css/custom.css">
+      <file leaf-file-name="register.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/user/register.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="2669" max-vertical-offset="12512">
-              <caret line="173" column="4" selection-start-line="173" selection-start-column="4" selection-end-line="173" selection-end-column="32" />
+            <state vertical-scroll-proportion="-0.4871795" vertical-offset="2342" max-vertical-offset="2924">
+              <caret line="140" column="10" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
               <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="addMapCoordinates.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/addMapCoordinates.gsp">
+      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.5918367" vertical-offset="1371" max-vertical-offset="1802">
-              <caret line="91" column="144" selection-start-line="91" selection-start-column="144" selection-end-line="91" selection-end-column="144" />
+            <state vertical-scroll-proportion="-3.6410255" vertical-offset="1671" max-vertical-offset="2414">
+              <caret line="115" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
               <folding />
             </state>
           </provider>
@@ -242,8 +125,28 @@
       <file leaf-file-name="AlmacenController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/AlmacenController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-70.21739" vertical-offset="0" max-vertical-offset="2278">
-              <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+            <state vertical-scroll-proportion="-11.782609" vertical-offset="1939" max-vertical-offset="2380">
+              <caret line="131" column="47" selection-start-line="131" selection-start-column="47" selection-end-line="131" selection-end-column="47" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="create.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/create.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.43589744" vertical-offset="1785" max-vertical-offset="2448">
+              <caret line="107" column="37" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="addMapCoordinates.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/addMapCoordinates.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-1.8775511" vertical-offset="1387" max-vertical-offset="1802">
+              <caret line="87" column="114" selection-start-line="87" selection-start-column="114" selection-end-line="87" selection-end-column="114" />
               <folding />
             </state>
           </provider>
@@ -252,8 +155,8 @@
       <file leaf-file-name="index.gsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/index.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.7543353" vertical-offset="2561" max-vertical-offset="3400">
-              <caret line="166" column="40" selection-start-line="166" selection-start-column="40" selection-end-line="166" selection-end-column="40" />
+            <state vertical-scroll-proportion="0.7861635" vertical-offset="1943" max-vertical-offset="2720">
+              <caret line="129" column="245" selection-start-line="129" selection-start-column="245" selection-end-line="129" selection-end-column="245" />
               <folding />
             </state>
           </provider>
@@ -267,10 +170,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/sprint2.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/authentication.gsp" />
-        <option value="$PROJECT_DIR$/web-app/js/context.js" />
-        <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/usuario/create.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/v/market/UsuarioController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/v/market/Usuario.groovy" />
@@ -309,14 +208,18 @@
         <option value="$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/auth/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/user/profile.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/product/newProduct.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/almacen/Map.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/vMarket/index.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy" />
         <option value="$PROJECT_DIR$/web-app/css/googlemaps.css" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/product/one_product.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/v/market/AlmacenController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/almacen/addMapCoordinates.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/almacen/create.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/almacen/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/almacen/index.gsp" />
       </list>
     </option>
@@ -326,7 +229,7 @@
   </component>
   <component name="ProjectFrameBounds">
     <option name="x" value="62" />
-    <option name="width" value="1310" />
+    <option name="width" value="1304" />
     <option name="height" value="744" />
   </component>
   <component name="ProjectInspectionProfilesVisibleTreeState">
@@ -719,15 +622,16 @@
       <workItem from="1433810433037" duration="404000" />
       <workItem from="1433812634856" duration="1832000" />
       <workItem from="1433815325219" duration="1276000" />
-      <workItem from="1433983205231" duration="32427000" />
+      <workItem from="1433983205231" duration="35941000" />
+      <workItem from="1434211301464" duration="8589000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="219445000" />
+    <option name="totallyTimeSpent" value="231548000" />
   </component>
   <component name="ToolWindowManager">
-    <frame x="62" y="0" width="1310" height="744" extended-state="0" />
+    <frame x="62" y="0" width="1304" height="744" extended-state="0" />
     <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
@@ -739,17 +643,18 @@
       <window_info id="CDI" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Designer" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Database" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32440946" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Structure" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="Ant Build" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
       <window_info id="UI Designer" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
-      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19319938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
+      <window_info id="Grails View" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.19409938" sideWeight="0.5" order="7" side_tool="false" content_ui="tabs" />
       <window_info id="Debug" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Changes" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
       <window_info id="TODO" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="6" side_tool="false" content_ui="tabs" />
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3133858" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.31181103" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -761,7 +666,6 @@
       <window_info id="Cvs" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="4" side_tool="false" content_ui="tabs" />
       <window_info id="Message" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="0" side_tool="false" content_ui="tabs" />
       <window_info id="Hierarchy" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.25" sideWeight="0.5" order="2" side_tool="false" content_ui="combo" />
-      <window_info id="Console" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32507738" sideWeight="0.5" order="8" side_tool="false" content_ui="tabs" />
       <window_info id="Inspection" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.4" sideWeight="0.5" order="5" side_tool="false" content_ui="tabs" />
       <window_info id="Find" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32861635" sideWeight="0.5" order="1" side_tool="false" content_ui="tabs" />
     </layout>
@@ -827,48 +731,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/template.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="898" max-vertical-offset="1785">
-          <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/css/bootstrap-theme.css">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="8194">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/template.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="898" max-vertical-offset="1785">
-          <caret line="55" column="52" selection-start-line="55" selection-start-column="52" selection-end-line="55" selection-end-column="52" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/web-app/js/context.js">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="102">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/template.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1785">
-          <caret line="20" column="43" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/layouts/template.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="116" max-vertical-offset="1785">
-          <caret line="20" column="43" selection-start-line="16" selection-start-column="3" selection-end-line="20" selection-end-column="43" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/UrlMappings.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="153" max-vertical-offset="323">
@@ -1006,13 +868,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
+      <provider editor-type-id="ResourceBundle">
+        <state />
+      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77393615" vertical-offset="627" max-vertical-offset="1037">
           <caret line="54" column="69" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
         </state>
-      </provider>
-      <provider editor-type-id="ResourceBundle">
-        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/login/denied.gsp">
@@ -1036,20 +898,6 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/register.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.22568807" vertical-offset="1815" max-vertical-offset="2771">
-          <caret line="114" column="191" selection-start-line="114" selection-start-column="191" selection-end-line="114" selection-end-column="191" />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/UserController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.4168126" vertical-offset="1530" max-vertical-offset="2669">
-          <caret line="107" column="56" selection-start-line="107" selection-start-column="56" selection-end-line="107" selection-end-column="56" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.53212523" vertical-offset="153" max-vertical-offset="1088">
@@ -1067,21 +915,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/User.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.46575344" vertical-offset="0" max-vertical-offset="584">
-          <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/AuthController.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="51" max-vertical-offset="731">
           <caret line="3" column="6" selection-start-line="3" selection-start-column="6" selection-end-line="3" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1101,70 +938,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/user/profile.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="2431" max-vertical-offset="2533">
-          <caret line="143" column="7" selection-start-line="143" selection-start-column="7" selection-end-line="143" selection-end-column="7" />
-          <folding>
-            <marker date="1433982793818" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1433982793818" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Product.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="68" max-vertical-offset="646">
-          <caret line="4" column="6" selection-start-line="4" selection-start-column="6" selection-end-line="4" selection-end-column="6" />
-          <folding>
-            <marker date="1433982791344" expanded="true" signature="-1:-1" placeholder="}" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1972" max-vertical-offset="2975">
-          <caret line="117" column="0" selection-start-line="117" selection-start-column="0" selection-end-line="117" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/product/newProduct.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.142857" vertical-offset="101" max-vertical-offset="2703">
-          <caret line="15" column="4" selection-start-line="15" selection-start-column="4" selection-end-line="15" selection-end-column="43" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/conf/BuildConfig.groovy">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="748" max-vertical-offset="1411">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.1698112" vertical-offset="410" max-vertical-offset="833">
-          <caret line="34" column="0" selection-start-line="34" selection-start-column="0" selection-end-line="34" selection-end-column="0" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/vMarket/index.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.2040815" vertical-offset="4839" max-vertical-offset="5338">
-          <caret line="291" column="77" selection-start-line="291" selection-start-column="77" selection-end-line="291" selection-end-column="77" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1172,14 +949,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2669" max-vertical-offset="12512">
           <caret line="173" column="4" selection-start-line="173" selection-start-column="4" selection-end-line="173" selection-end-column="32" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/create.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="748">
-          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
           <folding />
         </state>
       </provider>
@@ -1200,26 +969,165 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Product.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="102" max-vertical-offset="646">
+          <caret line="6" column="15" selection-start-line="6" selection-start-column="15" selection-end-line="6" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-11.73913" vertical-offset="2518" max-vertical-offset="2958">
+          <caret line="165" column="21" selection-start-line="165" selection-start-column="21" selection-end-line="165" selection-end-column="21" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/product/list_product.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="283" max-vertical-offset="697">
+          <caret line="32" column="17" selection-start-line="32" selection-start-column="17" selection-end-line="32" selection-end-column="17" />
+          <folding>
+            <marker date="1433982793735" expanded="true" signature="-1:-1" placeholder="..." />
+          </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/product/one_product.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.11815562" vertical-offset="163" max-vertical-offset="1105">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="100" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/product/newProduct.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.21613833" vertical-offset="843" max-vertical-offset="2703">
+          <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="55" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/product/_one_product.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.48126802" vertical-offset="71" max-vertical-offset="629">
+          <caret line="14" column="10" selection-start-line="14" selection-start-column="10" selection-end-line="14" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/product/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.7348703" vertical-offset="0" max-vertical-offset="748">
+          <caret line="15" column="17" selection-start-line="15" selection-start-column="17" selection-end-line="15" selection-end-column="17" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/vMarket/index.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-2.0816326" vertical-offset="2057" max-vertical-offset="5338">
+          <caret line="127" column="0" selection-start-line="127" selection-start-column="0" selection-end-line="202" selection-end-column="6" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/User.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.943396" vertical-offset="95" max-vertical-offset="578">
+          <caret line="21" column="8" selection-start-line="21" selection-start-column="8" selection-end-line="21" selection-end-column="52" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.6226415" vertical-offset="86" max-vertical-offset="476">
+          <caret line="7" column="15" selection-start-line="7" selection-start-column="15" selection-end-line="7" selection-end-column="15" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/UserController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-5.7391305" vertical-offset="2282" max-vertical-offset="2941">
+          <caret line="145" column="4" selection-start-line="145" selection-start-column="4" selection-end-line="149" selection-end-column="5" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6410255" vertical-offset="2453" max-vertical-offset="2839">
+          <caret line="161" column="0" selection-start-line="161" selection-start-column="0" selection-end-line="161" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/profile.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-4.3061223" vertical-offset="1608" max-vertical-offset="2533">
+          <caret line="107" column="41" selection-start-line="107" selection-start-column="41" selection-end-line="107" selection-end-column="41" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/user/register.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.4871795" vertical-offset="2342" max-vertical-offset="2924">
+          <caret line="140" column="10" selection-start-line="140" selection-start-column="10" selection-end-line="140" selection-end-column="10" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/addMapCoordinates.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.5918367" vertical-offset="1371" max-vertical-offset="1802">
-          <caret line="91" column="144" selection-start-line="91" selection-start-column="144" selection-end-line="91" selection-end-column="144" />
+        <state vertical-scroll-proportion="-1.8775511" vertical-offset="1387" max-vertical-offset="1802">
+          <caret line="87" column="114" selection-start-line="87" selection-start-column="114" selection-end-line="87" selection-end-column="114" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/AlmacenController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-70.21739" vertical-offset="0" max-vertical-offset="2278">
-          <caret line="96" column="13" selection-start-line="96" selection-start-column="13" selection-end-line="96" selection-end-column="13" />
+        <state vertical-scroll-proportion="-11.782609" vertical-offset="1939" max-vertical-offset="2380">
+          <caret line="131" column="47" selection-start-line="131" selection-start-column="47" selection-end-line="131" selection-end-column="47" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/create.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.43589744" vertical-offset="1785" max-vertical-offset="2448">
+          <caret line="107" column="37" selection-start-line="107" selection-start-column="37" selection-end-line="107" selection-end-column="37" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/show.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-3.6410255" vertical-offset="1671" max-vertical-offset="2414">
+          <caret line="115" column="24" selection-start-line="114" selection-start-column="24" selection-end-line="115" selection-end-column="24" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/almacen/index.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.7543353" vertical-offset="2561" max-vertical-offset="3400">
-          <caret line="166" column="40" selection-start-line="166" selection-start-column="40" selection-end-line="166" selection-end-column="40" />
+        <state vertical-scroll-proportion="0.7861635" vertical-offset="1943" max-vertical-offset="2720">
+          <caret line="129" column="245" selection-start-line="129" selection-start-column="245" selection-end-line="129" selection-end-column="245" />
           <folding />
         </state>
       </provider>

@@ -1,4 +1,3 @@
-
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
@@ -98,7 +97,7 @@
                 </div>
                 <div class="col-md-3 profilep">
                     <div  class="panel-body panelAlmacenBody">
-                        <img src="${almacenInstance.urlImageProfile}" class="img-responsive img-rounded" alt="Almacen image" width="200" height="150">
+                        <img src='${createLink(controller:"almacen", action:"showAlmacenImage", id:"${almacen.id}")}' class="img-responsive img-rounded" alt="Almacen image" width="200" height="150">
                     </div>
                 </div>
                 <div class="col-md-8 profilep">
@@ -106,41 +105,14 @@
 
                         <tbody>
                         <tr>
-                            <td>NIT</td>
-                            <td><span class="property-value" aria-labelledby="nit-label"><g:fieldValue bean="${almacenInstance}" field="nit"/></span></td>
-                        </tr>
-                        <tr>
                             <td>Nombre Comercial</td>
                             <td><span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${almacenInstance}" field="name"/></span></td>
                         </tr>
                         <tr>
-                            <td>Razón Social</td>
-                            <td><span class="property-value" aria-labelledby="razonSocial-label"><g:fieldValue bean="${almacenInstance}" field="razonSocial"/></span></td>
-                        </tr>
-                        <tr>
-                            <td>Tipo de Productos</td>
-                            <td><span class="property-value" aria-labelledby="tipoProducto-label"><g:fieldValue bean="${almacenInstance}" field="tipoProducto"/></span></td>
-                        </tr>
-                        <tr>
                             <td>Dirección</td>
-                            <td><span class="property-value" aria-labelledby="address-label"><g:fieldValue bean="${almacenInstance}" field="address"/></span></td>
+                            <td><span class="property-value" aria-labelledby="nit-label"><g:fieldValue bean="${almacenInstance}" field="streetAddress"/></span></td>
                         </tr>
-                        <tr>
-                            <td>Teléfono</td>
-                            <td><span class="property-value" aria-labelledby="telefono-label"><g:fieldValue bean="${almacenInstance}" field="telefono"/></span></td>
-                        </tr>
-                        <tr>
-                            <td>E-mail</td>
-                            <td><span class="property-value" aria-labelledby="email-label"><g:fieldValue bean="${almacenInstance}" field="email"/></span></td>
-                        </tr>
-                        <tr>
-                            <td>Ciudad</td>
-                            <td><span class="property-value" aria-labelledby="ciudad-label"><g:fieldValue bean="${almacenInstance}" field="ciudad"/></span></td>
-                        </tr>
-                        <tr>
-                            <td>País</td>
-                            <td><span class="property-value" aria-labelledby="pais-label"><g:fieldValue bean="${almacenInstance}" field="pais"/></span></td>
-                        </tr>
+                        <img src="https://maps.googleapis.com/maps/api/staticmap?center=40.714728,-73.998672&zoom=12&size=400x400" width="250" height="250"/>
                         </tbody>
                     </table>
                 </div>

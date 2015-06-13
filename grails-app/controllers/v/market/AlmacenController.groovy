@@ -126,4 +126,10 @@ class AlmacenController {
         redirect(action: 'index')
         //chain(action: 'show', model: almacen);
     }
+
+    def showAlmacenImage(){
+        def almacen = Almacen.get(params.id)
+        response.outputStream << almacen.almacenImage
+        response.outputStream.flush()
+    }
 }

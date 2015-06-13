@@ -85,8 +85,8 @@
     <div class="almacenInfo">
         <g:form>
             <div class="name">${almacen.getName()} </div><div class=" glyphicon glyphicon-question-sign glyphiconCustom" ><div class="texthide">Selecciona un punto en el mapa haciendo click derecho</div></div>
-            <div class="ima"><img src="${almacen.getUrl()}" width="100px" height="100px"/> </div>
-            <div class="direccion">${almacen.getAddress()}</div>
+            <div class="ima"><img src='${createLink(controller:"almacen", action:"showAlmacenImage", id:"${almacen.id}")}' width="100px" height="100px"/> </div>
+            <div class="direccion">${almacen.getStreetAddress()}</div>
             <div class="Coord">
                 <div class="inputLat"><g:textField name="almacenLat" field="hola" readonly="true" placeholder="Latitud" value="${almacen.lat}" id="lat">hola</g:textField></div>
                 <div class="inputLng"><g:textField name="almacenLng" field="hola" readonly="true" placeholder="Longitud" value="${almacen.lng}" id="lng">hola</g:textField></div>
