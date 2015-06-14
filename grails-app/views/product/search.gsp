@@ -23,7 +23,7 @@
     <title>Buscar Producto</title>
 
     <script>
-        $('.select').selectpicker({
+        $('.selectpicker').selectpicker({
             style: 'btn-info',
             size: 4
         });
@@ -63,21 +63,27 @@
 </br>
 
 </br>
-<br class="container">
+<div class="container">
 <div class="row" >
-    <div class="col-lg-offset-2 col-lg-6">
-            <input type="text" class="form-control input-lg" placeholder="Ingresa el Producto que Deseas Buscar" size="4">
+    <div class="col-lg-offset-2 col-sm-6">
+        <div class="input-group input-group-lg">
+            <input type="text" class="form-control" placeholder="Busca tu producto !!!">
+            <span class="input-group-btn" id="basic-addon2">
+                <button type="button" class="btn btn-default">
+                    <span class="glyphicon glyphicon-search"></span>
+                </button>
+            </span>
         </div>
-    <div class="col-lg-1">
-        <button type="submit" class="btn btn-default input-lg">Submit</button>
     </div>
 </div>
 </br>
 
-<br class="container" >
+
+
+<div class="container" >
 <div class="row">
     <div class="col-sm-2 sidebar-offcanvas">
-        <select class="selectpicker">
+        <select class="form-control">
             <option>Mustard</option>
             <option>Ketchup</option>
             <option>Relish</option>
@@ -146,6 +152,6 @@
     </div>
 
 </div>
-</br>
+</div>
 </body>
 </html>

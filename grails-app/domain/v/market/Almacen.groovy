@@ -17,6 +17,6 @@ class Almacen {
     }
 
     public String toString(){
-        return name;
+        return name+" ("+streetAddress+")";
     }
 }

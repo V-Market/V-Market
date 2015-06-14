@@ -1,6 +1,6 @@
 package v.market
 
-
+import org.apache.log4j.Category
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
@@ -51,8 +51,9 @@ class ProductController {
     }
 
     def newProduct(){
-
-        respond new Product(params)
+        def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos Varios']
+        def alma = Almacen.list(params)
+        respond new Product(params) , model: [categories:cate,stores:alma]
     }
 
     def upload(Product productInstance){
@@ -66,7 +67,9 @@ class ProductController {
     }
 
     def search(){
-        respond Product.list(params), model:[productInstanceCount: Product.count()]
+        def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos Varios']
+        def alma = Almacen.list(params)
+        respond Product.list(params), model:[productInstanceCount: Product.count(),categories: cate,stores: alma]
     }
 
     def showImage() {
@@ -83,6 +86,9 @@ class ProductController {
         //product.id = product.name+"/"+product.trademark+"/"+product.description+"/"+product.present+"/"+product.size+"/"+product.shops
 
         def f = request.getFile('image')
+
+        def almacen = Almacen.get(params.shops)
+        product.shops=almacen
 
         if(!f.empty) {
             product.imageByte=f.getBytes()

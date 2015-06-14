@@ -55,7 +55,7 @@
 </br>
 </br>
 <div class="row">
-    <div class="col-xs-12 col-sm-8 col-md-6 col-sm-offset-2 col-md-offset-3">
+    <div class="col-xs-12 col-sm-8 col-md-8 col-sm-offset-2 col-md-offset-2">
         <g:form role="form" enctype="multipart/form-data">
             <h2>Crear Producto
                 <br/><br/>
@@ -69,17 +69,19 @@
                     </div>
                 </g:hasErrors>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-7 col-md-7">
                         <div class="form-group">
-                            <input type="text" name="name" id="name" class="form-control input-lg" placeholder="Nombre del Producto" tabindex="1">
+                            <label for="name">Nombre del Producto:</label>
+                            <input type="text" name="name" id="name" class="form-control input-lg" placeholder="Ej: Leche Deslactosada" tabindex="1">
                             <g:hasErrors bean="${product}" field="name">
                                 <p style="color: red"> * Este campo no puede ir vacio</p>
                             </g:hasErrors>
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-5 col-md-5">
                         <div class="form-group">
-                            <input type="text" name="trademark" id="trademark" class="form-control input-lg" placeholder="Marca" tabindex="2">
+                            <label for="trademark">Marca:</label>
+                            <input type="text" name="trademark" id="trademark" class="form-control input-lg" placeholder="Ej: Alpina" tabindex="2">
                             <g:hasErrors bean="${product}" field="trademark">
                                 <p style="color: red"> * Este campo no puede ir vacio</p>
                             </g:hasErrors>
@@ -87,45 +89,53 @@
                     </div>
                 </div>
 
-                <div class="form-group">
-                    <g:textField name="description" id="description" class="form-control input-lg" placeholder="Descripcion" tabindex="3"/>
-                </div>
-
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-7 col-md-7">
                         <div class="form-group">
-                            <input type="text" name="size" id="size" class="form-control input-lg" placeholder="Tamaño" tabindex="4">
+                            <label for="size">Tamaño:</label>
+                            <input type="text" name="size" id="size" class="form-control input-lg" placeholder="Ej: grande / 1 litro / 500 gr" tabindex="4">
                         </div>
                     </div>
-                    <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-12 col-sm-5 col-md-5">
                         <div class="form-group">
-                            <input type="text" name="present" id="present" class="form-control input-lg" placeholder="Presentacion" tabindex="5">
+                            <label for="category">Categoria:</label>
+                            <select type="text" name="category" id="category" formmethod="POST" class="form-control input-lg" tabindex="5">
+                                <g:each in="${categories}" status="i" var="it">
+                                    <option>${it}</option>
+                                </g:each>
+                            </select>
                         </div>
                     </div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-12 col-sm-6 col-md-6">
+                    <div class="col-xs-2 col-sm-1 col-md-1">
                         <div class="form-group">
-                            <input type="text" name="shops" id="shops" formmethod="POST" class="form-control input-lg" placeholder="Lugar" tabindex="6">
-                            <g:hasErrors bean="${product}" field="shops">
-                                <p style="color: red"> * Este campo no puede estar vacio</p>
-                            </g:hasErrors>
-                        </div>
-                    </div>
-                    <div class="col-xs-6 col-sm-3 col-md-3">
-                        <div class="form-group">
-
-                            <p class="text-right" style="font-size: xx-large">
+                        </br>
+                            <p class="text-right" style="font-size: x-large">
                                 $
                             </p>
 
                         </div>
                     </div>
-                    <div class="col-xs-6 col-sm-3 col-md-3">
+                    <div class="col-xs-2 col-sm-2 col-md-2">
                         <div class="form-group">
-                            <input type="number" min="0" name="prize" id="prize" formmethod="POST" class="form-control input-lg" placeholder="Precio" tabindex="7">
+                            <label for="prize">Precio:</label>
+                            <input type="number" min="0" name="prize" id="prize" formmethod="POST" class="form-control input-lg" placeholder="00" tabindex="7">
                             <g:hasErrors bean="${product}" field="prize">
                                 <p style="color: red"> * Ingreso Incorrecto</p>
+                            </g:hasErrors>
+                        </div>
+                    </div>
+                    <div class="col-md-offset-4 col-xs-12 col-sm-5 col-md-5">
+                        <div class="form-group">
+                            <label for="shops">Almacén:</label>
+                            <select type="text" name="shops" id="shops" formmethod="POST" class="form-control input-lg" tabindex="8">
+                                <g:each in="${stores}" status="i" var="it">
+                                    <option value="${it.id}">${it}</option>
+                                </g:each>
+
+                            <g:hasErrors bean="${product}" field="shops">
+                                <p style="color: red"> * Este campo no puede estar vacio</p>
                             </g:hasErrors>
                         </div>
                     </div>
