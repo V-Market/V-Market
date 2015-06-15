@@ -32,41 +32,39 @@
         var events = [];
         var semaforo = false;
         var current = 0;
+        var next = 1;
         $(document).ready(function() {
             if(init){
                 init = false;
                 index = 0;
                 scrollToID(divs[0], 750);
             }
-            $(".standard").click(function(){
-                var index = $(this).attr('data-button');
-                if(index == current) return;
-                $(categories[current]).removeClass();
-                $(categories[index]).removeClass();
-                if(index>current) {
-                    $(categories[current]).addClass('defaultSaleDerecha');
-                    $(categories[index]).addClass('defaultEntraIzquierda');
-                }else{
-                    $(categories[current]).addClass('defaultSaleIzquierda');
-                    $(categories[index]).addClass('defaultEntraDerecha');
+            window.setInterval(function(){
+                $(categories[indexC]).removeClass();
+                $(categories[next]).removeClass();
+                $(categories[indexC]).addClass('defaultSaleDerecha');
+                $(categories[next]).addClass('defaultEntraIzquierda');
+                indexC = next;
+                next = next + 1;
+                if(next==categories.length){
+                    next = 0;
                 }
-                view = categories[index];
-                current = index;
-                var intervalo = setInterval(function(){
+                view = categories[indexC];
+                 var intervalo = setInterval(function(){
                     if(view!=null){
                         for(var j=0;j<categories.length;j++){
                             if(categories[j]==view){
                                 $(view).removeClass().addClass('default');
                                 continue;
-                            }
+                                }
                             $(categories[j]).removeClass();
                             $(categories[j]).addClass('defaultHide');
                         }
-                        view = null;
+                       view = null;
                     }
                     window.clearInterval(intervalo);
-                }, 1000);
-            });
+                 }, 1000);
+            }, 5000);
             $('a[href^="#"]').click(function(){
                 scrollToID(divs[0], 750, 0,0);
                 index = 0;
@@ -83,13 +81,6 @@
                     if(index == 0) {
                         //$('.background-color').css('background-color', 'transparent');
                     }
-                    if(index%2==0) {
-                        var a = $('.Title3').removeClass();
-                        a.addClass('Title');
-                    }else{
-                        var a = $('.Title').removeClass();
-                        a.addClass('Title3');
-                    }
                     break;
                 case 40:
                     if(index != 4) {
@@ -101,13 +92,6 @@
                     }
                     if(index == 1) {
                         //$('.background-color').css('background-color', 'white');
-                    }
-                    if(index%2==0) {
-                        var a = $('.Title3').removeClass();
-                        a.addClass('Title');
-                    }else{
-                        var a = $('.Title').removeClass();
-                        a.addClass('Title3');
                     }
                     break;
             }
