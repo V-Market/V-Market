@@ -2,27 +2,17 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b0df2c-1e1b-417d-b462-b5aaa5ed91a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/Almacen.class" afterPath="$PROJECT_DIR$/target/classes/v/market/Almacen.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure3.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure3.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure3_closure5.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure3_closure5.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure3_closure6.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure3_closure6.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure4.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure4.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure4_closure7.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure1_closure4_closure7.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap$_closure2.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/BootStrap.class" afterPath="$PROJECT_DIR$/target/classes/BootStrap.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__createProduct_closure17.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__createProduct_closure17.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__delete_closure19.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__delete_closure19.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__update_closure18.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_$tt__update_closure18.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure13.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure13_closure20.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure13_closure20.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure13_closure21.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure13_closure21.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__delete_closure19_closure26.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__delete_closure19_closure26.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__delete_closure19_closure27.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__delete_closure19_closure27.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__update_closure18_closure24.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__update_closure18_closure24.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__update_closure18_closure25.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_tt__update_closure18_closure25.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy" afterPath="$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" afterPath="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/product/newProduct.gsp" afterPath="$PROJECT_DIR$/grails-app/views/product/newProduct.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/product/search.gsp" afterPath="$PROJECT_DIR$/grails-app/views/product/search.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
@@ -52,47 +42,63 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="newProduct.gsp" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/product/newProduct.gsp">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.4693878" vertical-offset="2091" max-vertical-offset="2873">
-              <caret line="133" column="75" selection-start-line="133" selection-start-column="75" selection-end-line="133" selection-end-column="75" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="Product.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Product.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-4.4528303" vertical-offset="138" max-vertical-offset="612">
-              <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+            <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="612">
+              <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
               <folding />
             </state>
-          </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
           </provider>
         </entry>
       </file>
       <file leaf-file-name="Almacen.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-3.8113208" vertical-offset="121" max-vertical-offset="476">
+            <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="476">
               <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
               <folding />
             </state>
           </provider>
-          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-            <state />
+        </entry>
+      </file>
+      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.31627908" vertical-offset="1003" max-vertical-offset="1632">
+              <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+              <folding />
+            </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="ProductController.groovy" pinned="false" current-in-tab="true">
+      <file leaf-file-name="newProduct.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/product/newProduct.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2873">
+              <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
+              <folding>
+                <marker date="1434251361234" expanded="true" signature="1200:1334" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="1576:1811" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="2007:7400" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="2365:2535" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="2965:3111" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="3554:3705" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="4589:4710" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="5600:5737" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="6176:6314" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="6375:6525" placeholder="..." />
+                <marker date="1434251361234" expanded="true" signature="6874:6996" placeholder="..." />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="ProductController.groovy" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.75" vertical-offset="1209" max-vertical-offset="3162">
-              <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+            <state vertical-scroll-proportion="-15.652174" vertical-offset="1272" max-vertical-offset="3723">
+              <caret line="96" column="60" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
               <folding>
                 <element signature="e#18#50#0" expanded="true" />
               </folding>
@@ -100,21 +106,11 @@
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="BootStrap.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
-          <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1615">
-              <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
-              <folding />
-            </state>
-          </provider>
-        </entry>
-      </file>
       <file leaf-file-name="search.gsp" pinned="false" current-in-tab="false">
         <entry file="file://$PROJECT_DIR$/grails-app/views/product/search.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-2.6938775" vertical-offset="1670" max-vertical-offset="2754">
-              <caret line="106" column="85" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="85" />
+            <state vertical-scroll-proportion="-3.4693878" vertical-offset="1921" max-vertical-offset="3043">
+              <caret line="123" column="35" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
               <folding />
             </state>
           </provider>
@@ -172,11 +168,11 @@
         <option value="$PROJECT_DIR$/grails-app/views/product/show.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/product/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/product/_form.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/product/search.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/v/market/Product.groovy" />
         <option value="$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/product/newProduct.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/conf/BootStrap.groovy" />
+        <option value="$PROJECT_DIR$/grails-app/views/product/search.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
       </list>
     </option>
@@ -586,16 +582,20 @@
       <workItem from="1434122945843" duration="24572000" />
       <workItem from="1434221180504" duration="2086000" />
       <workItem from="1434224597926" duration="833000" />
-      <workItem from="1434226065017" duration="24451000" />
+      <workItem from="1434226065017" duration="28940000" />
+      <workItem from="1434296654559" duration="28543000" />
+      <workItem from="1434327073625" duration="3571000" />
+      <workItem from="1434335865846" duration="780000" />
+      <workItem from="1434340809740" duration="1921000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="247163000" />
+    <option name="totallyTimeSpent" value="286467000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="-8" y="-8" width="1382" height="754" extended-state="7" />
-    <editor active="false" />
+    <editor active="true" />
     <layout>
       <window_info id="Palette" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="IDEtalk" active="false" anchor="right" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="9" side_tool="false" content_ui="tabs" />
@@ -615,7 +615,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="true" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.23839009" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.29102167" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -824,13 +824,13 @@
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/i18n/messages.properties">
-      <provider editor-type-id="ResourceBundle">
-        <state />
-      </provider>
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.77393615" vertical-offset="627" max-vertical-offset="1037">
           <caret line="54" column="69" selection-start-line="54" selection-start-column="69" selection-end-line="54" selection-end-column="69" />
         </state>
+      </provider>
+      <provider editor-type-id="ResourceBundle">
+        <state />
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/login/denied.gsp">
@@ -906,7 +906,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2533" max-vertical-offset="5321">
           <caret line="163" column="85" selection-start-line="163" selection-start-column="85" selection-end-line="163" selection-end-column="85" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -921,7 +920,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9180723" vertical-offset="3172" max-vertical-offset="12512">
           <caret line="209" column="16" selection-start-line="209" selection-start-column="16" selection-end-line="209" selection-end-column="16" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -929,7 +927,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.9036827" vertical-offset="667" max-vertical-offset="2533">
           <caret line="58" column="47" selection-start-line="58" selection-start-column="47" selection-end-line="58" selection-end-column="47" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -937,10 +934,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="1382" max-vertical-offset="2006">
           <caret line="112" column="0" selection-start-line="112" selection-start-column="0" selection-end-line="112" selection-end-column="0" />
-          <folding>
-            <marker date="1434224391525" expanded="true" signature="-1:-1" placeholder="..." />
-            <marker date="1434224391525" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -948,9 +941,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="481" max-vertical-offset="1105">
           <caret line="59" column="7" selection-start-line="59" selection-start-column="7" selection-end-line="59" selection-end-column="7" />
-          <folding>
-            <marker date="1433638036398" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -958,9 +948,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="128" max-vertical-offset="697">
           <caret line="35" column="7" selection-start-line="35" selection-start-column="7" selection-end-line="35" selection-end-column="7" />
-          <folding>
-            <marker date="1433812340233" expanded="true" signature="-1:-1" placeholder="..." />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -968,7 +955,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="11" max-vertical-offset="629">
           <caret line="14" column="4" selection-start-line="14" selection-start-column="4" selection-end-line="14" selection-end-column="4" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -976,7 +962,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.3469388" vertical-offset="153" max-vertical-offset="935">
           <caret line="10" column="0" selection-start-line="10" selection-start-column="0" selection-end-line="10" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -984,7 +969,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.189066" vertical-offset="124" max-vertical-offset="748">
           <caret line="38" column="0" selection-start-line="38" selection-start-column="0" selection-end-line="38" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -992,7 +976,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.189066" vertical-offset="175" max-vertical-offset="799">
           <caret line="41" column="0" selection-start-line="41" selection-start-column="0" selection-end-line="41" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1000,7 +983,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="1.0341686" vertical-offset="1229" max-vertical-offset="2125">
           <caret line="99" column="0" selection-start-line="99" selection-start-column="0" selection-end-line="99" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1008,7 +990,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-12.565217" vertical-offset="0" max-vertical-offset="595">
           <caret line="17" column="99" selection-start-line="17" selection-start-column="8" selection-end-line="17" selection-end-column="99" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1016,7 +997,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-0.057939913" vertical-offset="945" max-vertical-offset="1411">
           <caret line="54" column="0" selection-start-line="54" selection-start-column="0" selection-end-line="54" selection-end-column="0" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1024,7 +1004,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.58719647" vertical-offset="2199" max-vertical-offset="2652">
           <caret line="145" column="56" selection-start-line="145" selection-start-column="56" selection-end-line="145" selection-end-column="56" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1032,7 +1011,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.5622318" vertical-offset="10" max-vertical-offset="476">
           <caret line="16" column="26" selection-start-line="16" selection-start-column="26" selection-end-line="16" selection-end-column="26" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1040,22 +1018,13 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-1.1158798" vertical-offset="605" max-vertical-offset="1071">
           <caret line="5" column="17" selection-start-line="5" selection-start-column="17" selection-end-line="5" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/product/search.gsp">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-2.6938775" vertical-offset="1670" max-vertical-offset="2754">
-          <caret line="106" column="85" selection-start-line="106" selection-start-column="85" selection-end-line="106" selection-end-column="85" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Product.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-4.4528303" vertical-offset="138" max-vertical-offset="612">
-          <caret line="22" column="15" selection-start-line="22" selection-start-column="15" selection-end-line="22" selection-end-column="15" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="40" max-vertical-offset="476">
+          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
           <folding />
         </state>
       </provider>
@@ -1063,10 +1032,10 @@
         <state />
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Product.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.8113208" vertical-offset="121" max-vertical-offset="476">
-          <caret line="19" column="43" selection-start-line="19" selection-start-column="43" selection-end-line="19" selection-end-column="43" />
+        <state vertical-scroll-proportion="0.0" vertical-offset="289" max-vertical-offset="612">
+          <caret line="17" column="24" selection-start-line="17" selection-start-column="24" selection-end-line="17" selection-end-column="24" />
           <folding />
         </state>
       </provider>
@@ -1076,27 +1045,47 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/product/newProduct.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-3.4693878" vertical-offset="2091" max-vertical-offset="2873">
-          <caret line="133" column="75" selection-start-line="133" selection-start-column="75" selection-end-line="133" selection-end-column="75" />
-          <folding />
+        <state vertical-scroll-proportion="0.0" vertical-offset="2074" max-vertical-offset="2873">
+          <caret line="131" column="28" selection-start-line="131" selection-start-column="28" selection-end-line="131" selection-end-column="28" />
+          <folding>
+            <marker date="1434251361234" expanded="true" signature="1200:1334" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="1576:1811" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="2007:7400" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="2365:2535" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="2965:3111" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="3554:3705" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="4589:4710" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="5600:5737" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="6176:6314" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="6375:6525" placeholder="..." />
+            <marker date="1434251361234" expanded="true" signature="6874:6996" placeholder="..." />
+          </folding>
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+    <entry file="file://$PROJECT_DIR$/grails-app/views/product/search.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="1020" max-vertical-offset="1615">
-          <caret line="65" column="42" selection-start-line="65" selection-start-column="42" selection-end-line="65" selection-end-column="42" />
+        <state vertical-scroll-proportion="-3.4693878" vertical-offset="1921" max-vertical-offset="3043">
+          <caret line="123" column="35" selection-start-line="123" selection-start-column="35" selection-end-line="123" selection-end-column="35" />
           <folding />
         </state>
       </provider>
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.75" vertical-offset="1209" max-vertical-offset="3162">
-          <caret line="90" column="29" selection-start-line="90" selection-start-column="29" selection-end-line="90" selection-end-column="29" />
+        <state vertical-scroll-proportion="-15.652174" vertical-offset="1272" max-vertical-offset="3723">
+          <caret line="96" column="60" selection-start-line="96" selection-start-column="60" selection-end-line="96" selection-end-column="60" />
           <folding>
             <element signature="e#18#50#0" expanded="true" />
           </folding>
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/conf/BootStrap.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.31627908" vertical-offset="1003" max-vertical-offset="1632">
+          <caret line="67" column="47" selection-start-line="67" selection-start-column="47" selection-end-line="67" selection-end-column="47" />
+          <folding />
         </state>
       </provider>
     </entry>

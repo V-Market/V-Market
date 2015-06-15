@@ -2,10 +2,12 @@ package v.market
 
 import org.apache.log4j.Category
 
+import grails.plugin.springsecurity.annotation.Secured
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
+@Secured('permitAll')
 class ProductController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -66,9 +68,40 @@ class ProductController {
             }
     }
 
+    def clicksearch(){
+
+        def listafiltrada = []
+
+        if(params.lookup==""){
+            listafiltrada=Product.list()
+        }
+        else{
+            def cadena = (params.lookup)
+            Product.list().each(){
+                if(it.name.toLowerCase().contains(cadena.toLowerCase())){
+                   listafiltrada << it
+                }
+            }
+        }
+
+        if((params.vcategory) != null){
+            listafiltrada.removeAll{it.category != params.category}
+        }
+        if((params.vstore) != null){
+            listafiltrada.removeAll{it.shops.toString() != params.shops}
+        }
+        if((params.vprize) != null){
+            listafiltrada.removeAll{it.prize > Double.parseDouble(params.prize)}
+        }
+        //chain action:'search', model:[lista:listafiltrada]
+        forward action:'search', model:[lista:listafiltrada]
+
+    }
+
     def search(){
         def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos Varios']
         def alma = Almacen.list(params)
+
         respond Product.list(params), model:[productInstanceCount: Product.count(),categories: cate,stores: alma]
     }
 
