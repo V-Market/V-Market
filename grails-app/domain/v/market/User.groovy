@@ -2,6 +2,8 @@ package v.market
 
 class User extends SecUser{
 
+
+    static hasMany = [carritos: Carrito]
     String passwordConfirm
     String name
     String lastname
@@ -20,8 +22,12 @@ class User extends SecUser{
         birthday(blank: false)
         age()
         userImage(nullable:true, maxSize:1073741824)
+        carritos(nullable: true)
     }
 
+    static mapping = {
+        carritos lazy:false
+    }
     public String toString(){
         return name;
     }

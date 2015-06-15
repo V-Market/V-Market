@@ -1,7 +1,6 @@
 package v.market
 
 import grails.plugin.springsecurity.annotation.Secured
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -67,9 +66,40 @@ class ProductController {
             }
     }
 
+    def clicksearch(){
+
+        def listafiltrada = []
+
+        if(params.lookup==""){
+            listafiltrada=Product.list()
+        }
+        else{
+            def cadena = (params.lookup)
+            Product.list().each(){
+                if(it.name.toLowerCase().contains(cadena.toLowerCase())){
+                   listafiltrada << it
+                }
+            }
+        }
+
+        if((params.vcategory) != null){
+            listafiltrada.removeAll{it.category != params.category}
+        }
+        if((params.vstore) != null){
+            listafiltrada.removeAll{it.shops.toString() != params.shops}
+        }
+        if((params.vprize) != null){
+            listafiltrada.removeAll{it.prize > Double.parseDouble(params.prize)}
+        }
+        //chain action:'search', model:[lista:listafiltrada]
+        forward action:'search', model:[lista:listafiltrada]
+
+    }
+
     def search(){
         def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos Varios']
         def alma = Almacen.list(params)
+
         respond Product.list(params), model:[productInstanceCount: Product.count(),categories: cate,stores: alma]
     }
 
@@ -90,16 +120,15 @@ class ProductController {
         Product productExist = Product.findByNameAndSizeAndTrademark(params.name,params.size,params.trademark)
 
 
-        if(productExist){
-            if(!almacen){
-                productExist.addToStores(new AlmacenInfo(price: params.price,rating: params.rating, almacenId: params.store))
-                if(!image.empty){
+        if(productExist) {
+            if (!almacen) {
+                productExist.addToStores(new AlmacenInfo(price: params.price, rating: params.rating, almacenId: params.store))
+                if (!image.empty) {
                     productExist.imageByte = image.getBytes()
                 }
-                productExist.save flush:true
+                productExist.save flush: true
                 redirect action: "list_product"
-            }
-            else{
+            } else {
                 flash.message = "Este producto ya se encuentra en la base de datos"
                 redirect action: "newProduct"
             }
@@ -186,6 +215,57 @@ class ProductController {
         respond productInstance
     }
     def list_product(){
+        /*println(listProducts.get(1).name)
+        println(listProducts.get(1).category)
+        println(listProducts.get(1).price)*/
         respond Product.all
+    }
+
+    def showProductImage(){
+        def product = Product.get(params.id)
+        response.outputStream << product.imageByte
+        response.outputStream.flush()
+    }
+
+    def addProductToCarrito(){
+        def productInstance = Product.findById(params.id)
+        session.carrito.addToProducts(productInstance).save(flush: true)
+        redirect(controller: 'product', action: 'list_product')
+    }
+
+    def removeProductFromCarrito(){
+        def productInstance = Product.findById(params.id)
+        def carrito = Carrito.findById(session.carrito.id)
+        carrito.removeFromProducts(productInstance)
+        if(!carrito.save(flush: true)){
+            carrito.errors.each {
+                err ->
+                    println(err)
+            }
+        }
+        session.carrito = carrito;
+        redirect(controller: 'product', action: 'list_product')
+    }
+
+    def Salud_y_Aseo(){
+        /*def listProducts = Product.findAllByCategory('Salud y Aseo')
+        println(listProducts.get(1).name)
+        println(listProducts.get(1).category)
+        println(listProducts.get(1).price)
+        redirect(action: "list_product", params: [listProducts])*/
+        respond Product.findAllByCategory('Salud y Aseo')
+    }
+
+    def Licores(){
+        respond Product.findAllByCategory('Licores')
+    }
+    def Refrigerados(){
+        respond Product.findAllByCategory('Refrigerados')
+    }
+    def Frutas_Y_Verduras(){
+        respond Product.findAllByCategory('Frutas y Verduras')
+    }
+    def Alimentos_Y_Bebidas(){
+        respond Product.findAllByCategory('Alimentos y bebidas')
     }
 }

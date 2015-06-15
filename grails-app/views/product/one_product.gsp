@@ -28,9 +28,10 @@
 <g:form role="form">
     <div>
         <a href="">
-            <img src="https://megaricoss.files.wordpress.com/2013/10/gafas-ray-ban-aviator-en-oro-macizo-de-18-quilates-0.jpg" class="img-thumbnail" style="width: 150px; height: auto;" />
+            <img src="https://megaricoss.files.wordpress.com/2013/10/gafas-ray-ban-aviator-en-oro-macizo-de-18-quilates-0.jpg" class="img-thumbnail" style="width: auto; height: 150px;" />
         </a>
     </div>
+
     <br>
     <div>
         <a href="">

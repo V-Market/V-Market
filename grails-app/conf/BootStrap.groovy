@@ -16,6 +16,14 @@ class BootStrap {
         def userRole = SecRole.findByAuthority("ROLE_USER") ?: new SecRole(authority: "ROLE_USER").save()
         def adminRole = SecRole.findByAuthority("ROLE_ADMIN") ?: new SecRole(authority: "ROLE_ADMIN").save()
 
+        def carrito = Carrito.findById(1);
+        if(carrito != null){
+            println("Carrito cargado en Bootstrap")
+        }else {
+            carrito = new Carrito(current: true).save(flush: true);
+            println("Carrito creado en Bootstrap")
+        }
+
         def users = User.list() ?: []
         def stores = Almacen.list() ?: []
 

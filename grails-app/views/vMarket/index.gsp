@@ -123,7 +123,6 @@
 </head>
 
 <body class="wrapper">
-
 <!-- CABEZA DE LA PAGINA -->
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">
     <div class="container">
@@ -153,15 +152,18 @@
                 <!--li><a href="#">Link</a></li>-->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <g:each in="${cate}" var="cat" status="it">
-                            <!--li role="presentation"><a role='menuitem' class="standard" data-button="${it}">${cat[2]}</a></li-->
-                        </g:each>
+                <ul class="dropdown-menu" role="menu">
+                    <li><g:link controller="product" action="Salud_y_Aseo">Salud y Aseo</g:link> </li>
+                    <li><g:link controller="product" action="Licores">Licores</g:link></li>
+                    <li><g:link controller="product" action="Refrigerados">Refrigerados</g:link></li>
+                    <li><g:link controller="product" action="Frutas_Y_Verduras">Frutas y Verduras</g:link></li>
+                    <li><g:link controller="product" action="Alimentos_Y_Bebidas">Alimentos y bebidas</g:link>></li>
+                <%--
                         <li><g:link action="index">Salud y aseo</g:link></li>
                         <li><g:link action="index">Licores</g:link></li>
                         <li><g:link action="index">Refrigerados</g:link></li>
                         <li><g:link action="index">Salud y aseo</g:link></li>
-                        <li><g:link action="index">Salud y aseo</g:link></li>
+                        <li><g:link action="index">Salud y aseo</g:link></li--%>
                     </ul>
                 </li>
             </ul>
@@ -186,7 +188,7 @@
                             <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><g:link controller="user" action="profile" id="${user.id}">Ver perfil</g:link></li>
-                            <li><a href="#">Carrito</a></li>
+                            <li><g:link controller="carrito" action="show" >Carrito</g:link></li>
                             <li class="divider"></li>
                             <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
                         </ul>
