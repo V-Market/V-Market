@@ -2,20 +2,10 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b0df2c-1e1b-417d-b462-b5aaa5ed91a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/Product.class" afterPath="$PROJECT_DIR$/target/classes/v/market/Product.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure13.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_notFound_closure13.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.h2.db" afterPath="$PROJECT_DIR$/devDb.h2.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V-Market-grailsPlugins.iml" afterPath="$PROJECT_DIR$/V-Market-grailsPlugins.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V-Market.iml" afterPath="$PROJECT_DIR$/V-Market.iml" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" afterPath="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/almacen/addMapCoordinates.gsp" afterPath="$PROJECT_DIR$/grails-app/views/almacen/addMapCoordinates.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.lock.db" afterPath="$PROJECT_DIR$/devDb.lock.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.trace.db" afterPath="$PROJECT_DIR$/devDb.trace.db" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/vMarket/index.gsp" afterPath="$PROJECT_DIR$/grails-app/views/vMarket/index.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/carrito/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/carrito/show.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/.idea/workspace.xml" afterPath="$PROJECT_DIR$/.idea/workspace.xml" />
     </list>
     <ignored path="V.iws" />
@@ -56,8 +46,8 @@
       <file leaf-file-name="show.gsp" pinned="false" current-in-tab="true">
         <entry file="file://$PROJECT_DIR$/grails-app/views/carrito/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.8969697" vertical-offset="3274" max-vertical-offset="5695">
-              <caret line="210" column="47" selection-start-line="210" selection-start-column="47" selection-end-line="210" selection-end-column="47" />
+            <state vertical-scroll-proportion="0.6393939" vertical-offset="5620" max-vertical-offset="6018">
+              <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
               <folding />
             </state>
           </provider>
@@ -608,12 +598,12 @@
       <workItem from="1433815325219" duration="1276000" />
       <workItem from="1433983205231" duration="35941000" />
       <workItem from="1434211301464" duration="38113000" />
-      <workItem from="1434335535831" duration="6014000" />
+      <workItem from="1434335535831" duration="13335000" />
     </task>
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="267086000" />
+    <option name="totallyTimeSpent" value="274407000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="62" y="0" width="1304" height="744" extended-state="0" />
@@ -1121,8 +1111,8 @@
     </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/carrito/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.8969697" vertical-offset="3274" max-vertical-offset="5695">
-          <caret line="210" column="47" selection-start-line="210" selection-start-column="47" selection-end-line="210" selection-end-column="47" />
+        <state vertical-scroll-proportion="0.6393939" vertical-offset="5620" max-vertical-offset="6018">
+          <caret line="343" column="0" selection-start-line="343" selection-start-column="0" selection-end-line="343" selection-end-column="0" />
           <folding />
         </state>
       </provider>

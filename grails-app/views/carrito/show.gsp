@@ -89,21 +89,27 @@
                 }
             });
 
-            $('#valueprogress1').change(function(){
-                var value = $('#valueprogress1').val();
-                var toSum = progressbar1 - value;
+            $('#valueprogress1').click(function(){
+                var value = parseInt($('#valueprogress1').val());
+                var toSum = parseInt(progressbar1 - value);
                 var prog2;
                 var prog3;
                 if(toSum==1 || toSum==-1){
-                    prog2 = progressbar2 + toSum;
-                    prog3 = progressbar3;
+                    prog2 = parseInt(progressbar2);
+                    prog3 = parseInt(progressbar3);
+                    if(Math.random()<0.5){
+                        prog3 = prog3 + parseInt(toSum);
+                    }else{
+                        prog2 = prog2 + parseInt(toSum);
+                    }
                 }else{
                     if(toSum % 2 == 0){
-                        prog2 = progressbar2 + (toSum/2);
-                        prog3 = progressbar3 + (toSum/2)
+                        prog2 = parseInt(progressbar2) + parseInt(toSum/2);
+                        prog3 = parseInt(progressbar3) + parseInt(toSum/2);
+
                     }else{
-                        prog2 = progressbar2 + (toSum-1)/2 + 1;
-                        prog3 = progressbar3 + (toSum-1)/2;
+                        prog2 = parseInt(progressbar2) + parseInt((toSum-1)/2) + parseInt(1);
+                        prog3 = parseInt(progressbar3) + parseInt((toSum-1)/2);
                     }
                 }
                 progressbar2 = prog2;
@@ -114,23 +120,29 @@
                 $('#progress3').css("width",prog3+"%");
                 $("#valueprogress3").val(progressbar3);
                 $('#progress1').css("width",value+"%");
+                $("#valueprogress1").val(progressbar1);
             });
 
-            $('#valueprogress2').change(function(){
-                var value = $('#valueprogress2').val();
-                var toSum = progressbar2 - value;
+            $('#valueprogress2').click(function(){
+                var value = parseInt($('#valueprogress2').val());
+                var toSum = parseInt(progressbar2 - value);
                 var prog1;
                 var prog3;
                 if(toSum==1 || toSum==-1){
-                    prog1 = progressbar1 + toSum;
-                    prog3 = progressbar3;
+                    prog1 = parseInt(progressbar1);
+                    prog3 = parseInt(progressbar3);
+                    if(Math.random()<0.5){
+                        prog3 = prog3 + parseInt(toSum);
+                    }else{
+                        prog1 = prog1 + parseInt(toSum);
+                    }
                 }else{
                     if(toSum % 2 == 0){
-                        prog1 = progressbar1 + (toSum/2);
-                        prog3 = progressbar3 + (toSum/2)
+                        prog1 = parseInt(progressbar1) + parseInt(toSum/2);
+                        prog3 = parseInt(progressbar3) + parseInt(toSum/2)
                     }else{
-                        prog1 = progressbar1 + (toSum-1)/2 + 1;
-                        prog3 = progressbar3 + (toSum-1)/2;
+                        prog1 = parseInt(progressbar1) + parseInt((toSum-1)/2) + parseInt(1);
+                        prog3 = parseInt(progressbar3) + parseInt((toSum-1)/2);
                     }
                 }
                 progressbar2 = value;
@@ -141,23 +153,29 @@
                 $('#progress3').css("width",prog3+"%");
                 $("#valueprogress3").val(progressbar3);
                 $('#progress2').css("width",value+"%");
+                $("#valueprogress2").val(progressbar2);
             });
 
-            $('#valueprogress3').change(function(){
-                var value = $('#valueprogress3').val();
-                var toSum = progressbar3 - value;
+            $('#valueprogress3').click(function(){
+                var value = parseInt($('#valueprogress3').val());
+                var toSum = parseInt(progressbar3 - value);
                 var prog1;
                 var prog2;
                 if(toSum==1 || toSum==-1){
-                    prog2 = progressbar2 + toSum;
-                    prog1 = progressbar1;
+                    prog2 = parseInt(progressbar2);
+                    prog1 = parseInt(progressbar1);
+                    if(Math.random()<0.5){
+                        prog1 = prog1 + parseInt(toSum);
+                    }else{
+                        prog2 = prog2 + parseInt(toSum);
+                    }
                 }else{
                     if(toSum % 2 == 0){
-                        prog2 = progressbar2 + (toSum/2);
-                        prog1 = progressbar1 + (toSum/2)
+                        prog2 = parseInt(progressbar2) + parseInt(toSum/2);
+                        prog1 = parseInt(progressbar1) + parseInt(toSum/2)
                     }else{
-                        prog2 = progressbar2 + (toSum-1)/2 + 1;
-                        prog1 = progressbar1 + (toSum-1)/2;
+                        prog2 = parseInt(progressbar2) + parseInt((toSum-1)/2) + parseInt(1);
+                        prog1 = parseInt(progressbar1) + parseInt((toSum-1)/2);
                     }
                 }
                 progressbar2 = prog2;
@@ -168,6 +186,7 @@
                 $('#progress1').css("width",prog1+"%");
                 $("#valueprogress1").val(progressbar1);
                 $('#progress3').css("width",value+"%");
+                $("#valueprogress3").val(progressbar3);
             });
 
             $('.buttonsucess').click(function () {
@@ -286,8 +305,8 @@
     <div class="titulo">Criterios de Selección</div>
     <br>
     <br>
-    <div class="row">
-        <div class="col-md-12" style="text-align: center">
+    <div class="row" style="padding-left: 30px; padding-right: 30px;">
+        <div class="col-md-12" style="text-align: center;">
             <div class="progress" style="width: 100%">
                 <div class="progress-bar progress-bar-success" role="progressbar" style="width:33%" id="progress1">
                     Distancia
@@ -301,15 +320,15 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="padding-left: 30px; padding-right: 30px;">
         <div class="col-md-4">
-            <g:field type="number" min="0" max="100" name="valueprogress1" value="33"/>
+            <g:field type="number" min="0" max="100" name="valueprogress1" value="33" class="form-control"/>
         </div>
         <div class="col-md-4">
-            <g:field type="number" min="0" max="100" name="valueprogress2" value="33"/>
+            <g:field type="number" min="0" max="100" name="valueprogress2" value="33" class="form-control"/>
         </div>
         <div class="col-md-4">
-            <g:field type="number" min="0" max="100" name="valueprogress3" value="34"/>
+            <g:field type="number" min="0" max="100" name="valueprogress3" value="34" class="form-control"/>
         </div>
     </div>
     <br>
