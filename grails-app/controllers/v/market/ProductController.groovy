@@ -205,6 +205,9 @@ class ProductController {
         respond productInstance
     }
     def list_product(){
+        /*println(listProducts.get(1).name)
+        println(listProducts.get(1).category)
+        println(listProducts.get(1).price)*/
         respond Product.all
     }
 
@@ -232,5 +235,26 @@ class ProductController {
         }
         session.carrito = carrito;
         redirect(controller: 'product', action: 'list_product')
+    }
+
+    def Salud_y_Aseo(){
+        /*def listProducts = Product.findAllByCategory('Salud y Aseo')
+        println(listProducts.get(1).name)
+        println(listProducts.get(1).category)
+        println(listProducts.get(1).price)
+        redirect(action: "list_product", params: [listProducts])*/
+        respond Product.findAllByCategory('Salud y Aseo')
+    }
+    def Licores(){
+        respond Product.findAllByCategory('Licores')
+    }
+    def Refrigerados(){
+        respond Product.findAllByCategory('Refrigerados')
+    }
+    def Frutas_Y_Verduras(){
+        respond Product.findAllByCategory('Frutas y Verduras')
+    }
+    def Alimentos_Y_Bebidas(){
+        respond Product.findAllByCategory('Alimentos y bebidas')
     }
 }

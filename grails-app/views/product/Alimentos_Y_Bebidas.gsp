@@ -1,9 +1,10 @@
 <%--
   Created by IntelliJ IDEA.
-  User: Jenny
-  Date: 8/06/15
-  Time: 14:05
+  User: johnd_000
+  Date: 15/06/2015
+  Time: 12:05 PM
 --%>
+
 
 <%@ page contentType="text/html;charset=UTF-8" %>
 <html>
@@ -120,8 +121,8 @@
     </div>
 </nav>
 
-    <div class="container">
-        <div class="row">
+<div class="container">
+    <div class="row">
         <div class="h_line"></div>
         <g:each in="${productInstanceList}" status="i" var="productInstance">
             <div class="col-md-3">

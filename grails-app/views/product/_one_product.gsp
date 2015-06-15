@@ -10,7 +10,7 @@
 
 <div class="card card-container-register" style="color: #000000">
     <a href="">
-        <img class="img-thumbnail center-block" src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" width='150'/>
+        <img class="img-thumbnail center-block" src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" style="width: auto; height: 150px" />
     </a>
     <hr style="background-color: #000000;height: 1px">
     <div class="text-center">
