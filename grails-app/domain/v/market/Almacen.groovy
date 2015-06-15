@@ -8,6 +8,8 @@ class Almacen {
     String lat;
     String lng;
 
+    static hasMany = [products: Product]
+
     static constraints = {
         name(blank: false)
         almacenImage(nullable:true, maxSize:1073741824)

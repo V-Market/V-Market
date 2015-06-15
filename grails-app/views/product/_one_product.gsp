@@ -16,9 +16,9 @@
         <div class="text-center">
             <p><strong><g:fieldValue bean="${productInstance}" field="name"/></strong></p>
             <p><g:fieldValue bean="${productInstance}" field="trademark"/> </p>
-            <p><strong>$ </strong><g:fieldValue bean="${productInstance}" field="price"/> </p>
+            <p><strong>$ </strong><g:fieldValue bean="${productInstance}" field="stores"/> </p>
         </div>
-        <input class="product-rate" data-readonly="true" value="<g:fieldValue bean="${productInstance}" field="rating"/>">
+        <input class="product-rate" data-readonly="true" value="<g:fieldValue bean="${productInstance}" field="name"/>">
     </div>
 
 

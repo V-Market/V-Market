@@ -84,28 +84,37 @@ class ProductController {
 
         product.clearErrors()
 
-        def f = request.getFile('image')
+        def image = request.getFile('image')
+        if(!image.empty)product.imageByte=image.getBytes()
+        def almacen = AlmacenInfo.findByAlmacenId(params.store)
+        Product productExist = Product.findByNameAndSizeAndTrademark(params.name,params.size,params.trademark)
 
-        def almacen = Almacen.get(params.shops)
-        product.shops=almacen
 
-        if(!f.empty) {
-
-            //flash.message = "No se ha subido ninguna imagen"
-            //redirect(controller: "product")
+        if(productExist){
+            if(!almacen){
+                productExist.addToStores(new AlmacenInfo(price: params.price,rating: params.rating, almacenId: params.store))
+                if(!image.empty){
+                    productExist.imageByte = image.getBytes()
+                }
+                productExist.save flush:true
+                redirect action: "list_product"
+            }
+            else{
+                flash.message = "Este producto ya se encuentra en la base de datos"
+                redirect action: "newProduct"
+            }
         }
-        if(f.empty){
+        else if(image.empty){
             flash.message = "No ha subido ninguna imagen del producto"
             redirect(action: "newProduct")
         }
-        else if(!(f.contentType.equals("image/jpeg") || f.contentType.equals("image/png") ) ){
+        else if(!(image.contentType.equals("image/jpeg") || image.contentType.equals("image/png") ) ){
             flash.message = "El tipo de archivo debe ser JPEG o PNG"
             redirect(action: "newProduct")
         }
         else if (product.validate()) {
 
-            product.imageByte=f.getBytes()
-
+            product.addToStores(new AlmacenInfo(price: params.price,rating: params.rating, almacenId: params.store))
             println("Creating product ${params.name}")
             product.save(flush: true)
 
