@@ -106,6 +106,7 @@
                         </ul>
                     </li>
                 </ul>
+
             </sec:ifLoggedIn><!--
             <ul class="nav navbar-nav navbar-right">
                 <li><a href="user/register"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>

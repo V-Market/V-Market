@@ -245,6 +245,7 @@ class ProductController {
         redirect(action: "list_product", params: [listProducts])*/
         respond Product.findAllByCategory('Salud y Aseo')
     }
+
     def Licores(){
         respond Product.findAllByCategory('Licores')
     }

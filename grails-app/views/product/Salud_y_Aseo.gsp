@@ -33,7 +33,6 @@
     </script>
 
 </head>
-
 <body class="background-color scroll">
 <!-- CABEZA DE LA PAGINA -->
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">

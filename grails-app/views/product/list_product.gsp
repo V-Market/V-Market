@@ -64,6 +64,7 @@
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
+
                         <li><g:link controller="product" action="Salud_y_Aseo">Salud y Aseo</g:link> </li>
                         <li><g:link controller="product" action="Licores">Licores</g:link></li>
                         <li><g:link controller="product" action="Refrigerados">Refrigerados</g:link></li>

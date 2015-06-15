@@ -123,7 +123,6 @@
 </head>
 
 <body class="wrapper">
-
 <!-- CABEZA DE LA PAGINA -->
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">
     <div class="container">

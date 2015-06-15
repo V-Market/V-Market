@@ -120,7 +120,6 @@
         </div><!--/.navbar-collapse-->
     </div>
 </nav>
-
 <div class="container">
     <div class="row">
         <div class="h_line"></div>

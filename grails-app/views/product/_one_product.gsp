@@ -9,6 +9,7 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <div class="card card-container-register" style="color: #000000">
+
     <a href="">
         <img class="img-thumbnail center-block" src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" style="width: auto; height: 150px" />
     </a>
