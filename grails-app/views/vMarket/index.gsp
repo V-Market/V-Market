@@ -156,7 +156,12 @@
                     <ul class="dropdown-menu" role="menu">
                         <g:each in="${cate}" var="cat" status="it">
                             <li role="presentation"><a role='menuitem' class="standard" data-button="${it}">${cat[2]}</a></li>
-                        </g:each>
+                        </g:each><!--
+                        <li><g:link action="index">Salud y aseo</g:link></li>
+                        <li><g:link action="index">Licores</g:link></li>
+                        <li><g:link action="index">Refrigerados</g:link></li>
+                        <li><g:link action="index">Salud y aseo</g:link></li>
+                        <li><g:link action="index">Salud y aseo</g:link></li-->
                     </ul>
                 </li>
             </ul>
@@ -181,7 +186,7 @@
                             <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><g:link controller="user" action="profile" id="${user.id}">Ver perfil</g:link></li>
-                            <li><a href="#">Carrito</a></li>
+                            <li><g:link controller="carrito" action="show" >Carrito</g:link></li>
                             <li class="divider"></li>
                             <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
                         </ul>

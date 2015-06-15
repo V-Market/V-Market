@@ -1,6 +1,6 @@
 package v.market
 
-import org.apache.log4j.Category
+import grails.plugin.springsecurity.annotation.Secured
 
 import grails.plugin.springsecurity.annotation.Secured
 import static org.springframework.http.HttpStatus.*
@@ -53,7 +53,7 @@ class ProductController {
     }
 
     def newProduct(){
-        def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos Varios']
+        def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos y bebidas']
         def alma = Almacen.list(params)
         respond new Product(params) , model: [categories:cate,stores:alma]
     }
@@ -116,8 +116,6 @@ class ProductController {
 
         product.clearErrors()
 
-        //product.id = product.name+"/"+product.trademark+"/"+product.description+"/"+product.present+"/"+product.size+"/"+product.shops
-
         def f = request.getFile('image')
 
         def almacen = Almacen.get(params.shops)
@@ -125,22 +123,21 @@ class ProductController {
 
         if(!f.empty) {
             product.imageByte=f.getBytes()
-            //flash.message = "No se ha subido ninguna imagen"
-            //redirect(controller: "product")
         }
-        if(!(f.contentType.equals("image/jpeg") || f.contentType.equals("image/png") ) ){
+        if(f.empty){
+            flash.message = "No ha subido ninguna imagen del producto"
+            redirect(action: "newProduct")
+        }
+        else if(!(f.contentType.equals("image/jpeg") || f.contentType.equals("image/png") ) ){
             flash.message = "El tipo de archivo debe ser JPEG o PNG"
             redirect(action: "newProduct")
         }
         else if (product.validate()) {
 
-
-
             println("Creating product ${params.name}")
             product.save(flush: true)
 
-
-            redirect action: "newProduct"
+            redirect action: "list_product"
 
         } else {
             println("Error in account bootstrap for ${params.product}")
@@ -148,7 +145,7 @@ class ProductController {
                 err ->
                     println(err)
             }
-            render view: 'newProduct', model: [product: product]
+            forward action: 'newProduct', model: [product: product]
         }
     }
 
@@ -209,5 +206,31 @@ class ProductController {
     }
     def list_product(){
         respond Product.all
+    }
+
+    def showProductImage(){
+        def product = Product.get(params.id)
+        response.outputStream << product.imageByte
+        response.outputStream.flush()
+    }
+
+    def addProductToCarrito(){
+        def productInstance = Product.findById(params.id)
+        session.carrito.addToProducts(productInstance).save(flush: true)
+        redirect(controller: 'product', action: 'list_product')
+    }
+
+    def removeProductFromCarrito(){
+        def productInstance = Product.findById(params.id)
+        def carrito = Carrito.findById(session.carrito.id)
+        carrito.removeFromProducts(productInstance)
+        if(!carrito.save(flush: true)){
+            carrito.errors.each {
+                err ->
+                    println(err)
+            }
+        }
+        session.carrito = carrito;
+        redirect(controller: 'product', action: 'list_product')
     }
 }

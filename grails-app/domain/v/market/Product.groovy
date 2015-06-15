@@ -1,21 +1,23 @@
 package v.market
 
 class Product {
+
     String name
-    //String id
     String trademark
     String size
-    double prize
+    double price
     Almacen shops
     String category
+    double rating
     byte[] imageByte
 
     static constraints = {
-        name(blank:false)
-        //id(blank: false, unique: true)
+        name(blank:false, unique: 'shops')
+        rating(min: (double)1,max:(double)5)
+        price(blank: false)
         trademark(blank:false)
-        prize(blank: false)
-        shops(null:true)
+        shops(nullable: false)
+        category(blank: false, inList: ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos y bebidas'])
         imageByte(blank:false , maxSize:1073741824)
     }
 

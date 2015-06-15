@@ -5,27 +5,30 @@
   Time: 6:19 PM
 --%>
 
+
 <%@ page contentType="text/html;charset=UTF-8" %>
 
-<%--<g:form role="form">--%>
-    <div class="center">
-        <a href="">
-            <img  src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" width='260' height="200"/>
-        </a>
+<div class="card card-container-register" style="color: #000000">
+    <a href="">
+        <img class="img-thumbnail center-block" src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" width='150'/>
+    </a>
+    <hr style="background-color: #000000;height: 1px">
+    <div class="text-center">
+        <p><strong><g:fieldValue bean="${productInstance}" field="name"/></strong></p>
+        <p><g:fieldValue bean="${productInstance}" field="trademark"/> </p>
+        <p><strong>$ </strong><g:fieldValue bean="${productInstance}" field="price"/> </p>
     </div>
+    <input class="product-rate" data-readonly="true" value="<g:fieldValue bean="${productInstance}" field="rating"/>">
     <br>
-    <div class="h_line"></div>
-    <div>
-        <p class="text-center" style="color: #006dba">
-            <span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${productInstance}" field="name"/></span>
-        </p>
+    <g:form>
+        <g:hiddenField name="id" value="${productInstance.id}"/>
+        <g:if test="${session.carrito.products.find{it.id==productInstance.id} == null}">
+            <g:actionSubmit action="addProductToCarrito" class="btn btn-success" value="Agregar Producto"><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>
+        </g:if>
+        <g:else>
+            <g:actionSubmit action="removeProductFromCarrito" class="btn btn-danger" value="Eliminar Producto"><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>
+        </g:else>
+    </g:form>
+</div>
 
-        <p class="text-center" style="color: #000000">
-            <span class="property-value" aria-labelledby="trademark-label"><g:fieldValue bean="${productInstance}" field="trademark"/></span>
-        </p>
 
-        <p class="text-center" style="color: #3e8f3e">
-            <span class="property-value" aria-labelledby="prize-label"><g:fieldValue bean="${productInstance}" field="prize"/></span> COP
-        </p>
-    </div>
-<%--</g:form>--%>
