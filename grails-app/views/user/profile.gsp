@@ -77,7 +77,7 @@
                             <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><g:link controller="user" action="profile">Ver perfil</g:link></li>
-                            <li><a href="#">Carrito</a></li>
+                            <li><g:link controller="carrito" action="show">Carrito</g:link></li>
                             <li class="divider"></li>
                             <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
                         </ul>
@@ -136,6 +136,8 @@
             <hr/>
             <h3>Carritos frecuentes</h3>
             <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
+            <div> Current Carrito</div>
+            <div>${session.carrito.getProducts()}</div>
         </div>
     </div>
 </div>

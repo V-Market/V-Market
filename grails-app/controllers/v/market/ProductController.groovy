@@ -167,4 +167,30 @@ class ProductController {
     def list_product(){
         respond Product.all
     }
+
+    def showProductImage(){
+        def product = Product.get(params.id)
+        response.outputStream << product.imageByte
+        response.outputStream.flush()
+    }
+
+    def addProductToCarrito(){
+        def productInstance = Product.findById(params.id)
+        session.carrito.addToProducts(productInstance).save(flush: true)
+        redirect(controller: 'product', action: 'list_product')
+    }
+
+    def removeProductFromCarrito(){
+        def productInstance = Product.findById(params.id)
+        def carrito = Carrito.findById(session.carrito.id)
+        carrito.removeFromProducts(productInstance)
+        if(!carrito.save(flush: true)){
+            carrito.errors.each {
+                err ->
+                    println(err)
+            }
+        }
+        session.carrito = carrito;
+        redirect(controller: 'product', action: 'list_product')
+    }
 }

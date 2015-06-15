@@ -18,7 +18,7 @@
     <g:javascript src="bootstrap.min.js" />
 
     <style type="text/css">
-    html, body, #map-canvas { height: 100%; margin: 0; padding: 0;}
+    html, body, #map-canv { height: 100%; margin: 0; padding: 0;}
     </style>
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHnIu6wKpmVEuMWFKM6fO98apSBsG-tHk&libraries=places&sensor=false">
