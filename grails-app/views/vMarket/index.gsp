@@ -155,8 +155,13 @@
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
                         <g:each in="${cate}" var="cat" status="it">
-                            <li role="presentation"><a role='menuitem' class="standard" data-button="${it}">${cat[2]}</a></li>
+                            <!--li role="presentation"><a role='menuitem' class="standard" data-button="${it}">${cat[2]}</a></li-->
                         </g:each>
+                        <li><g:link action="index">Salud y aseo</g:link></li>
+                        <li><g:link action="index">Licores</g:link></li>
+                        <li><g:link action="index">Refrigerados</g:link></li>
+                        <li><g:link action="index">Salud y aseo</g:link></li>
+                        <li><g:link action="index">Salud y aseo</g:link></li>
                     </ul>
                 </li>
             </ul>

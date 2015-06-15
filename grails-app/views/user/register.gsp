@@ -14,7 +14,12 @@
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
     <g:javascript src="jquery-1.11.2.min.js" />
     <g:javascript src="bootstrap.min.js" />
+    <g:javascript src="bootstrap-filestyle.js"/>
     <g:javascript src="context.js" />
+
+    <script>
+        $(":file").filestyle({buttonText: "Find file"});
+    </script>
 
     <title>Registrate</title>
 
@@ -120,8 +125,7 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12">
                         <div class="form-group">
-                            <label for="userImage">Imagen de pefil (Opcional)</label>
-                            <input type="file" name="userImage" id="userImage" formmethod="POST" class="btn btn-link form-control" placeholder="Imagen de perfil" tabindex="6">
+                            <input type="file"  name="userImage" id="userImage" formmethod="POST" class="filestyle" data-buttonText=" Sube una imagen (Opcional) " data-buttonName="btn-primary" tabindex="6">
                         </div>
                     </div>
                 </div>

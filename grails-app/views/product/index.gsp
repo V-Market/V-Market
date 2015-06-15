@@ -95,11 +95,33 @@
 
                                                         <tr>
                                                             <td>Precio</td>
-                                                            <td><span class="property-value" aria-labelledby="prize-label"><g:fieldValue bean="${productInstance}" field="prize"/></span></td>
+                                                            <td><span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${productInstance}" field="price"/></span></td>
                                                         </tr>
+
+                                                        <tr>
+                                                            <td>Almacen</td>
+                                                            <td><span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${productInstance}" field="shops"/></span></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Categoria</td>
+                                                            <td><span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${productInstance}" field="category"/></span></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Rating</td>
+                                                            <td><span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${productInstance}" field="rating"/></span></td>
+                                                        </tr>
+
+                                                        <tr>
+                                                            <td>Tamaño</td>
+                                                            <td><span class="property-value" aria-labelledby="price-label"><g:fieldValue bean="${productInstance}" field="size"/></span></td>
+                                                        </tr>
+
 
                                                         </tbody>
                                                     </table>
+                                                    <g:render template="one_product"/>
                                                 </div>
                                             </div>
 

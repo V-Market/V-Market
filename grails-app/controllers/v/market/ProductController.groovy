@@ -1,11 +1,12 @@
 package v.market
 
-import org.apache.log4j.Category
+import grails.plugin.springsecurity.annotation.Secured
 
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
+@Secured('permitAll')
 class ProductController {
 
     static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
@@ -51,7 +52,7 @@ class ProductController {
     }
 
     def newProduct(){
-        def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos Varios']
+        def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos y bebidas']
         def alma = Almacen.list(params)
         respond new Product(params) , model: [categories:cate,stores:alma]
     }
@@ -83,31 +84,32 @@ class ProductController {
 
         product.clearErrors()
 
-        //product.id = product.name+"/"+product.trademark+"/"+product.description+"/"+product.present+"/"+product.size+"/"+product.shops
-
         def f = request.getFile('image')
 
         def almacen = Almacen.get(params.shops)
         product.shops=almacen
 
         if(!f.empty) {
-            product.imageByte=f.getBytes()
+
             //flash.message = "No se ha subido ninguna imagen"
             //redirect(controller: "product")
         }
-        if(!(f.contentType.equals("image/jpeg") || f.contentType.equals("image/png") ) ){
+        if(f.empty){
+            flash.message = "No ha subido ninguna imagen del producto"
+            redirect(action: "newProduct")
+        }
+        else if(!(f.contentType.equals("image/jpeg") || f.contentType.equals("image/png") ) ){
             flash.message = "El tipo de archivo debe ser JPEG o PNG"
             redirect(action: "newProduct")
         }
         else if (product.validate()) {
 
-
+            product.imageByte=f.getBytes()
 
             println("Creating product ${params.name}")
             product.save(flush: true)
 
-
-            redirect action: "newProduct"
+            redirect action: "list_product"
 
         } else {
             println("Error in account bootstrap for ${params.product}")
@@ -115,7 +117,7 @@ class ProductController {
                 err ->
                     println(err)
             }
-            render view: 'newProduct', model: [product: product]
+            forward action: 'newProduct', model: [product: product]
         }
     }
 
