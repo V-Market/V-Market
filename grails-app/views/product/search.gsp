@@ -6,7 +6,7 @@
 --%>
 
 <%@ page contentType="text/html;charset=UTF-8" %>
-<html>
+<html xmlns="http://www.w3.org/1999/html">
 <head>
     <meta charset="utf-8">
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
@@ -22,17 +22,9 @@
 
     <title>Buscar Producto</title>
 
-    <script>
-        $('.selectpicker').selectpicker({
-            style: 'btn-info',
-            size: 4
-        });
-    </script>
-
 </head>
 
 <body class="body">
-<br class="container">
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">
     <div class="container">
         <div class="navbar-header">
@@ -62,35 +54,60 @@
 </br>
 </br>
 
-</br>
-<div class="container">
+</br></br>
+<div class="container"><g:form>
 <div class="row" >
-    <div class="col-lg-offset-2 col-sm-6">
+    <div class="col-xs-2 col-sm-2 col-md-2">
+        <h3>
+            Selecciona de las opciones que deseas buscar:
+        </h3>
+    </div>
+    <div class="col-lg-offset-1 col-sm-6">
+        </br>
         <div class="input-group input-group-lg">
-            <input type="text" class="form-control" placeholder="Busca tu producto !!!">
+            <input type="text" class="form-control" name="lookup" id="lookup" placeholder="Busca tu producto !!!">
             <span class="input-group-btn" id="basic-addon2">
-                <button type="button" class="btn btn-default">
-                    <span class="glyphicon glyphicon-search"></span>
-                </button>
+                <g:actionSubmitImage value="Loop" type="button" class="btn btn-default" action="clicksearch" src="${resource(dir: 'images', file: 'lupa.png')}"/>
+                    <!--<span class="glyphicon glyphicon-search"></span>-->
             </span>
         </div>
+
     </div>
 </div>
 </br>
 
-
-
-<div class="container" >
 <div class="row">
-    <div class="col-sm-2 sidebar-offcanvas">
-        <select class="form-control">
-            <option>Mustard</option>
-            <option>Ketchup</option>
-            <option>Relish</option>
-        </select>
+    <div class="col-xs-2 col-sm-2 col-md-2">
+
+        <div class="form-group">
+            <input type="checkbox" name="vcategory" id="vcategory"/>
+
+            <label for="category">Categoria:</label>
+            <select type="text" name="category" id="category" formmethod="POST" class="form-control input-lg" tabindex="1">
+                <g:each in="${categories}" status="i" var="it">
+                    <option>${it}</option>
+                </g:each>
+            </select>
+        </div>
+        </br>
+        <div class="form-group">
+            <input type="checkbox" name="vstore" id="vstore">
+            <label for="shops">Almacén:</label>
+            <select type="text" name="shops" id="shops" formmethod="POST" class="form-control input-lg" tabindex="2">
+                <g:each in="${stores}" status="i" var="it">
+                    <option>${it}</option>
+                </g:each>
+            </select>
+        </div>
+        </br>
+            <div class="form-group">
+                <input type="checkbox" name="vprize" id="vprize">
+                <label for="prize">Máximo Precio:</label>
+                <input type="number" min="0" name="prize" id="prize" formmethod="POST" class="form-control input-lg" placeholder="00" tabindex="3">
+            </div>
     </div>
 
-    <div class="col-sm-10">
+    <div class="col-xs-10 col-sm-10 col-md-10">
         <div class="thumbnail">
 
             <div class="container" >
@@ -104,7 +121,7 @@
                 </g:if>--%>
                 <%--<ul class="list-group ">--%>
             <div id="list" style="max-height: 300px;" class="overflow-y-scroll">
-                <g:each in="${productInstanceList}" status="i" var="productInstance">
+                <g:each in="${lista}" status="i" var="productInstance">
                 <%--<li class="list-group-item list-group-item-transparent">--%>
 
 
@@ -151,7 +168,7 @@
         </div>
     </div>
 
-</div>
+</div></g:form>
 </div>
 </body>
 </html>

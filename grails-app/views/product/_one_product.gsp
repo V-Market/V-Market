@@ -9,16 +9,17 @@
 <%@ page contentType="text/html;charset=UTF-8" %>
 
 <div class="card card-container-register" style="color: #000000">
+
     <a href="">
-        <img class="img-thumbnail center-block" src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" width='150'/>
+        <img class="img-thumbnail center-block" src="${createLink(controller:'product', action:'showImage', id:"${productInstance.id}")}" style="width: auto; height: 150px" />
     </a>
     <hr style="background-color: #000000;height: 1px">
     <div class="text-center">
         <p><strong><g:fieldValue bean="${productInstance}" field="name"/></strong></p>
         <p><g:fieldValue bean="${productInstance}" field="trademark"/> </p>
-        <p><strong>$ </strong><g:fieldValue bean="${productInstance}" field="price"/> </p>
+        <p><strong>$ </strong><g:fieldValue bean="${productInstance}" field="stores"/> </p>
     </div>
-    <input class="product-rate" data-readonly="true" value="<g:fieldValue bean="${productInstance}" field="rating"/>">
+    <!--input class="product-rate" data-readonly="true" value="<g:fieldValue bean="${productInstance}" field="name"/>"-->
     <br>
     <g:form>
         <g:hiddenField name="id" value="${productInstance.id}"/>

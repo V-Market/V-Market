@@ -5,18 +5,14 @@ class Product {
     String name
     String trademark
     String size
-    double price
-    Almacen shops
     String category
-    double rating
     byte[] imageByte
 
+    static hasMany = [stores:AlmacenInfo]
+
     static constraints = {
-        name(blank:false, unique: 'shops')
-        rating(min: (double)1,max:(double)5)
-        price(blank: false)
+        name(blank:false)
         trademark(blank:false)
-        shops(nullable: false)
         category(blank: false, inList: ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos y bebidas'])
         imageByte(blank:false , maxSize:1073741824)
     }

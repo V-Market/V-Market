@@ -1,7 +1,6 @@
 package v.market
 
 import grails.plugin.springsecurity.annotation.Secured
-
 import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
@@ -67,9 +66,40 @@ class ProductController {
             }
     }
 
+    def clicksearch(){
+
+        def listafiltrada = []
+
+        if(params.lookup==""){
+            listafiltrada=Product.list()
+        }
+        else{
+            def cadena = (params.lookup)
+            Product.list().each(){
+                if(it.name.toLowerCase().contains(cadena.toLowerCase())){
+                   listafiltrada << it
+                }
+            }
+        }
+
+        if((params.vcategory) != null){
+            listafiltrada.removeAll{it.category != params.category}
+        }
+        if((params.vstore) != null){
+            listafiltrada.removeAll{it.shops.toString() != params.shops}
+        }
+        if((params.vprize) != null){
+            listafiltrada.removeAll{it.prize > Double.parseDouble(params.prize)}
+        }
+        //chain action:'search', model:[lista:listafiltrada]
+        forward action:'search', model:[lista:listafiltrada]
+
+    }
+
     def search(){
         def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos Varios']
         def alma = Almacen.list(params)
+
         respond Product.list(params), model:[productInstanceCount: Product.count(),categories: cate,stores: alma]
     }
 
@@ -84,24 +114,36 @@ class ProductController {
 
         product.clearErrors()
 
-        def f = request.getFile('image')
+        def image = request.getFile('image')
+        if(!image.empty)product.imageByte=image.getBytes()
+        def almacen = AlmacenInfo.findByAlmacenId(params.store)
+        Product productExist = Product.findByNameAndSizeAndTrademark(params.name,params.size,params.trademark)
 
-        def almacen = Almacen.get(params.shops)
-        product.shops=almacen
 
-        if(!f.empty) {
-            product.imageByte=f.getBytes()
+        if(productExist) {
+            if (!almacen) {
+                productExist.addToStores(new AlmacenInfo(price: params.price, rating: params.rating, almacenId: params.store))
+                if (!image.empty) {
+                    productExist.imageByte = image.getBytes()
+                }
+                productExist.save flush: true
+                redirect action: "list_product"
+            } else {
+                flash.message = "Este producto ya se encuentra en la base de datos"
+                redirect action: "newProduct"
+            }
         }
-        if(f.empty){
+        else if(image.empty){
             flash.message = "No ha subido ninguna imagen del producto"
             redirect(action: "newProduct")
         }
-        else if(!(f.contentType.equals("image/jpeg") || f.contentType.equals("image/png") ) ){
+        else if(!(image.contentType.equals("image/jpeg") || image.contentType.equals("image/png") ) ){
             flash.message = "El tipo de archivo debe ser JPEG o PNG"
             redirect(action: "newProduct")
         }
         else if (product.validate()) {
 
+            product.addToStores(new AlmacenInfo(price: params.price,rating: params.rating, almacenId: params.store))
             println("Creating product ${params.name}")
             product.save(flush: true)
 
@@ -173,6 +215,9 @@ class ProductController {
         respond productInstance
     }
     def list_product(){
+        /*println(listProducts.get(1).name)
+        println(listProducts.get(1).category)
+        println(listProducts.get(1).price)*/
         respond Product.all
     }
 
@@ -200,5 +245,27 @@ class ProductController {
         }
         session.carrito = carrito;
         redirect(controller: 'product', action: 'list_product')
+    }
+
+    def Salud_y_Aseo(){
+        /*def listProducts = Product.findAllByCategory('Salud y Aseo')
+        println(listProducts.get(1).name)
+        println(listProducts.get(1).category)
+        println(listProducts.get(1).price)
+        redirect(action: "list_product", params: [listProducts])*/
+        respond Product.findAllByCategory('Salud y Aseo')
+    }
+
+    def Licores(){
+        respond Product.findAllByCategory('Licores')
+    }
+    def Refrigerados(){
+        respond Product.findAllByCategory('Refrigerados')
+    }
+    def Frutas_Y_Verduras(){
+        respond Product.findAllByCategory('Frutas y Verduras')
+    }
+    def Alimentos_Y_Bebidas(){
+        respond Product.findAllByCategory('Alimentos y bebidas')
     }
 }

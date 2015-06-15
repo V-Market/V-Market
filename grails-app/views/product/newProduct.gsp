@@ -127,8 +127,8 @@
                 <div class="row">
                     <div class="col-xs-12 col-sm-7 col-md-7">
                         <div class="form-group">
-                            <label for="shops">Almacén:</label>
-                            <select type="text" name="shops" id="shops" formmethod="POST" class="form-control input-lg" tabindex="8">
+                            <label for="store">Almacén:</label>
+                            <select type="text" name="store" id="store" formmethod="POST" class="form-control input-lg" tabindex="8">
                                 <g:each in="${stores}" status="i" var="it">
                                     <option value="${it.id}">${it}</option>
                                 </g:each>
