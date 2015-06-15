@@ -139,6 +139,7 @@
             <div> Current Carrito</div>
             <div>${session.carrito.getProducts()}</div>
         </div>
+
     </div>
 </div>
 

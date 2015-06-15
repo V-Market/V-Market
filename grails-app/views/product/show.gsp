@@ -81,26 +81,17 @@
                                     <td>Nombre</td>
                                     <td><span class="property-value" aria-labelledby="name-label"><g:fieldValue bean="${productInstance}" field="name"/></span></td>
                                 </tr>
-                                <tr>
-                                    <td>Descripción</td>
-                                    <td><span class="property-value" aria-labelledby="description-label"><g:fieldValue bean="${productInstance}" field="description"/></span></td>
-                                </tr>
+
                                 <tr>
                                     <td>Marca</td>
                                     <td><span class="property-value" aria-labelledby="trademark-label"><g:fieldValue bean="${productInstance}" field="trademark"/></span></td>
                                 </tr>
-                                <tr>
-                                    <td>Identificación</td>
-                                    <td><span class="property-value" aria-labelledby="id-label"><g:fieldValue bean="${productInstance}" field="id"/></span></td>
-                                </tr>
+
                                 <tr>
                                     <td>Precio</td>
                                     <td><span class="property-value" aria-labelledby="prize-label"><g:fieldValue bean="${productInstance}" field="prize"/></span></td>
                                 </tr>
-                                <tr>
-                                    <td>Disponible en</td>
-                                    <td><span class="property-value" aria-labelledby="shops-label"><g:fieldValue bean="${productInstance}" field="shops"/></span></td>
-                                </tr>
+                                
                                 </tbody>
                             </table>
                         </div>

@@ -11,15 +11,6 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: productInstance, field: 'description', 'error')} required">
-	<label for="description">
-		<g:message code="product.description.label" default="Description" />
-		<span class="required-indicator">*</span>
-	</label>
-	<g:textField name="description" required="" value="${productInstance?.description}"/>
-
-</div>
-
 <div class="fieldcontain ${hasErrors(bean: productInstance, field: 'trademark', 'error')} required">
 	<label for="trademark">
 		<g:message code="product.trademark.label" default="Trademark" />
@@ -47,12 +38,12 @@
 
 </div>
 
-<div class="fieldcontain ${hasErrors(bean: productInstance, field: 'urlImageProduct', 'error')} required">
-	<label for="urlImageProduct">
-		<g:message code="product.urlImageProduct.label" default="Url Image Product" />
+<div class="fieldcontain ${hasErrors(bean: productInstance, field: 'imageByte', 'error')} required">
+	<label for="imageByte">
+		<g:message code="product.urlImageProduct.label" default="imageByte" />
 		<span class="required-indicator">*</span>
 	</label>
-	<g:textField name="urlImageProduct" required="" value="${productInstance?.urlImageProduct}"/>
+	<g:textField name="imageByte" required="" value="${productInstance?.imageByte}"/>
 
 </div>
 

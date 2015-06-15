@@ -12,6 +12,7 @@
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'bootstrap.min.css')}" />
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'custom.css')}" />
     <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'carrito.css')}" />
+    <link rel="stylesheet" type="text/css" href="${resource(dir: 'css', file: 'star-rating.css')}" />
 
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
     <g:javascript src="jquery-1.11.2.min.js" />
@@ -21,6 +22,20 @@
     <script type="text/javascript"
             src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAHnIu6wKpmVEuMWFKM6fO98apSBsG-tHk&libraries=places&sensor=false">
     </script>
+
+    <g:javascript src="star-rating.js"/>
+
+    <script type="text/javascript">
+        $(document).ready(function(){
+            $(".product-rate").rating({
+                'size':'sm',
+                showClear: false,
+                starCaptions: {1: "Muy malo", 2: "Malo", 3: "Regular", 4: "Bueno", 5: "Excelente"},
+                clearCaption: "Sin calificación"
+            });
+        });
+    </script>
+
     <script type="text/javascript">
 
         function scrollToID(id, speed, before, index){
@@ -57,17 +72,7 @@
             $('#lat').val(markerCurrent.getPosition().lat());
             $('#lng').val(markerCurrent.getPosition().lng());
         }
-        function callback(results,status){
-            if (status == google.maps.places.PlacesServiceStatus.OK) {
-                for (var i = 5; i < results.length; i++) {
-                    var place = results[i];
-                    createMarker(results[i]);
-                    var Almacen = new google.maps.LatLng(results[i].geometry.location.lat(), results[i].geometry.location.lng());
-                    map.setCenter(Almacen);
-                    map.setZoom(18);
-                }
-            }
-        }
+
         google.maps.event.addDomListener(window, 'load', initialize);
 
         $(document).ready(function(){
@@ -168,17 +173,7 @@
             $('.buttonsucess').click(function () {
                 $('.resultados').html(markerCurrent.getPosition().lat() + " " + markerCurrent.getPosition().lat() + " " + $('#valueprogress1').val() + " " +$('#valueprogress2').val() + " " + $('#valueprogress3').val());
             });
-            $('.boton').click(function() {
-                var Bogota = new google.maps.LatLng( 4.668487, -74.092701);
-                var request = {
-                    location: Bogota,
-                    radius: '200',
-                    query: $('#dir').val()
 
-                };
-                var service = new google.maps.places.PlacesService(map);
-                service.textSearch(request, callback);
-            });
         });
     </script>
 </head>
@@ -263,8 +258,7 @@
 
 <div class="container">
     <div class="row" style="height: 80%">
-        <div class="col-md-1"></div>
-        <div class="col-md-10">
+        <div class="col-md-12">
             <div class="row" style="height: 14%; width:100%"></div>
             <div class="container">
                 <div class="row" style="width:100%">
@@ -276,16 +270,12 @@
                     </g:each>
                 </div>
             </div>
-            <div class="row" style="height: 6%"></div>
         </div>
-        <div class="col-md-1"></div>
     </div>
     <div class="row" style="height: 20%">
-        <div class="col-md-1"></div>
-        <div class="col-lg-10" style="text-align: center    ">
+        <div class="col-lg-12" style="text-align: center    ">
             <div class="btn btn-default"><div class="buttonMap">Verificar Opciones</div></div>
         </div>
-        <div class="col-md-1"></div>
     </div>
 </div>
 <div id="containerMap">
