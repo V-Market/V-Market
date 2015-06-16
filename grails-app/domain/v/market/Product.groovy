@@ -17,6 +17,9 @@ class Product {
         imageByte(blank:false , maxSize:1073741824)
     }
 
+    static mapping = {
+        stores lazy: false
+    }
     public String toString(){
         return name;
     }

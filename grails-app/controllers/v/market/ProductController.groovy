@@ -262,6 +262,7 @@ class ProductController {
     }
 
     def Licores(){
+        render "Hola"
         respond Product.findAllByCategory('Licores')
     }
     def Refrigerados(){

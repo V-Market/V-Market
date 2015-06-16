@@ -5,7 +5,7 @@
   Time: 10:44 AM
 --%>
 
-<%@ page contentType="text/html;charset=UTF-8" %>
+<%@ page import="groovy.json.JsonSlurper; grails.converters.JSON" contentType="text/html;charset=UTF-8" %>
 <html>
 <head>
     <title>Carrito</title>
@@ -38,17 +38,25 @@
 
     <script type="text/javascript">
 
+        var progressbar1 = 33;
+        var progressbar2 = 33;
+        var progressbar3 = 34;
+        var map;
+        var markerCurrent;
+
+        function getDistance(lat,lng){
+            var latlng = new google.maps.LatLng(lat,lng);
+            var dos = markerCurrent.getPosition();
+            alert(latlng);
+            alert(dos)
+        }
         function scrollToID(id, speed, before, index){
             var offSet = 50;
             var targetOffset = $(id).offset().top - offSet;
             $('html,body').animate({scrollTop:targetOffset}, speed);
         }
 
-        var progressbar1 = 33;
-        var progressbar2 = 33;
-        var progressbar3 = 34;
-        var map;
-        var markerCurrent;
+
         function initialize() {
             var mapOptions = {
                 center: { lat: 4.668487, lng: -74.092701},
@@ -77,6 +85,7 @@
 
         $(document).ready(function(){
 
+            scrollToID("#container",750,0,0);
             $('.buttonMap').click(function () {
                 scrollToID("#containerMap", 750 ,0,0)
             });
@@ -89,21 +98,27 @@
                 }
             });
 
-            $('#valueprogress1').change(function(){
-                var value = $('#valueprogress1').val();
-                var toSum = progressbar1 - value;
+            $('#valueprogress1').click(function(){
+                var value = parseInt($('#valueprogress1').val());
+                var toSum = parseInt(progressbar1 - value);
                 var prog2;
                 var prog3;
                 if(toSum==1 || toSum==-1){
-                    prog2 = progressbar2 + toSum;
-                    prog3 = progressbar3;
+                    prog2 = parseInt(progressbar2);
+                    prog3 = parseInt(progressbar3);
+                    if(Math.random()<0.5){
+                        prog3 = prog3 + parseInt(toSum);
+                    }else{
+                        prog2 = prog2 + parseInt(toSum);
+                    }
                 }else{
                     if(toSum % 2 == 0){
-                        prog2 = progressbar2 + (toSum/2);
-                        prog3 = progressbar3 + (toSum/2)
+                        prog2 = parseInt(progressbar2) + parseInt(toSum/2);
+                        prog3 = parseInt(progressbar3) + parseInt(toSum/2);
+
                     }else{
-                        prog2 = progressbar2 + (toSum-1)/2 + 1;
-                        prog3 = progressbar3 + (toSum-1)/2;
+                        prog2 = parseInt(progressbar2) + parseInt((toSum-1)/2) + parseInt(1);
+                        prog3 = parseInt(progressbar3) + parseInt((toSum-1)/2);
                     }
                 }
                 progressbar2 = prog2;
@@ -114,23 +129,29 @@
                 $('#progress3').css("width",prog3+"%");
                 $("#valueprogress3").val(progressbar3);
                 $('#progress1').css("width",value+"%");
+                $("#valueprogress1").val(progressbar1);
             });
 
-            $('#valueprogress2').change(function(){
-                var value = $('#valueprogress2').val();
-                var toSum = progressbar2 - value;
+            $('#valueprogress2').click(function(){
+                var value = parseInt($('#valueprogress2').val());
+                var toSum = parseInt(progressbar2 - value);
                 var prog1;
                 var prog3;
                 if(toSum==1 || toSum==-1){
-                    prog1 = progressbar1 + toSum;
-                    prog3 = progressbar3;
+                    prog1 = parseInt(progressbar1);
+                    prog3 = parseInt(progressbar3);
+                    if(Math.random()<0.5){
+                        prog3 = prog3 + parseInt(toSum);
+                    }else{
+                        prog1 = prog1 + parseInt(toSum);
+                    }
                 }else{
                     if(toSum % 2 == 0){
-                        prog1 = progressbar1 + (toSum/2);
-                        prog3 = progressbar3 + (toSum/2)
+                        prog1 = parseInt(progressbar1) + parseInt(toSum/2);
+                        prog3 = parseInt(progressbar3) + parseInt(toSum/2)
                     }else{
-                        prog1 = progressbar1 + (toSum-1)/2 + 1;
-                        prog3 = progressbar3 + (toSum-1)/2;
+                        prog1 = parseInt(progressbar1) + parseInt((toSum-1)/2) + parseInt(1);
+                        prog3 = parseInt(progressbar3) + parseInt((toSum-1)/2);
                     }
                 }
                 progressbar2 = value;
@@ -141,23 +162,29 @@
                 $('#progress3').css("width",prog3+"%");
                 $("#valueprogress3").val(progressbar3);
                 $('#progress2').css("width",value+"%");
+                $("#valueprogress2").val(progressbar2);
             });
 
-            $('#valueprogress3').change(function(){
-                var value = $('#valueprogress3').val();
-                var toSum = progressbar3 - value;
+            $('#valueprogress3').click(function(){
+                var value = parseInt($('#valueprogress3').val());
+                var toSum = parseInt(progressbar3 - value);
                 var prog1;
                 var prog2;
                 if(toSum==1 || toSum==-1){
-                    prog2 = progressbar2 + toSum;
-                    prog1 = progressbar1;
+                    prog2 = parseInt(progressbar2);
+                    prog1 = parseInt(progressbar1);
+                    if(Math.random()<0.5){
+                        prog1 = prog1 + parseInt(toSum);
+                    }else{
+                        prog2 = prog2 + parseInt(toSum);
+                    }
                 }else{
                     if(toSum % 2 == 0){
-                        prog2 = progressbar2 + (toSum/2);
-                        prog1 = progressbar1 + (toSum/2)
+                        prog2 = parseInt(progressbar2) + parseInt(toSum/2);
+                        prog1 = parseInt(progressbar1) + parseInt(toSum/2)
                     }else{
-                        prog2 = progressbar2 + (toSum-1)/2 + 1;
-                        prog1 = progressbar1 + (toSum-1)/2;
+                        prog2 = parseInt(progressbar2) + parseInt((toSum-1)/2) + parseInt(1);
+                        prog1 = parseInt(progressbar1) + parseInt((toSum-1)/2);
                     }
                 }
                 progressbar2 = prog2;
@@ -168,12 +195,52 @@
                 $('#progress1').css("width",prog1+"%");
                 $("#valueprogress1").val(progressbar1);
                 $('#progress3').css("width",value+"%");
+                $("#valueprogress3").val(progressbar3);
             });
 
             $('.buttonsucess').click(function () {
-                $('.resultados').html(markerCurrent.getPosition().lat() + " " + markerCurrent.getPosition().lat() + " " + $('#valueprogress1').val() + " " +$('#valueprogress2').val() + " " + $('#valueprogress3').val());
-            });
+                var or = []
+                var des = []
+                for(var h=0; h<${classes};h++) {
+                    var string = '.field' + h;
+                    var value = $(string).val();
+                    var lat = value.split("/");
+                    var lngUno = new google.maps.LatLng(parseFloat(lat[0]), parseFloat(lat[1]));
+                    var lngDos = new google.maps.LatLng(parseFloat($('#lat').val()), parseFloat($('#lng').val()));
+                    or.push(lngUno)
+                    des.push(lngDos)
+                }
+                    var service = new google.maps.DistanceMatrixService();
+                    service.getDistanceMatrix(
+                            {
+                                origins: or,
+                                destinations: des,
+                                travelMode: google.maps.TravelMode.DRIVING
 
+                            }, function (response, status) {
+                                if (status == google.maps.DistanceMatrixStatus.OK) {
+                                    var origins = response.originAddresses;
+                                    var destinations = response.destinationAddresses;
+                                    for (var i = 0; i < origins.length; i++) {
+                                        var results = response.rows[i].elements;
+                                        for (var j = 0; j < results.length; j++) {
+                                            if(i!=j) continue;
+                                            var element = results[j];
+                                            var distance = element.distance.text;
+                                            var duration = element.duration.text;
+                                            var distance = distance.split(" ");
+                                            $('.field'+j).val(distance[0]);
+                                        }
+                                    }
+                                }
+                            });
+                            $('.myrow').css('opacity','1');
+                            $.get("${createLink(action:'renderDistances',controller: 'carrito', params:'${params}')}").done(function(data){
+                                $(".distances").html(data);
+                            });
+
+
+                });
         });
     </script>
 </head>
@@ -240,7 +307,7 @@
     </div>
 </nav>
 
-<div class="container">
+<div id="container">
     <div class="row" style="height: 80%">
         <div class="col-md-12">
             <div class="row" style="height: 14%; width:100%"></div>
@@ -270,8 +337,8 @@
     <div class="titulo">Criterios de Selección</div>
     <br>
     <br>
-    <div class="row">
-        <div class="col-md-12" style="text-align: center">
+    <div class="row" style="padding-left: 30px; padding-right: 30px;">
+        <div class="col-md-12" style="text-align: center;">
             <div class="progress" style="width: 100%">
                 <div class="progress-bar progress-bar-success" role="progressbar" style="width:33%" id="progress1">
                     Distancia
@@ -285,15 +352,15 @@
             </div>
         </div>
     </div>
-    <div class="row">
+    <div class="row" style="padding-left: 30px; padding-right: 30px;">
         <div class="col-md-4">
-            <g:field type="number" min="0" max="100" name="valueprogress1" value="33"/>
+            <g:field type="number" min="0" max="100" name="valueprogress1" value="33" class="form-control"/>
         </div>
         <div class="col-md-4">
-            <g:field type="number" min="0" max="100" name="valueprogress2" value="33"/>
+            <g:field type="number" min="0" max="100" name="valueprogress2" value="33" class="form-control"/>
         </div>
         <div class="col-md-4">
-            <g:field type="number" min="0" max="100" name="valueprogress3" value="34"/>
+            <g:field type="number" min="0" max="100" name="valueprogress3" value="34" class="form-control"/>
         </div>
     </div>
     <br>
@@ -305,7 +372,36 @@
         </div>
         <div class="col-md-4"></div>
     </div>
-    <div class="resultados">
+    <div id="resultados" style="width: 100%; height: 100%">
+
+        <g:hiddenField  id="lat" name="lat"/>
+        <g:hiddenField  id="lng" name="lng"/>
+        <br>
+        <br>
+        <div class="myrow row" style="opacity:0;">
+        <g:each in="${almacenes}" var="almacenInstance" status="it">
+            <g:hiddenField name="field${it}" value="${almacenInstance.lat}/${almacenInstance.lng}" class="field${it}"/>
+
+                <div class="col-md-4">
+                    <td style="text-align: center" >
+                        <img  class="img-thumbnail" src="https://maps.googleapis.com/maps/api/staticmap?center=${almacenInstance.lat},${almacenInstance.lng}&zoom=14&size=200x200&markers=size:tiny%7label:S%7C${almacenInstance.lat},${almacenInstance.lng}" width="200" height="200"/>
+                        <br>
+                        ${almacenInstance.toString()}
+                        <br>
+                        <g:radio name="hola" value="hola"/>
+                    </td>
+                </div>
+
+        </g:each>
+        </div>
+        <br>
+        <div class="row">
+        <div class="col-md-4"></div>
+            <div class="col-md-4">
+                <g:actionSubmit value="Guardar Carrito" class="btn btn-success"/>
+            </div>
+            <div class="col-md-4"></div>
+        </div>
 
 
     </div>
