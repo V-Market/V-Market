@@ -65,6 +65,35 @@
                     window.clearInterval(intervalo);
                  }, 1000);
             }, 5000);
+            $(".standard").click(function(){
+                var index = $(this).attr('data-button');
+                if(index == current) return;
+                $(categories[current]).removeClass();
+                $(categories[index]).removeClass();
+                if(index>current) {
+                    $(categories[current]).addClass('defaultSaleDerecha');
+                    $(categories[index]).addClass('defaultEntraIzquierda');
+                }else{
+                    $(categories[current]).addClass('defaultSaleIzquierda');
+                    $(categories[index]).addClass('defaultEntraDerecha');
+                }
+                view = categories[index];
+                current = index;
+                /*var intervalo = setInterval(function(){
+                    if(view!=null){
+                        for(var j=0;j<categories.length;j++){
+                            if(categories[j]==view){
+                                $(view).removeClass().addClass('default');
+                                continue;
+                            }
+                            $(categories[j]).removeClass();
+                            $(categories[j]).addClass('defaultHide');
+                        }
+                        view = null;
+                    }
+                    window.clearInterval(intervalo);
+                }, 1000);*/
+            });
             $('a[href^="#"]').click(function(){
                 scrollToID(divs[0], 750, 0,0);
                 index = 0;
@@ -81,6 +110,13 @@
                     if(index == 0) {
                         //$('.background-color').css('background-color', 'transparent');
                     }
+                    if(index%2==0) {
+                        var a = $('.Title3').removeClass();
+                        a.addClass('Title');
+                    }else{
+                        var a = $('.Title').removeClass();
+                        a.addClass('Title3');
+                    }
                     break;
                 case 40:
                     if(index != 4) {
@@ -92,6 +128,13 @@
                     }
                     if(index == 1) {
                         //$('.background-color').css('background-color', 'white');
+                    }
+                    if(index%2==0) {
+                        var a = $('.Title3').removeClass();
+                        a.addClass('Title');
+                    }else{
+                        var a = $('.Title').removeClass();
+                        a.addClass('Title3');
                     }
                     break;
             }
