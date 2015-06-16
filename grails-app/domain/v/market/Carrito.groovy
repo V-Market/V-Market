@@ -6,15 +6,25 @@ class Carrito {
     boolean current
     double price
     double distance
+    Almacen almacen
 
     static constraints = {
         products(nullable: true);
         distance(nullable: true);
         price(nullable:true);
-        current(nullable: false, blank:false)
+        current(nullable: false, blank:false);
+        almacen(nullable:true);
     }
 
     static mapping = {
         products lazy: false
+    }
+
+    public String toString(){
+        String ha = " "
+        for(Product product: products){
+           ha = ha + product + " ";
+        }
+        return ha
     }
 }

@@ -84,6 +84,17 @@
         google.maps.event.addDomListener(window, 'load', initialize);
 
         $(document).ready(function(){
+            $("#almacenId0").click(function(){
+                $("#idAlmacen").val($("#almacenId0").val());
+            });
+            $("#almacenId1").click(function(){
+
+                $("#idAlmacen").val($("#almacenId1").val());
+            });
+            $("#almacenId2").click(function(){
+
+                $("#idAlmacen").val($("#almacenId2").val());
+            });
 
             scrollToID("#container",750,0,0);
             $('.buttonMap').click(function () {
@@ -404,7 +415,7 @@
                         <br>
                         ${almacenInstance.toString()}
                         <br>
-                        <g:radio name="hola" value="hola"/>
+                        <g:radio name="almacenId" value="${almacenInstance.id}" id="almacenId${it}"/>
                     </td>
                 </div>
 
@@ -414,7 +425,14 @@
         <div class="row">
         <div class="col-md-4"></div>
             <div class="col-md-4">
-                <g:actionSubmit value="Guardar Carrito" class="btn btn-success"/>
+                <g:form>
+                    <g:hiddenField name="current" value="false"/>
+                    <g:hiddenField name="price" value="120.000"/>
+                    <g:hiddenField name="almacenSeleccionadoid" value="" id="idAlmacen"/>
+                    <g:hiddenField name="distancia" value="3,6"/>
+                    <g:hiddenField name="carrito" value="${carrito.id}"/>
+                    <g:actionSubmit action="save" value="Guardar Carrito" class="btn btn-success"/>
+                </g:form>
             </div>
             <div class="col-md-4"></div>
         </div>

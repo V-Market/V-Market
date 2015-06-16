@@ -100,11 +100,11 @@
             </select>
         </div>
         </br>
-            <div class="form-group">
-                <input type="checkbox" name="vprize" id="vprize">
-                <label for="prize">Máximo Precio:</label>
-                <input type="number" min="0" name="prize" id="prize" formmethod="POST" class="form-control input-lg" placeholder="00" tabindex="3">
-            </div>
+            <!--div class="form-group">
+                <input type="checkbox" name="vprice" id="vprice">
+                <label for="price">Máximo Precio:</label>
+                <input type="number" min="0" name="price" id="price" formmethod="POST" class="form-control input-lg" placeholder="00" tabindex="3">
+            </div>-->
     </div>
 
     <div class="col-xs-10 col-sm-10 col-md-10">
@@ -120,7 +120,7 @@
                 <div class="message" role="status">${flash.message}</div>
                 </g:if>--%>
                 <%--<ul class="list-group ">--%>
-            <div id="list" style="max-height: 300px;" class="overflow-y-scroll">
+            <div id="list" style="max-height: 300px; width:100%" class="overflow-y-scroll">
                 <g:each in="${lista}" status="i" var="productInstance">
                 <%--<li class="list-group-item list-group-item-transparent">--%>
 
@@ -136,7 +136,7 @@
                     </div>
 
                     <div class="col-md-8 profilep">
-                        <table class="table table-hover">
+                        <table class="table table-hover" style="width:100%">
                             <tbody>
                             <tr>
                                 <td>Nombre</td>
@@ -146,10 +146,10 @@
                                 <td>Marca</td>
                                 <td><span class="property-value" aria-labelledby="trademark-label"><g:fieldValue bean="${productInstance}" field="trademark"/></span></td>
                             </tr>
-                            <tr>
+                            <!--tr>
                                 <td>Precio</td>
-                                <td><span class="property-value" aria-labelledby="prize-label"><g:fieldValue bean="${productInstance}" field="prize"/></span></td>
-                            </tr>
+                                <td><span class="property-value" aria-labelledby="prize-label"><!g:fieldValue bean="$ {productInstance}" field="price"/></span></td>
+                            </tr-->
                             </tbody>
                         </table>
                     </div>

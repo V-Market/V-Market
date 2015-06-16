@@ -22,12 +22,14 @@ class VMarketController {
             def user = User.get(springSecurityService.principal.id)
             def carritos = user.getCarritos();
             if(carritos.size()==0){
+
                 user.addToCarritos(new Carrito(current: true)).save(flush: true);
                 carritos = user.getCarritos();
             }
             session.carrito = carritos.find { it.current }
             if(session.carrito == null){
-                session.carrito = user.addToCarritos(new Carrito(current: true)).save(flush: true);
+                def carrito = new Carrito(current: true);
+                session.carrito = user.addToCarritos(carrito).save(flush: true);
             }
             respond user, model: [user:user, categories: cat , cate:cate]
         }

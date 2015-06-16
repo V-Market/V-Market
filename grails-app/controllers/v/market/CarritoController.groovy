@@ -8,6 +8,23 @@ class CarritoController {
     static allowedMethods = [getDistance: "GET"]
     def index() {}
 
+    def save(){
+        def almacen = Almacen.findById(params.almacenSeleccionadoid)
+        def carrito = Carrito.findById(params.carrito)
+        carrito.almacen = almacen;
+        carrito.price = Double.parseDouble(params.price)
+        carrito.distance = Double.parseDouble((params.distancia).replace(",","."))
+        carrito.current = false
+        if(!carrito.save(flush:true)){
+            carrito.errors.each{err->
+                println(err)
+            }
+        }
+        redirect(action:"index", controller: "VMarket")
+
+
+    }
+
     def show(){
         def distances = [:]
         for(Almacen almacen:Almacen.findAll()){
@@ -15,7 +32,8 @@ class CarritoController {
 
         }
         def almacenes = Almacen.findAll();
-        respond session.carrito, model: [almacenes: almacenes, distances: distances, classes: almacenes.size()]
+        def carrito = session.carrito
+        [almacenes: almacenes, distances: distances, classes: almacenes.size(), carrito: carrito]
     }
 
     def renderDistances(){
