@@ -305,8 +305,6 @@
 }
 
 
-
-
 .defaultHide{
     width: 100%;
     height: 100%;
@@ -316,32 +314,7 @@
 
 #refrigerados{
 
-    background-color: #a94442;
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-size: cover;
-    color: #ffffff;
-    font-size: 100px;
-    text-align: center;
-
-}
-
-#fritos{
-
-    background-image: url('http://mamacitagrill.com/wp-content/uploads/2013/03/hamburger.jpg');
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    background-size: cover;
-    color: #ffffff;
-    font-size: 100px;
-    text-align: center;
-
-}
-
-#carnes{
-    background-image: url('https://s3.amazonaws.com/peerfit.wpcontent/2013/07/Red-Meat.jpg');
+    background-image: url("../images/categories/refrigerados.png");
     width: 100%;
     height: 100%;
     position: absolute;
@@ -353,7 +326,8 @@
 }
 
 #saludyaseo{
-    background-color: #2b542c;
+
+    background-image: url("../images/categories/mercar1.jpg");
     width: 100%;
     height: 100%;
     position: absolute;
@@ -365,7 +339,7 @@
 }
 
 #licores{
-    background-color: #204d74;
+    background-image: url("../images/categories/licor.png");
     width: 100%;
     height: 100%;
     position: absolute;
@@ -378,7 +352,7 @@
 
 #frutasyverduras{
 
-    background-color: #f0ad4e;
+    background-image: url("../images/categories/frutas.jpg");
     width: 100%;
     height: 100%;
     position: absolute;
@@ -390,7 +364,7 @@
 
 
 #alimentosvarios{
-    background-color: greenyellow;
+    background-image: url("../images/categories/bebidas.jpg");
     width: 100%;
     height: 100%;
     position: absolute;
@@ -603,7 +577,7 @@ body, html {
  * Card component
  */
 .card {
-    background-color: #F7F7F7;
+    background-color: #e7eaf7;
     /* just in case there no content*/
     padding: 20px 25px 30px;
     margin: 0 auto 25px;
@@ -728,4 +702,20 @@ Common styles
 
 .username-style{
     font-family: 'MS Sans Serif', sans-serif, Verdana, Arial;
+}
+
+/*
+
+Body for categories
+
+ */
+
+.header-style{
+    background-image: url('../images/category-header.jpg');
+    background-repeat: no-repeat;
+    color: #ffffff;
+}
+
+.carousel-inner img {
+    margin: auto;
 }

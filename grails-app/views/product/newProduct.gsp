@@ -46,25 +46,54 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
+        <!--El header contiene el boton "inicio"-->
             <g:link controller="VMarket" action="index" class="navbar-brand">
                 V-Market <span class="glyphicon glyphicon-asterisk"></span>
             </g:link>
+
         </div>
 
-        <!-- contenido del encabezado (navbar), el cual es colapsable -->
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
+                <li class="dropdown">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias <span class="caret"></span></a>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><g:link controller="product" action="Salud_y_Aseo">Salud y Aseo</g:link> </li>
+                        <li><g:link controller="product" action="Licores">Licores</g:link></li>
+                        <li><g:link controller="product" action="Refrigerados">Refrigerados</g:link></li>
+                        <li><g:link controller="product" action="Frutas_Y_Verduras">Frutas y Verduras</g:link></li>
+                        <li><g:link controller="product" action="Alimentos_Y_Bebidas">Alimentos y bebidas</g:link>></li>
+                    </ul>
+                </li>
             </ul>
-
 
             <sec:ifNotLoggedIn>
                 <ul class="nav navbar-nav navbar-right">
-                    <li><g:link controller="login"> <span class="glyphicon glyphicon-log-in"></span> Ingresa</g:link></li>
+                    <li><g:link controller="user" action="register"> <span class="glyphicon glyphicon-user"></span> Registrate</g:link></li>
+                </ul>
+
+                <p class="nav navbar-text navbar-right" > o </p>
+
+                <ul class="nav navbar-nav navbar-right">
+                    <li><g:link controller="login"><span class="glyphicon glyphicon-log-in"></span> Ingresa</g:link></li>
                 </ul>
             </sec:ifNotLoggedIn>
-
-        </div><!--/.navbar-collapse -->
+            <sec:ifLoggedIn>
+                <ul class="nav navbar-nav navbar-right">
+                    <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
+                            <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
+                        <ul class="dropdown-menu" role="menu">
+                            <li><g:link controller="user" action="profile" id="${user.id}">Ver perfil</g:link></li>
+                            <li><g:link controller="carrito" action="show" >Carrito</g:link></li>
+                            <li class="divider"></li>
+                            <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
+                        </ul>
+                    </li>
+                </ul>
+            </sec:ifLoggedIn>
+        </div><!--/.navbar-collapse-->
     </div>
 </nav>
 </br>
@@ -175,6 +204,26 @@
             </div>
         </g:form>
     </div>
+
+    <!-- Modal -->
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span aria-hidden="true">&times;</span></button>
+                    <h4 class="modal-title" id="myModalLabel">Modal title</h4>
+                </div>
+                <div class="modal-body">
+                    ...
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">Close</button>
+                    <button type="button" class="btn btn-primary">Save changes</button>
+                </div>
+            </div>
+        </div>
+    </div>
+
 </div>
 </body>
 </html>
