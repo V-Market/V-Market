@@ -24,5 +24,23 @@ class Product {
     public byte[] getImage(){
         return imageByte;
     }
+
+    public double getMinPrice(){
+        double min = Double.MAX_VALUE
+        stores.each {
+            if(it.price<min)
+                min=it.price
+        }
+        return min
+    }
+
+    public def getStoreListInfo(){
+        def storeList = []
+        stores.each {
+            def name = Almacen.findById(it.almacenId).toString()
+            storeList << [name:name,price:it.price,rate:it.rating]
+        }
+        return storeList
+    }
 }
 

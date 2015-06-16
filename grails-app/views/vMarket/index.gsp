@@ -123,53 +123,39 @@
 </head>
 
 <body class="wrapper">
+
 <!-- CABEZA DE LA PAGINA -->
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">
     <div class="container">
-        <!--El header es el "fondo" del encabezado (navbar-header)-->
         <div class="navbar-header">
-            <!-- Si la pagina se vuelve pequeña (sr-only) aparece un botton
-          que al desplegarse mostrara el contenido del encabezado
-          (data-target="#navbar"), esto se llama "colapsar".-->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <!--El header contiene el boton "inicio"-->
+        <!--El header contiene el boton "inicio"-->
             <g:link controller="VMarket" action="index" class="navbar-brand">
                 V-Market <span class="glyphicon glyphicon-asterisk"></span>
             </g:link>
 
         </div>
 
-        <!-- contenido del encabezado (navbar), el cual es colapsable -->
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
-                <!--<li class=""><a href="#">Contacto</a></li>
-                <!--li><a href="#">Link</a></li>-->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias <span class="caret"></span></a>
-                <ul class="dropdown-menu" role="menu">
-                    <li><g:link controller="product" action="Salud_y_Aseo">Salud y Aseo</g:link> </li>
-                    <li><g:link controller="product" action="Licores">Licores</g:link></li>
-                    <li><g:link controller="product" action="Refrigerados">Refrigerados</g:link></li>
-                    <li><g:link controller="product" action="Frutas_Y_Verduras">Frutas y Verduras</g:link></li>
-                    <li><g:link controller="product" action="Alimentos_Y_Bebidas">Alimentos y bebidas</g:link>></li>
-                <%--
-                        <li><g:link action="index">Salud y aseo</g:link></li>
-                        <li><g:link action="index">Licores</g:link></li>
-                        <li><g:link action="index">Refrigerados</g:link></li>
-                        <li><g:link action="index">Salud y aseo</g:link></li>
-                        <li><g:link action="index">Salud y aseo</g:link></li--%>
+                    <ul class="dropdown-menu" role="menu">
+                        <li><g:link controller="product" action="Salud_y_Aseo">Salud y Aseo</g:link> </li>
+                        <li><g:link controller="product" action="Licores">Licores</g:link></li>
+                        <li><g:link controller="product" action="Refrigerados">Refrigerados</g:link></li>
+                        <li><g:link controller="product" action="Frutas_Y_Verduras">Frutas y Verduras</g:link></li>
+                        <li><g:link controller="product" action="Alimentos_Y_Bebidas">Alimentos y bebidas</g:link>></li>
                     </ul>
                 </li>
             </ul>
 
-        <!-- todo lo que esta alineado a la derecha (navbar-right) cambia dependiendo
-             de si el usuario esta o no loggeado-->
             <sec:ifNotLoggedIn>
                 <ul class="nav navbar-nav navbar-right">
                     <li><g:link controller="user" action="register"> <span class="glyphicon glyphicon-user"></span> Registrate</g:link></li>
@@ -194,22 +180,10 @@
                         </ul>
                     </li>
                 </ul>
-            </sec:ifLoggedIn><!--
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="user/register"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
-            </ul>
-            <p class="nav navbar-text navbar-right" > o </p>
-            <g:form class = "navbar-form navbar-right">
-            <div class="form-group">
-            <g:actionSubmit value="Ingresar" name="submitButton" action="doLogin" class="btn btn-success" />
-            </div>
-        </g:form>
-        -->
+            </sec:ifLoggedIn>
         </div><!--/.navbar-collapse-->
     </div>
 </nav>
-
-
 
 <div class="categorias">
     <div class="wrapper">
@@ -229,12 +203,9 @@
         </g:each>
     </div>
 </div>
-<div class="background" onscroll="categorias(this)">
-    <div class="Title">V-Market</div>
-</div>
 <div class="whoarewe">
     <div class="row top">
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'vmarket-logo.jpg')}"  width="250" height="250">
+        <div class="col-xs-3"><img src="${resource(dir:'images', file:'Vmarket.png')}"  width="250" height="250">
             <div class="mask">
                 <h2>¿Quienes Somos?</h2>
                 <p>Estudiantes Activos Universidad Nacional de Colombia</p>
@@ -300,7 +271,6 @@
             <div class="col-md-6" style="text-align: right; padding-right: 40px">
                 <img src="${resource(dir: 'images',file:'facebook.png')}" width="25px" height="25px"/>
                 <img src="${resource(dir: 'images',file:'twittericon.jpg')}" width="25px" height="25px"/>
-                <img src="${resource(dir: 'images',file:'youtube.jpg')}" width="50px" height="25px"/>
             </div>
         </div>
     </div>

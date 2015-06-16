@@ -182,11 +182,7 @@
 
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">
     <div class="container">
-        <!--El header es el "fondo" del encabezado (navbar-header)-->
         <div class="navbar-header">
-            <!-- Si la pagina se vuelve pequeña (sr-only) aparece un botton
-          que al desplegarse mostrara el contenido del encabezado
-          (data-target="#navbar"), esto se llama "colapsar".-->
             <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
                 <span class="sr-only">Toggle navigation</span>
                 <span class="icon-bar"></span>
@@ -200,23 +196,21 @@
 
         </div>
 
-        <!-- contenido del encabezado (navbar), el cual es colapsable -->
         <div id="navbar" class="navbar-collapse collapse">
 
             <ul class="nav navbar-nav">
-                <!--<li class=""><a href="#">Contacto</a></li>
-                <!--li><a href="#">Link</a></li>-->
                 <li class="dropdown">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias <span class="caret"></span></a>
                     <ul class="dropdown-menu" role="menu">
-                        <g:each in="${cate}" var="cat" status="it">
-                            <li role="presentation"><a role='menuitem' class="standard" data-button="${it}">${cat[2]}</a></li>
-                        </g:each>
+                        <li><g:link controller="product" action="Salud_y_Aseo">Salud y Aseo</g:link> </li>
+                        <li><g:link controller="product" action="Licores">Licores</g:link></li>
+                        <li><g:link controller="product" action="Refrigerados">Refrigerados</g:link></li>
+                        <li><g:link controller="product" action="Frutas_Y_Verduras">Frutas y Verduras</g:link></li>
+                        <li><g:link controller="product" action="Alimentos_Y_Bebidas">Alimentos y bebidas</g:link>></li>
                     </ul>
                 </li>
             </ul>
-        <!-- todo lo que esta alineado a la derecha (navbar-right) cambia dependiendo
-             de si el usuario esta o no loggeado-->
+
             <sec:ifNotLoggedIn>
                 <ul class="nav navbar-nav navbar-right">
                     <li><g:link controller="user" action="register"> <span class="glyphicon glyphicon-user"></span> Registrate</g:link></li>
@@ -235,23 +229,13 @@
                             <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><g:link controller="user" action="profile" id="${user.id}">Ver perfil</g:link></li>
-                            <li><a href="#">Carrito</a></li>
+                            <li><g:link controller="carrito" action="show" >Carrito</g:link></li>
                             <li class="divider"></li>
                             <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
                         </ul>
                     </li>
                 </ul>
-            </sec:ifLoggedIn><!--
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="user/register"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
-            </ul>
-            <p class="nav navbar-text navbar-right" > o </p>
-            <g:form class = "navbar-form navbar-right">
-            <div class="form-group">
-            <g:actionSubmit value="Ingresar" name="submitButton" action="doLogin" class="btn btn-success" />
-            </div>
-        </g:form>
-        -->
+            </sec:ifLoggedIn>
         </div><!--/.navbar-collapse-->
     </div>
 </nav>

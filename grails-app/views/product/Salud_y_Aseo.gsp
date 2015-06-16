@@ -33,7 +33,7 @@
     </script>
 
 </head>
-<body class="background-color scroll">
+<body class="background-color scroll body-salud">
 <!-- CABEZA DE LA PAGINA -->
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">
     <div class="container">
@@ -105,21 +105,19 @@
                         </ul>
                     </li>
                 </ul>
-            </sec:ifLoggedIn><!--
-            <ul class="nav navbar-nav navbar-right">
-                <li><a href="user/register"><span class="glyphicon glyphicon-user"></span> Registrate</a></li>
-            </ul>
-            <p class="nav navbar-text navbar-right" > o </p>
-            <g:form class = "navbar-form navbar-right">
-            <div class="form-group">
-            <g:actionSubmit value="Ingresar" name="submitButton" action="doLogin" class="btn btn-success" />
-            </div>
-        </g:form>
-        -->
+            </sec:ifLoggedIn>
         </div><!--/.navbar-collapse-->
     </div>
 </nav>
-
+<div class="container-fluid">
+    <div class="row header-style">
+        <div class="col-sm-5 col-md-5 col-xs-5">
+            <br/><br/><br/><br/>
+            <h1 class="text-center">Salud y aseo</h1>
+            <br/><br/>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="h_line"></div>

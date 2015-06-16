@@ -8,7 +8,7 @@ import grails.transaction.Transactional
 @Secured('permitAll')
 class ProductController {
 
-    static allowedMethods = [save: "POST", update: "PUT", delete: "DELETE"]
+    static allowedMethods = [save: "POST", delete: "DELETE", update: "POST"]
 
     def index(Integer max) {
         params.max = Math.min(max ?: 10, 100)
@@ -47,7 +47,8 @@ class ProductController {
     }
 
     def edit(Product productInstance) {
-        respond productInstance
+        def cate = ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos y bebidas']
+        respond productInstance, model: [product: productInstance,categories: cate,stores: Almacen.list()]
     }
 
     def newProduct(){
@@ -91,7 +92,6 @@ class ProductController {
         if((params.vprize) != null){
             listafiltrada.removeAll{it.prize > Double.parseDouble(params.prize)}
         }
-        //chain action:'search', model:[lista:listafiltrada]
         forward action:'search', model:[lista:listafiltrada]
 
     }
@@ -109,6 +109,7 @@ class ProductController {
         response.outputStream.flush()
     }
 
+
     @Transactional
     def createProduct(Product product){
 
@@ -123,14 +124,11 @@ class ProductController {
         if(productExist) {
             if (!almacen) {
                 productExist.addToStores(new AlmacenInfo(price: params.price, rating: params.rating, almacenId: params.store))
-                if (!image.empty) {
-                    productExist.imageByte = image.getBytes()
-                }
                 productExist.save flush: true
                 redirect action: "list_product"
             } else {
-                flash.message = "Este producto ya se encuentra en la base de datos"
-                redirect action: "newProduct"
+                flash.message = "Ya existe este producto, editalo ! "
+                redirect action: "edit", id: productExist.id
             }
         }
         else if(image.empty){
@@ -160,25 +158,35 @@ class ProductController {
     }
 
     @Transactional
-    def update(Product productInstance) {
-        if (productInstance == null) {
-            notFound()
-            return
+    def update(Product product) {
+
+        product.clearErrors()
+
+        def image = request.getFile('image')
+        if(!image.empty)product.imageByte=image.getBytes()
+
+        def almacen = AlmacenInfo.findByAlmacenId(params.store)
+
+
+        if(!(image.contentType.equals("image/jpeg") || image.contentType.equals("image/png") || image.empty) ){
+            flash.message = "El tipo de archivo debe ser JPEG o PNG"
+            redirect(action: "edit")
         }
+        else if (product.validate()) {
+            product.removeFromStores(almacen)
+            product.addToStores(new AlmacenInfo(price: params.price,rating: params.rating, almacenId: params.store))
+            println("Updating product ${product.name}")
+            product.save(flush: true)
 
-        if (productInstance.hasErrors()) {
-            respond productInstance.errors, view:'edit'
-            return
-        }
+            redirect action: "list_product"
 
-        productInstance.save flush:true
-
-        request.withFormat {
-            form multipartForm {
-                flash.message = message(code: 'default.updated.message', args: [message(code: 'Product.label', default: 'Product'), productInstance.id])
-                redirect productInstance
+        } else {
+            println("Error in account bootstrap for ${params.product}")
+            product.errors.each {
+                err ->
+                    println(err)
             }
-            '*'{ respond productInstance, [status: OK] }
+            forward action: 'edit', model: [product: product]
         }
     }
 
@@ -214,10 +222,8 @@ class ProductController {
     def _one_product(Product productInstance){
         respond productInstance
     }
+
     def list_product(){
-        /*println(listProducts.get(1).name)
-        println(listProducts.get(1).category)
-        println(listProducts.get(1).price)*/
         respond Product.all
     }
 
@@ -230,7 +236,9 @@ class ProductController {
     def addProductToCarrito(){
         def productInstance = Product.findById(params.id)
         session.carrito.addToProducts(productInstance).save(flush: true)
-        redirect(controller: 'product', action: 'list_product')
+        def targetUri = params.targetUri ?: "/"
+        redirect(uri: targetUri)
+        //redirect(controller: 'product', action: 'list_product')
     }
 
     def removeProductFromCarrito(){
@@ -244,15 +252,12 @@ class ProductController {
             }
         }
         session.carrito = carrito;
-        redirect(controller: 'product', action: 'list_product')
+        def targetUri = params.targetUri ?: "/"
+        redirect(uri: targetUri)
+        //redirect(controller: 'product', action: 'list_product')
     }
 
     def Salud_y_Aseo(){
-        /*def listProducts = Product.findAllByCategory('Salud y Aseo')
-        println(listProducts.get(1).name)
-        println(listProducts.get(1).category)
-        println(listProducts.get(1).price)
-        redirect(action: "list_product", params: [listProducts])*/
         respond Product.findAllByCategory('Salud y Aseo')
     }
 
@@ -267,5 +272,21 @@ class ProductController {
     }
     def Alimentos_Y_Bebidas(){
         respond Product.findAllByCategory('Alimentos y bebidas')
+    }
+
+    static def getSimilarProducts(params){
+        def similarProducts = []
+        Product.list().each(){
+            if(it.name.toLowerCase().contains(params.name.toLowerCase()) || params.name.toLowerCase().contains(it.name.toLowerCase())){
+                similarProducts << it
+            }
+            if(it.trademark.toLowerCase().contains(params.trademark.toLowerCase()) || params.trademark.toLowerCase().contains(it.trademark.toLowerCase())){
+                similarProducts << it
+            }
+            if(it.category.toLowerCase().contains(params.category.toLowerCase()) || params.category.toLowerCase().contains(it.category.toLowerCase())){
+                similarProducts << it
+            }
+        }
+        return similarProducts[0..4]
     }
 }

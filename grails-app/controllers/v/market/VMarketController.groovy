@@ -9,7 +9,7 @@ class VMarketController {
 
     def index() {
 
-        def cate = [[1:'saludyaseo',2:'Salud y Aseo'],[1:'licores',2:'Licores'],[1:'refrigerados',2:'Refrigerados'],[1:'frutasyverduras',2:'Frutas y Verduras'],[1:'alimentosvarios',2:'Alimentos Varios']]
+        def cate = [[1:'saludyaseo',2:'V * Market'],[1:'licores',2:'Licores'],[1:'refrigerados',2:'Refrigerados'],[1:'frutasyverduras',2:'Frutas y Verduras'],[1:'alimentosvarios',2:'Alimentos Varios']]
         def cat = new String("'#saludyaseo','#licores','#refrigerados','#frutasyverduras','#alimentosvarios'").encodeAsRaw();
         //def cat = new String("'#refrigerados','#carnes','#fritos'").encodeAsRaw();
         //def cate = ['Refrigerados','Carnes','Fritos'];

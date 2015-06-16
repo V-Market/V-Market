@@ -34,7 +34,7 @@
 
 </head>
 
-<body class="background-color scroll">
+<body class="background-color scroll body-frutas">
 <!-- CABEZA DE LA PAGINA -->
 <nav class="navbar navbar-inverse navbar-fixed-top background-color">
     <div class="container">
@@ -121,7 +121,15 @@
         </div><!--/.navbar-collapse-->
     </div>
 </nav>
-
+<div class="container-fluid">
+    <div class="row header-style">
+        <div class="col-sm-5 col-md-5 col-xs-5">
+            <br/><br/><br/><br/>
+            <h1 class="text-center">Frutas y verduras</h1>
+            <br/><br/>
+        </div>
+    </div>
+</div>
 <div class="container">
     <div class="row">
         <div class="h_line"></div>
