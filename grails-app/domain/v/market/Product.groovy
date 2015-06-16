@@ -15,6 +15,7 @@ class Product {
         trademark(blank:false)
         category(blank: false, inList: ['Salud y Aseo','Licores','Refrigerados','Frutas y Verduras','Alimentos y bebidas'])
         imageByte(blank:false , maxSize:1073741824)
+        stores(nullable:true)
     }
 
     static mapping = {

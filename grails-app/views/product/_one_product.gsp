@@ -24,10 +24,10 @@
     <g:form class="text-center">
         <g:hiddenField name="id" value="${productInstance.id}"/>
         <g:if test="${session.carrito.products.find{it.id==productInstance.id} == null}">
-            <g:actionSubmit action="addProductToCarrito" params="[targetUri: (request.forwardURI - request.contextPath)]" class="btn btn-success" value="Agregar Producto"><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>
+            <g:actionSubmit action="addProductToCarrito" class="btn btn-success" value="Agregar Producto"><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>
         </g:if>
         <g:else>
-            <g:actionSubmit action="removeProductFromCarrito" params="[targetUri: (request.forwardURI - request.contextPath)]" class="btn btn-danger" value="Eliminar Producto"><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>
+            <g:actionSubmit action="removeProductFromCarrito"  class="btn btn-danger" value="Eliminar Producto"><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>
         </g:else>
     </g:form>
 
