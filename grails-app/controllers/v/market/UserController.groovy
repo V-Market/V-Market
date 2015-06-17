@@ -138,8 +138,6 @@ class UserController {
     }
 
     def profile(User user){
-        //User user = User.get(springSecurityService.principal.id)
-        //respond user, model: [user: user]
         respond user, model: [user:user]
     }
 

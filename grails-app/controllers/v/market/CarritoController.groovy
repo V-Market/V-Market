@@ -69,4 +69,8 @@ class CarritoController {
         session.carrito = carrito;
         redirect(controller: 'carrito', action: 'show')
     }
+
+    def showCarrito(Carrito carrito){
+        respond carrito, model: [carrito: carrito]
+    }
 }

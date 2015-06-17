@@ -124,13 +124,30 @@
         </div>
         <!-- carritos -->
         <div id="cars" class="tab-pane fade">
-            <h3>Carritos recientes</h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <hr/>
-            <h3>Carritos frecuentes</h3>
-            <p>Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat.</p>
-            <div> Current Carrito</div>
-            <div>${session.carrito.getProducts()}</div>
+        <div class="row">
+            <g:each in="${user.getCarritos()}" status="i" var="carrito">
+                <g:if test="${carrito?.almacen}">
+                <div class="col-md-4">
+                    <div class="card card-container-register">
+                        <g:link controller="carrito" action="showCarrito" id="${carrito.id}">
+                            <div class="row">
+                                <div class="col-sm-4">
+                                    <img src="${resource(dir: "images",file: "carrito.png")}" alt=""width="60"/>
+                                </div>
+                                <div class="col-sm-8">
+                                    <h3> Ver productos</h3>
+                                </div>
+                            </div>
+                        </g:link>
+                        <br/><br/>
+                        <p><strong>Almacen : </strong>${carrito.almacen}</p>
+                        <p><strong>Distancia(en metros) : </strong>${carrito.distance}</p>
+                        <p><strong>Precio total : </strong>${carrito.price}</p>
+                    </div>
+                </div>
+                </g:if>
+            </g:each>
+        </div>
         </div>
 
     </div>

@@ -87,10 +87,12 @@ class ProductController {
             listafiltrada.removeAll{it.category != params.category}
         }
         if((params.vstore) != null){
-            listafiltrada.removeAll{it.shops.toString() != params.shops}
+            def storeId = Integer.parseInt(params.store)
+            listafiltrada.removeAll{ !it.getStoresId().contains(storeId) }
         }
-        if((params.vprize) != null){
-            listafiltrada.removeAll{it.prize > Double.parseDouble(params.prize)}
+        if((params.vprice) != null){
+            def minPrice = Double.parseDouble(params.price)
+            listafiltrada.removeAll{it.getMinPrice()>minPrice}
         }
         forward action:'search', model:[lista:listafiltrada]
 
@@ -109,6 +111,7 @@ class ProductController {
         response.outputStream.flush()
     }
 
+    def showCategories(){}
 
     @Transactional
     def createProduct(Product product){
@@ -167,13 +170,14 @@ class ProductController {
 
         def almacen = AlmacenInfo.findByAlmacenId(params.store)
 
-
         if(!(image.contentType.equals("image/jpeg") || image.contentType.equals("image/png") || image.empty) ){
             flash.message = "El tipo de archivo debe ser JPEG o PNG"
             redirect(action: "edit")
         }
         else if (product.validate()) {
-            product.removeFromStores(almacen)
+            if(product.stores.contains(almacen)){
+                product.removeFromStores(almacen)
+            }
             product.addToStores(new AlmacenInfo(price: params.price,rating: params.rating, almacenId: params.store))
             println("Updating product ${product.name}")
             product.save(flush: true)
@@ -262,7 +266,6 @@ class ProductController {
     }
 
     def Licores(){
-        render "Hola"
         respond Product.findAllByCategory('Licores')
     }
     def Refrigerados(){

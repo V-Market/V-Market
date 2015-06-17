@@ -22,7 +22,7 @@ class Product {
         stores lazy: false
     }
     public String toString(){
-        return name;
+        return name +"/ "+trademark;
     }
 
     public byte[] getImage(){
@@ -45,6 +45,10 @@ class Product {
             storeList << [name:name,price:it.price,rate:it.rating]
         }
         return storeList
+    }
+
+    public def getStoresId(){
+        return stores.almacenId
     }
 }
 

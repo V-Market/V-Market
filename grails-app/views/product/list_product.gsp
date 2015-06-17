@@ -101,7 +101,7 @@
         <div class="h_line"></div>
         <g:each in="${productInstanceList}" status="i" var="productInstance">
             <div class="col-md-3">
-                <g:render template="one_product" bean="${productInstance}" var="productInstance"></g:render>
+                <g:render template="one_product" bean=  "${productInstance}" var="productInstance"></g:render>
             </div>
         </g:each>
     </div>

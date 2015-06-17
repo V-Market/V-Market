@@ -22,292 +22,156 @@
     <!-- ||||||||||||||| SCRIPTS ||||||||||||||| -->
     <g:javascript src="jquery-1.11.2.min.js" />
     <g:javascript src="bootstrap.min.js" />
-
-    <script>
-        var init = true;
-        var index = 0;
-        var divs = ['.categorias','.background','.whoarewe','.contacto'];
-        var categories = [${categories}];
-        var indexC = 0;
-        var events = [];
-        var semaforo = false;
-        var current = 0;
-        var next = 1;
-        $(document).ready(function() {
-            if(init){
-                init = false;
-                index = 0;
-                scrollToID(divs[0], 750);
-            }
-            window.setInterval(function(){
-                $(categories[indexC]).removeClass();
-                $(categories[next]).removeClass();
-                $(categories[indexC]).addClass('defaultSaleDerecha');
-                $(categories[next]).addClass('defaultEntraIzquierda');
-                indexC = next;
-                next = next + 1;
-                if(next==categories.length){
-                    next = 0;
-                }
-                view = categories[indexC];
-                 var intervalo = setInterval(function(){
-                    if(view!=null){
-                        for(var j=0;j<categories.length;j++){
-                            if(categories[j]==view){
-                                $(view).removeClass().addClass('default');
-                                continue;
-                                }
-                            $(categories[j]).removeClass();
-                            $(categories[j]).addClass('defaultHide');
-                        }
-                       view = null;
-                    }
-                    window.clearInterval(intervalo);
-                 }, 1000);
-            }, 5000);
-            $(".standard").click(function(){
-                var index = $(this).attr('data-button');
-                if(index == current) return;
-                $(categories[current]).removeClass();
-                $(categories[index]).removeClass();
-                if(index>current) {
-                    $(categories[current]).addClass('defaultSaleDerecha');
-                    $(categories[index]).addClass('defaultEntraIzquierda');
-                }else{
-                    $(categories[current]).addClass('defaultSaleIzquierda');
-                    $(categories[index]).addClass('defaultEntraDerecha');
-                }
-                view = categories[index];
-                current = index;
-                /*var intervalo = setInterval(function(){
-                    if(view!=null){
-                        for(var j=0;j<categories.length;j++){
-                            if(categories[j]==view){
-                                $(view).removeClass().addClass('default');
-                                continue;
-                            }
-                            $(categories[j]).removeClass();
-                            $(categories[j]).addClass('defaultHide');
-                        }
-                        view = null;
-                    }
-                    window.clearInterval(intervalo);
-                }, 1000);*/
-            });
-            $('a[href^="#"]').click(function(){
-                scrollToID(divs[0], 750, 0,0);
-                index = 0;
-            });
-        });
-        window.onkeydown = function h(e){
-            var view;
-            switch (e.keyCode) {
-                case 38:
-                    if(index !=0) {
-                        index = index - 1 ;
-                        scrollToID(divs[index], 750, divs[index+1], index+1);
-                    }
-                    if(index == 0) {
-                        //$('.background-color').css('background-color', 'transparent');
-                    }
-                    if(index%2==0) {
-                        var a = $('.Title3').removeClass();
-                        a.addClass('Title');
-                    }else{
-                        var a = $('.Title').removeClass();
-                        a.addClass('Title3');
-                    }
-                    break;
-                case 40:
-                    if(index != 4) {
-                        index = index + 1;
-                        scrollToID(divs[index], 750, divs[index-1], index-1);
-                    }
-                    if(index == 0) {
-                        //$('.background-color').css('background-color', 'transparent');
-                    }
-                    if(index == 1) {
-                        //$('.background-color').css('background-color', 'white');
-                    }
-                    if(index%2==0) {
-                        var a = $('.Title3').removeClass();
-                        a.addClass('Title');
-                    }else{
-                        var a = $('.Title').removeClass();
-                        a.addClass('Title3');
-                    }
-                    break;
-            }
-        };
-        function scrollToID(id, speed, before, index){
-            var offSet = 50;
-            var targetOffset = $(id).offset().top - offSet;
-            $(id).css('opacity','1');
-            $('html,body').animate({scrollTop:targetOffset}, speed);
-        }
-    </script>
-
 </head>
 
-<body class="wrapper">
+<body>
 
-<!-- CABEZA DE LA PAGINA -->
-<nav class="navbar navbar-inverse navbar-fixed-top background-color">
-    <div class="container">
-        <div class="navbar-header">
-            <button type="button" class="navbar-toggle collapsed" data-toggle="collapse" data-target="#navbar" aria-expanded="false" aria-controls="navbar">
-                <span class="sr-only">Toggle navigation</span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-                <span class="icon-bar"></span>
-            </button>
-        <!--El header contiene el boton "inicio"-->
-            <g:link controller="VMarket" action="index" class="navbar-brand">
-                V-Market <span class="glyphicon glyphicon-asterisk"></span>
-            </g:link>
+<g:render template="/layouts/navbar"></g:render>
 
+<!-- Header Carousel -->
+<header id="myCarousel" class="carousel slide">
+    <!-- Indicators -->
+    <ol class="carousel-indicators">
+        <li data-target="#myCarousel" data-slide-to="0" class=""></li>
+        <li data-target="#myCarousel" data-slide-to="1" class="active"></li>
+        <li data-target="#myCarousel" data-slide-to="2" class=""></li>
+    </ol>
+
+    <!-- Wrapper for slides -->
+    <div class="carousel-inner">
+        <div class="item">
+            <img src="${resource(dir: "images/slider", file: "frutas.jpg")}">
+            <div class="carousel-caption">
+                <div class="black-card">
+                    <h2>Todo en un mismo lugar</h2>
+                    <g:link controller="product" action="showCategories" class="btn btn-primary"> Ver categorias </g:link>
+                </div>
+            </div>
+        </div>
+        <div class="item active">
+            <img src="${resource(dir: "images/slider", file: "shop.jpg")}">
+            <div class="carousel-caption">
+                <div class="black-card">
+                    <h2>V-Market <span class="glyphicon glyphicon-asterisk"></span> </h2>
+                    <p>Mercar nunca sera tan fácil</p>
+                    <g:link controller="user" action="register" class="btn btn-primary"> Registrate </g:link>
+                </div>
+            </div>
+        </div>
+        <div class="item">
+            <img src="${resource(dir: "images/slider", file: "mercar1.jpg")}">
+            <div class="carousel-caption">
+                <div class="black-card">
+                    <h2>No compres en cualquier lugar</h2>
+                    <p>¿Cual es el lugar mas cercano?</p>
+                    <p>¿Cual es el lugar con los productos de mejor calidad y al menor precio?</p>
+                    <g:link controller="carrito" action="show" class="btn btn-primary"> Conoce tu mejor opción </g:link>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Controls -->
+    <a class="left carousel-control" href="#myCarousel" data-slide="prev">
+        <span class="icon-prev"></span>
+    </a>
+    <a class="right carousel-control" href="#myCarousel" data-slide="next">
+        <span class="icon-next"></span>
+    </a>
+</header>
+
+<!-- Page Content -->
+<div class="container">
+
+    <!-- Marketing Icons Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h1 class="page-header">
+                Bienvenido a V-Market <span class="glyphicon glyphicon-asterisk"></span>
+            </h1>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-compass"></i> Haz la mejor compra</h4>
+                </div>
+                <div class="panel-body">
+                    <p>Te brindamos la mas completa herramienta de selección de compra de tus productos en base a precio, calidad, y distancia</p>
+                    <br/>
+                    <g:link controller="carrito" action="show" class="btn btn-default"> Añade productos a tu carrito </g:link>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-check"></i> Todo en un mismo lugar</h4>
+                </div>
+                <div class="panel-body">
+                    <p> Todos los productos, de todos los almacenes de Bogotá en un solo lugar. Te brindamos la informacion mas reciente de los precios y de la calidad de los productos. </p>
+                    <g:link controller="product" action="showCategories" class="btn btn-default"> Ver categorias </g:link>
+                </div>
+            </div>
+        </div>
+        <div class="col-md-4">
+            <div class="panel panel-default">
+                <div class="panel-heading">
+                    <h4><i class="fa fa-fw fa-gift"></i> Aporta a nuestra comunidad</h4>
+                </div>
+                <div class="panel-body">
+                    <p>¿Tienes la mas reciente información sobre un producto? Aporta esta información a nuestra comunidad. Puedes actualizar o crear nuevos productos.</p>
+                    <g:link controller="user" action="register" class="btn btn-default"> Registrate </g:link>
+                </div>
+            </div>
         </div>
 
-        <div id="navbar" class="navbar-collapse collapse">
+    </div>
+    <!-- /.row -->
 
-            <ul class="nav navbar-nav">
-                <li class="dropdown">
-                    <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">Categorias <span class="caret"></span></a>
-                    <ul class="dropdown-menu" role="menu">
-                        <li><g:link controller="product" action="Salud_y_Aseo">Salud y Aseo</g:link> </li>
-                        <li><g:link controller="product" action="Licores">Licores</g:link></li>
-                        <li><g:link controller="product" action="Refrigerados">Refrigerados</g:link></li>
-                        <li><g:link controller="product" action="Frutas_Y_Verduras">Frutas y Verduras</g:link></li>
-                        <li><g:link controller="product" action="Alimentos_Y_Bebidas">Alimentos y bebidas</g:link>></li>
-                    </ul>
-                </li>
+    <!-- Features Section -->
+    <div class="row">
+        <div class="col-lg-12">
+            <h2 class="page-header">¿Por qué debo tener una cuenta en V-Market?</h2>
+        </div>
+        <div class="col-md-6">
+            <br/><br/>
+            <p>Tienes los siguientes beneficios:</p>
+            <ul>
+                <li>Almacenar tus compras frecuentes</li>
+                <li>Consultar la mejor opcion de compra</li>
+                <li>Consultar las diversas calidades y precios que ofrecen los almacenes</li>
+                <li>Consultar la opcion mas cercana de compra</li>
+                <li>Actualizar información de los productos</li>
             </ul>
-
-            <sec:ifNotLoggedIn>
-                <ul class="nav navbar-nav navbar-right">
-                    <li><g:link controller="user" action="register"> <span class="glyphicon glyphicon-user"></span> Registrate</g:link></li>
-                </ul>
-
-                <p class="nav navbar-text navbar-right" > o </p>
-
-                <ul class="nav navbar-nav navbar-right">
-                    <li><g:link controller="login"><span class="glyphicon glyphicon-log-in"></span> Ingresa</g:link></li>
-                </ul>
-            </sec:ifNotLoggedIn>
-            <sec:ifLoggedIn>
-                <ul class="nav navbar-nav navbar-right">
-                    <li class="dropdown">
-                        <a href="#" class="dropdown-toggle" data-toggle="dropdown" role="button" aria-expanded="false">
-                            <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
-                        <ul class="dropdown-menu" role="menu">
-                            <li><g:link controller="user" action="profile" id="${user.id}">Ver perfil</g:link></li>
-                            <li><g:link controller="carrito" action="show" >Carrito</g:link></li>
-                            <li class="divider"></li>
-                            <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>
-                        </ul>
-                    </li>
-                </ul>
-            </sec:ifLoggedIn>
-        </div><!--/.navbar-collapse-->
+        </div>
+        <div class="col-md-6">
+            <img class="img-responsive" src="${resource(dir: "images",file: "maps.PNG")}" alt="">
+        </div>
     </div>
-</nav>
+    <!-- /.row -->
 
-<div class="categorias">
-    <div class="wrapper">
-        <g:each in="${cate}" var="cat" status="it">
-            <g:if test="${it==0}">
-                <div class="default" id="${cat[1]}" >
+    <hr>
 
-                    <div class="Title">${cat[2]}</div>
-                </div>
-            </g:if>
-            <g:else>
-                <div class="defaultHide" id="${cat[1]}">
+    <hr>
 
-                    <div class="Title">${cat[2]}</div>
-                </div>
-            </g:else>
-        </g:each>
-    </div>
-</div>
-<div class="whoarewe">
-    <div class="row top">
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'Vmarket.png')}"  width="250" height="250">
-            <div class="mask">
-                <h2>¿Quienes Somos?</h2>
-                <p>Estudiantes Activos Universidad Nacional de Colombia</p>
-            </div>
-        </div>
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'Jenny.jpg')}"  width="250" height="250">
-            <div class="mask">
-                <h2>Jenny Sanchez</h2>
-                <p>Estudiante de Ingeniería de Sistemas y Estadística</p>
-                <a href="http://www.facebook.com">@JennySanchez</a>
-            </div>
-        </div>
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'Gabriel.jpg')}"  width="250" height="250">
-            <div class="mask">
-                <h2>Gabriel Torres</h2>
-                <p>Estudiante de Ingeniería de Sistemas y Computación</p>
-                <a href="http://www.facebook.com">@GabrielTorres</a>
-            </div>
-        </div>
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'Neill.jpg')}" width="250" height="250">
-            <div class="mask">
-                <h2>Neill Giraldo</h2>
-                <p>Estudiante de Ingeniería de Sistemas y Computación</p>
-                <a href="http://www.facebook.com">@NeillGiraldo</a>
-            </div>
-        </div>
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'John.jpg')}" width="250" height="250" >
-            <div class="mask">
-                <h2>John Ubaldo</h2>
-                <p>Estudiante de Ingeniería de Sistemas y Computación</p>
-                <a href="http://www.facebook.com">@JohnUbaldo</a>
-            </div>
-        </div>
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'Manuel.jpg')}" width="250" height="250">
-            <div class="mask">
-                <h2>Manuel Zambrano</h2>
-                <p>Estudiante de Ingeniería de Sistemas y Computación</p>
-                <a href="http://www.facebook.com">@ManuelZambrano</a>
-            </div>
-        </div>
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'david.jpeg')}" width="250" height="250">
-            <div class="mask">
-                <h2>David Martinez</h2>
-                <p>Estudiante de Ingeniería de Sistemas y Computación</p>
-                <a href="http://www.facebook.com">@DavidMartinez</a>
-            </div>
-        </div>
-        <div class="col-xs-3"><img src="${resource(dir:'images', file:'unal.gif')}"  width="250" height="250">
-            <div class="mask">
-                <h2>Ingenieria de Software II</h2>
-                <p>Profesor: Jairo Aponte</p>
-            </div>
-        </div>
-
-    </div>
-
-</div>
-<div class="contacto">
-    <div style="font-family: 'lexia', bold; font-size: 45px; color:#ffffff; padding-left: 40px  ">
+    <!-- Footer -->
+    <footer>
         <div class="row">
-            <div class="col-md-4">V-Market</div>
-            <div class="col-md-2" style="position: absolute; left:30%; top:25%; font-family: 'lexia', serif; line-height: 1.6em; font-weight: 100; font-size: 18px; letter-spacing: 3px">helpdeskvmarket@gmail.com</div>
-            <div class="col-md-6" style="text-align: right; padding-right: 40px">
-                <img src="${resource(dir: 'images',file:'facebook.png')}" width="25px" height="25px"/>
-                <img src="${resource(dir: 'images',file:'twittericon.jpg')}" width="25px" height="25px"/>
+            <div class="col-lg-12">
+                <p>V-Market <span class="glyphicon glyphicon-asterisk"></span> 2015</p>
+                <p><strong>E-Mail:</strong> helpdeskvmarket@gmail.com</p>
             </div>
         </div>
-    </div>
+    </footer>
+
 </div>
-<footer class="ourFooter">
-    <div style="vertical-align: middle; position: absolute; top: 35%; line-height: 1.6em; font-weight: 300; font-size: 12px; letter-spacing: 2px; padding-left: 20px"> © V-Market 2015, All rights reserved </div>
-</footer>
+<!-- /.container -->
 
-
-<!-- AQUI debe ir el contenido de cada vista !!!!!!!!!-->
-
+<!-- Script to Activate the Carousel -->
+<script>
+    $('.carousel').carousel({
+        interval: 5000 //changes the speed
+    })
+</script>
 </body>
 </html>

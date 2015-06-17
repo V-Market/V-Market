@@ -21,7 +21,7 @@ class Carrito {
     }
 
     public String toString(){
-        String ha = " "
+        String ha = "ID : "+id+" / "
         for(Product product: products){
            ha = ha + product + " ";
         }
