@@ -128,7 +128,7 @@ class ProductController {
             if (!almacen) {
                 productExist.addToStores(new AlmacenInfo(price: params.price, rating: params.rating, almacenId: params.store))
                 productExist.save flush: true
-                redirect action: "list_product"
+                redirect action: "show", id: productExist.id
             } else {
                 flash.message = "Ya existe este producto, editalo ! "
                 redirect action: "edit", id: productExist.id
@@ -148,7 +148,7 @@ class ProductController {
             println("Creating product ${params.name}")
             product.save(flush: true)
 
-            redirect action: "list_product"
+            redirect action: "show",id: product.id
 
         } else {
             println("Error in account bootstrap for ${params.product}")
@@ -182,7 +182,7 @@ class ProductController {
             println("Updating product ${product.name}")
             product.save(flush: true)
 
-            redirect action: "list_product"
+            redirect action: "show",id: product.id
 
         } else {
             println("Error in account bootstrap for ${params.product}")
