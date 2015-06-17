@@ -84,6 +84,7 @@
         google.maps.event.addDomListener(window, 'load', initialize);
 
         $(document).ready(function(){
+
             $(".arribaButton").click(function(){
                 scrollToID("#container",750,0,0);
             });
@@ -217,8 +218,9 @@
             });
 
             $('.buttonsucess').click(function () {
-                var or = []
-                var des = []
+
+                var or = [];
+                var des = [];
                 for(var h=0; h<${classes};h++) {
                     var string = '.field' + h;
                     var value = $(string).val();
@@ -236,6 +238,7 @@
                                 travelMode: google.maps.TravelMode.DRIVING
 
                             }, function (response, status) {
+                                var string = "";
                                 if (status == google.maps.DistanceMatrixStatus.OK) {
                                     var origins = response.originAddresses;
                                     var destinations = response.destinationAddresses;
@@ -247,15 +250,34 @@
                                             var distance = element.distance.text;
                                             var duration = element.duration.text;
                                             var distance = distance.split(" ");
-                                            $('.field'+j).val(distance[0]);
+                                            string = string + $('#fieldid'+j).val() + "/" + distance[0] + "-";
                                         }
                                     }
                                 }
+                                string = string.substr(0,string.length-1);
+                                $('#statusAlmacenes').val(string);
+                                $.ajax({
+                                    method: "GET",
+                                    url:"${createLink(controller: 'carrito', action: 'sortStores')}",
+                                    data: { productos: JSON.stringify(${session.carrito.products.collect{it.id}}), distances: string, cPrecio: parseInt($("#valueprogress1").val()),cCalidad: parseInt($("#valueprogress2").val()), cDistancia: parseInt($("#valueprogress3").val())}
+                                }).done(function(data){
+                                    <g:set var="string" value="data"/>
+                                    var h = ${string};
+                                    h = h.replaceAll("[","");
+                                    h = h.replaceAll("]","");
+                                    h = h.replaceAll(" ","");
+                                    arrays = h.split(",").map(Number);
+                                    arrays = $.unique(arrays);
+                                    val = 3;
+                                    if(arrays.length<3) val = arrays.length;
+                                    for(var i=0; i<val;i++) {
+                                        $("#almacenId"+i).val(arrays[i]);
+                                    }
+                                    $("#actualizar").val()
+                                })
                             });
                             $('.myrow').css('opacity','1');
-                            $.get("${createLink(action:'renderDistances',controller: 'carrito', params:'${params}')}").done(function(data){
-                                $(".distances").html(data);
-                            });
+
 
 
                 });
@@ -399,20 +421,35 @@
         <br>
         <br>
         <div class="myrow row" style="opacity:0;">
+            <g:hiddenField name="myalmacen" value=" " id="statusAlmacenes"/>
         <g:each in="${almacenes}" var="almacenInstance" status="it">
             <g:hiddenField name="field${it}" value="${almacenInstance.lat}/${almacenInstance.lng}" class="field${it}"/>
-
-                <div class="col-md-4">
-                    <td style="text-align: center" >
-                        <img  class="img-thumbnail" src="https://maps.googleapis.com/maps/api/staticmap?center=${almacenInstance.lat},${almacenInstance.lng}&zoom=14&size=200x200&markers=size:tiny%7label:S%7C${almacenInstance.lat},${almacenInstance.lng}" width="200" height="200"/>
-                        <br>
-                        ${almacenInstance.toString()}
-                        <br>
-                        <g:radio name="almacenId" value="${almacenInstance.id}" id="almacenId${it}"/>
-                    </td>
-                </div>
-
+            <g:hiddenField name="fieldid${it}" value="${almacenInstance.id}" class="field${it}" id="fieldid${it}"/>
         </g:each>
+            <div class="col-md-4">
+                <td style="text-align: center" >
+                    <g:include controller="carrito" action="getCenter" id="33"/>
+                    <br>
+                    <br>
+                    <g:radio name="almacenId" value="" id="almacenId0"/>
+                </td>
+            </div>
+            <div class="col-md-4">
+                <td style="text-align: center" >
+                    <g:include controller="carrito" action="getCenter" id="1"/>
+                    <br>
+                    <br>
+                    <g:radio name="almacenId" value="" id="almacenId1"/>
+                </td>
+            </div>
+            <div class="col-md-4">
+                <td style="text-align: center" >
+                    <g:include controller="carrito" action="getCenter" id="33"/>
+                    <br>
+                    <br>
+                    <g:radio name="almacenId" value="" id="almacenId2"/>
+                </td>
+            </div>
         </div>
         <br>
         <br>

@@ -2,13 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="37b0df2c-1e1b-417d-b462-b5aaa5ed91a9" name="Default" comment="">
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController$_getSimilarProducts_closure25.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController$_getSimilarProducts_closure25.class" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/ProductController.class" afterPath="$PROJECT_DIR$/target/classes/v/market/ProductController.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/CarritoController$_removeProductFromCarrito_closure2.class" afterPath="$PROJECT_DIR$/target/classes/v/market/CarritoController$_removeProductFromCarrito_closure2.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/CarritoController$_save_closure1.class" afterPath="$PROJECT_DIR$/target/classes/v/market/CarritoController$_save_closure1.class" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/classes/v/market/CarritoController.class" afterPath="$PROJECT_DIR$/target/classes/v/market/CarritoController.class" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.h2.db" afterPath="$PROJECT_DIR$/devDb.h2.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.trace.db.old" afterPath="$PROJECT_DIR$/devDb.trace.db.old" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.trace.db" afterPath="$PROJECT_DIR$/devDb.trace.db" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" afterPath="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" afterPath="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" />
-      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/web-app/css/carrito.css" afterPath="$PROJECT_DIR$/web-app/css/carrito.css" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V-Market-grailsPlugins.iml" afterPath="$PROJECT_DIR$/V-Market-grailsPlugins.iml" />
+      <change type="MODIFICATION" beforePath="$PROJECT_DIR$/V-Market.iml" afterPath="$PROJECT_DIR$/V-Market.iml" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/devDb.lock.db" afterPath="$PROJECT_DIR$/devDb.lock.db" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/grails-app/views/carrito/show.gsp" afterPath="$PROJECT_DIR$/grails-app/views/carrito/show.gsp" />
       <change type="MODIFICATION" beforePath="$PROJECT_DIR$/target/stacktrace.log" afterPath="$PROJECT_DIR$/target/stacktrace.log" />
@@ -39,23 +42,21 @@
   </component>
   <component name="FileEditorManager">
     <leaf>
-      <file leaf-file-name="CarritoController.groovy" pinned="false" current-in-tab="false">
-        <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy">
+      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/carrito/show.gsp">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="-8.26087" vertical-offset="320" max-vertical-offset="1326">
-              <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-              <folding>
-                <element signature="e#18#47#0" expanded="true" />
-              </folding>
+            <state vertical-scroll-proportion="-1.3061224" vertical-offset="7280" max-vertical-offset="8160">
+              <caret line="432" column="24" selection-start-line="432" selection-start-column="24" selection-end-line="432" selection-end-column="24" />
+              <folding />
             </state>
           </provider>
         </entry>
       </file>
-      <file leaf-file-name="show.gsp" pinned="false" current-in-tab="true">
-        <entry file="file://$PROJECT_DIR$/grails-app/views/carrito/show.gsp">
+      <file leaf-file-name="ProductController.groovy" pinned="false" current-in-tab="true">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy">
           <provider selected="true" editor-type-id="text-editor">
-            <state vertical-scroll-proportion="0.14325842" vertical-offset="6001" max-vertical-offset="7531">
-              <caret line="356" column="72" selection-start-line="356" selection-start-column="72" selection-end-line="356" selection-end-column="72" />
+            <state vertical-scroll-proportion="0.22427441" vertical-offset="4318" max-vertical-offset="4998">
+              <caret line="261" column="18" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
               <folding />
             </state>
           </provider>
@@ -71,6 +72,51 @@
           </provider>
         </entry>
       </file>
+      <file leaf-file-name="CarritoController.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-6.076923" vertical-offset="2438" max-vertical-offset="2958">
+              <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+              <folding>
+                <element signature="e#18#50#0" expanded="true" />
+              </folding>
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="getCenter.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/carrito/getCenter.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="119">
+              <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="Almacen.groovy" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
+          <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+            <state />
+          </provider>
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.0" vertical-offset="0" max-vertical-offset="510">
+              <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
+      <file leaf-file-name="_one_product.gsp" pinned="false" current-in-tab="false">
+        <entry file="file://$PROJECT_DIR$/grails-app/views/product/_one_product.gsp">
+          <provider selected="true" editor-type-id="text-editor">
+            <state vertical-scroll-proportion="-0.21794872" vertical-offset="187" max-vertical-offset="748">
+              <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+              <folding />
+            </state>
+          </provider>
+        </entry>
+      </file>
     </leaf>
   </component>
   <component name="Git.Settings">
@@ -79,7 +125,6 @@
   <component name="IdeDocumentHistory">
     <option name="CHANGED_PATHS">
       <list>
-        <option value="$PROJECT_DIR$/grails-app/views/layouts/template.gsp" />
         <option value="$PROJECT_DIR$/grails-app/controllers/v/market/HomeController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/v/market/VmarketController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/index.gsp" />
@@ -121,15 +166,16 @@
         <option value="$PROJECT_DIR$/grails-app/conf/DataSource.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/vMarket/index.gsp" />
         <option value="$PROJECT_DIR$/grails-app/domain/v/market/Carrito.groovy" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/v/market/VMarketController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/controllers/v/market/UserController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/product/search.gsp" />
         <option value="$PROJECT_DIR$/grails-app/views/product/list_product.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" />
-        <option value="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
         <option value="$PROJECT_DIR$/web-app/css/carrito.css" />
+        <option value="$PROJECT_DIR$/grails-app/views/product/_one_product.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/views/carrito/getCenter.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy" />
         <option value="$PROJECT_DIR$/grails-app/views/carrito/show.gsp" />
+        <option value="$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy" />
       </list>
     </option>
   </component>
@@ -554,6 +600,7 @@
       <workItem from="1434397687536" duration="29320000" />
       <workItem from="1434430440070" duration="9855000" />
       <workItem from="1434487253408" duration="5030000" />
+      <workItem from="1434507254550" duration="18859000" />
     </task>
     <task id="LOCAL-00001" summary="Deploy">
       <created>1434430947587</created>
@@ -571,7 +618,7 @@
     <servers />
   </component>
   <component name="TimeTrackingManager">
-    <option name="totallyTimeSpent" value="318612000" />
+    <option name="totallyTimeSpent" value="337471000" />
   </component>
   <component name="ToolWindowManager">
     <frame x="54" y="-8" width="1320" height="784" extended-state="6" />
@@ -596,7 +643,7 @@
       <window_info id="Palette&#9;" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="3" side_tool="false" content_ui="tabs" />
       <window_info id="Java Enterprise" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="10" side_tool="false" content_ui="tabs" />
       <window_info id="Version Control" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="11" side_tool="false" content_ui="tabs" />
-      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3127889" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
+      <window_info id="Run" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="true" weight="0.3174114" sideWeight="0.5" order="2" side_tool="false" content_ui="tabs" />
       <window_info id="Spring" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="12" side_tool="false" content_ui="tabs" />
       <window_info id="Terminal" active="false" anchor="bottom" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.32840723" sideWeight="0.5" order="13" side_tool="false" content_ui="tabs" />
       <window_info id="Persistence" active="false" anchor="left" auto_hide="false" internal_type="DOCKED" type="DOCKED" visible="false" weight="0.33" sideWeight="0.5" order="4" side_tool="true" content_ui="tabs" />
@@ -641,16 +688,6 @@
     <option name="FILTER_TARGETS" value="false" />
   </component>
   <component name="editorHistoryManager">
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="160" max-vertical-offset="1326">
-          <caret line="20" column="13" selection-start-line="20" selection-start-column="13" selection-end-line="20" selection-end-column="13" />
-          <folding>
-            <element signature="e#18#47#0" expanded="true" />
-          </folding>
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/web-app/css/bootstrap.min.css">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="369">
@@ -776,7 +813,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2856" max-vertical-offset="5253">
           <caret line="168" column="17" selection-start-line="168" selection-start-column="17" selection-end-line="168" selection-end-column="17" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -827,7 +863,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-11.826087" vertical-offset="0" max-vertical-offset="2244">
           <caret line="39" column="4" selection-start-line="39" selection-start-column="4" selection-end-line="39" selection-end-column="29" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -865,7 +900,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="-3.122449" vertical-offset="1190" max-vertical-offset="2567">
           <caret line="79" column="73" selection-start-line="79" selection-start-column="73" selection-end-line="79" selection-end-column="73" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -895,7 +929,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.8242424" vertical-offset="2210" max-vertical-offset="3145">
           <caret line="146" column="38" selection-start-line="146" selection-start-column="38" selection-end-line="146" selection-end-column="38" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -924,18 +957,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.0" vertical-offset="2312" max-vertical-offset="5916">
           <caret line="153" column="28" selection-start-line="153" selection-start-column="28" selection-end-line="153" selection-end-column="28" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
-      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
-        <state />
-      </provider>
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.0" vertical-offset="34" max-vertical-offset="510">
-          <caret line="2" column="6" selection-start-line="2" selection-start-column="6" selection-end-line="2" selection-end-column="6" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -943,14 +964,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.71629214" vertical-offset="1955" max-vertical-offset="2720">
           <caret line="130" column="41" selection-start-line="128" selection-start-column="36" selection-end-line="130" selection-end-column="41" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.2434555" vertical-offset="4004" max-vertical-offset="5015">
-          <caret line="243" column="35" selection-start-line="243" selection-start-column="35" selection-end-line="243" selection-end-column="35" />
           <folding />
         </state>
       </provider>
@@ -1001,19 +1014,10 @@
         </state>
       </provider>
     </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/views/product/_one_product.gsp">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.66573036" vertical-offset="290" max-vertical-offset="748">
-          <caret line="31" column="111" selection-start-line="31" selection-start-column="111" selection-end-line="31" selection-end-column="111" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/product/list_product.gsp">
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.80898875" vertical-offset="1514" max-vertical-offset="1938">
           <caret line="106" column="10" selection-start-line="106" selection-start-column="10" selection-end-line="106" selection-end-column="10" />
-          <folding />
         </state>
       </provider>
     </entry>
@@ -1021,17 +1025,6 @@
       <provider selected="true" editor-type-id="text-editor">
         <state vertical-scroll-proportion="0.46067417" vertical-offset="2131" max-vertical-offset="2703">
           <caret line="135" column="26" selection-start-line="135" selection-start-column="26" selection-end-line="135" selection-end-column="26" />
-          <folding />
-        </state>
-      </provider>
-    </entry>
-    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy">
-      <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="-8.26087" vertical-offset="320" max-vertical-offset="1326">
-          <caret line="30" column="38" selection-start-line="30" selection-start-column="38" selection-end-line="30" selection-end-column="38" />
-          <folding>
-            <element signature="e#18#47#0" expanded="true" />
-          </folding>
         </state>
       </provider>
     </entry>
@@ -1043,10 +1036,55 @@
         </state>
       </provider>
     </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/domain/v/market/Almacen.groovy">
+      <provider editor-type-id="org.jetbrains.plugins.grails.perspectives.DomainClassesRelationsEditorProvider">
+        <state />
+      </provider>
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="510">
+          <caret line="0" column="0" selection-start-line="0" selection-start-column="0" selection-end-line="0" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/product/_one_product.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-0.21794872" vertical-offset="187" max-vertical-offset="748">
+          <caret line="12" column="0" selection-start-line="12" selection-start-column="0" selection-end-line="12" selection-end-column="0" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/views/carrito/getCenter.gsp">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.0" vertical-offset="0" max-vertical-offset="119">
+          <caret line="0" column="38" selection-start-line="0" selection-start-column="38" selection-end-line="0" selection-end-column="38" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/CarritoController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="-6.076923" vertical-offset="2438" max-vertical-offset="2958">
+          <caret line="162" column="0" selection-start-line="162" selection-start-column="0" selection-end-line="162" selection-end-column="0" />
+          <folding>
+            <element signature="e#18#50#0" expanded="true" />
+          </folding>
+        </state>
+      </provider>
+    </entry>
     <entry file="file://$PROJECT_DIR$/grails-app/views/carrito/show.gsp">
       <provider selected="true" editor-type-id="text-editor">
-        <state vertical-scroll-proportion="0.14325842" vertical-offset="6001" max-vertical-offset="7531">
-          <caret line="356" column="72" selection-start-line="356" selection-start-column="72" selection-end-line="356" selection-end-column="72" />
+        <state vertical-scroll-proportion="-1.3061224" vertical-offset="7280" max-vertical-offset="8160">
+          <caret line="432" column="24" selection-start-line="432" selection-start-column="24" selection-end-line="432" selection-end-column="24" />
+          <folding />
+        </state>
+      </provider>
+    </entry>
+    <entry file="file://$PROJECT_DIR$/grails-app/controllers/v/market/ProductController.groovy">
+      <provider selected="true" editor-type-id="text-editor">
+        <state vertical-scroll-proportion="0.22427441" vertical-offset="4318" max-vertical-offset="4998">
+          <caret line="261" column="18" selection-start-line="261" selection-start-column="18" selection-end-line="261" selection-end-column="18" />
           <folding />
         </state>
       </provider>
@@ -1131,7 +1169,7 @@
       </state>
       <state key="ModuleStructureConfigurable.UI">
         <settings>
-          <last-edited>V-Market-grailsPlugins</last-edited>
+          <last-edited>V-Market</last-edited>
           <splitter-proportions>
             <option name="proportions">
               <list>
