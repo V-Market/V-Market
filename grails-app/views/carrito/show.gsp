@@ -84,6 +84,13 @@
         google.maps.event.addDomListener(window, 'load', initialize);
 
         $(document).ready(function(){
+            $(".arribaButton").click(function(){
+                scrollToID("#container",750,0,0);
+            });
+            $(".arribaButton2").click(function(){
+                scrollToID("#containerMap",750,0,0);
+            });
+
             $("#almacenId0").click(function(){
                 $("#idAlmacen").val($("#almacenId0").val());
             });
@@ -318,11 +325,11 @@
     </div>
 </nav>
 
-<div id="container">
-    <div class="row" style="height: 80%">
+<div id="container" style="position: relative; width:100%; height: 100%; padding: 0; margin:0">
+    <div class="row" style="height: 80%; width:100%; overflow: auto; overflow-x: hidden; position: absolute; margin:0">
         <div class="col-md-12">
             <div class="row" style="height: 14%; width:100%"></div>
-            <div class="container">
+            <div class="container" style="overflow: auto">
                 <div class="row" style="width:100%">
                     <div class="h_line"></div>
                     <g:each in="${session.carrito.products}" status="i" var="productInstance">
@@ -334,18 +341,20 @@
             </div>
         </div>
     </div>
-    <div class="row" style="height: 20%">
-        <div class="col-lg-12" style="text-align: center    ">
-            <div class="btn btn-default"><div class="buttonMap">Verificar Opciones</div></div>
+    <div class="row" style="height: 20%; position: absolute; bottom:0; text-align: center; width: 100%">
+        <div class="col-lg-12" style="text-align: center;position: relative; top:35%">
+            <div class="buttonMap btn btn-default">Verificar Opciones</div>
         </div>
     </div>
+
 </div>
 <div id="containerMap">
-    <div class="titulo">Selecciona un punto de referencia    <button class="mybutton btn btn-default">Continuar</button></div>
+
+    <div class="titulo">Selecciona un punto de referencia    <button class="mybutton btn btn-default">Continuar</button> <div class="arribaButton btn btn-default">Volver</div></div>
     <div id="map-canvas"></div>
 </div>
 <div id="opciones">
-    <div class="titulo">Criterios de Selección</div>
+    <div class="titulo">Criterios de Selección <div class="arribaButton2 btn btn-default">Volver</div> </div>
     <br>
     <br>
     <div class="row" style="padding-left: 30px; padding-right: 30px;">
@@ -383,7 +392,7 @@
         </div>
         <div class="col-md-4"></div>
     </div>
-    <div id="resultados" style="width: 100%; height: 100%">
+    <div id="resultados" style="width: 100%">
 
         <g:hiddenField  id="lat" name="lat"/>
         <g:hiddenField  id="lng" name="lng"/>
@@ -405,6 +414,7 @@
 
         </g:each>
         </div>
+        <br>
         <br>
         <div class="row">
         <div class="col-md-4"></div>
