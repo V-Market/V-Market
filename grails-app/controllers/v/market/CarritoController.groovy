@@ -162,7 +162,7 @@ class CarritoController {
             src = "https://maps.googleapis.com/maps/api/staticmap?center=${almacenInstance.lat},${almacenInstance.lng}&zoom=14&size=200x200&markers=size:tiny%7label:S%7C${almacenInstance.lat},${almacenInstance.lng}"
 
         }
-        [src: src]
+        render "<img src='"+src+"' width='200' height='200'/>"
     }
 
 }
