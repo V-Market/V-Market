@@ -8,7 +8,7 @@ class UrlMappings {
         }
 
         "/" {
-            controller = "auth"
+            controller = "VMarket"
             action = "index"
         }
 

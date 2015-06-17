@@ -2,6 +2,8 @@ package v.market
 
 class User extends SecUser{
 
+
+    static hasMany = [carritos: Carrito]
     String passwordConfirm
     String name
     String lastname
@@ -9,8 +11,7 @@ class User extends SecUser{
     String gender
     Date birthday
     int age
-
-    //static transients = ['springSecurityService', 'passwordConfirm']
+    byte[] userImage
 
     static constraints = {
         passwordConfirm(blank: false)
@@ -20,8 +21,13 @@ class User extends SecUser{
         gender(blank: false)
         birthday(blank: false)
         age()
+        userImage(nullable:true, maxSize:1073741824)
+        carritos(nullable: true)
     }
 
+    static mapping = {
+        carritos lazy:false
+    }
     public String toString(){
         return name;
     }

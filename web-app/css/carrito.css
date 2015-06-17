@@ -1,0 +1,29 @@
+#map-canvas{
+    height: 82%;
+    border: solid thick #000000;
+    border-radius: 20px;
+}
+
+#opciones{
+    height: 100%;
+    width: 100%;
+    text-align: center;
+}
+
+.titulo{
+    height: 8%;
+    font-size: 30px;
+}
+
+#containerMap{
+    padding: 10px;
+    text-align: center;
+}
+
+html{
+    overflow: hidden;
+}
+
+.arribaButton{
+    display: inline-block;
+}

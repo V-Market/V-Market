@@ -6,7 +6,6 @@ import static org.springframework.http.HttpStatus.*
 import grails.transaction.Transactional
 
 @Transactional(readOnly = true)
-@Secured('permitAll')
 class UserController {
 
     def springSecurityService
@@ -23,7 +22,6 @@ class UserController {
     }
 
     def create() {
-
     }
 
     @Transactional
@@ -100,13 +98,19 @@ class UserController {
 
     @Transactional
     def createUser(User user){
-        //def user = new User(params)
         user.clearErrors()
 
         user.age = calculateAge(user.birthday)
 
+        def uploadedImage = request.getFile('userImage')
+        user.userImage = uploadedImage.getBytes()
+
         if(!user.password.equals(user.passwordConfirm)){
             flash.message = "Las contraseñas no coinciden"
+            redirect(action: "register")
+        }
+        else if(!(uploadedImage.contentType.equals("image/jpeg") || uploadedImage.contentType.equals("image/png") || user.userImage.length == 0)){
+            flash.message = "El tipo de archivo debe ser JPEG o PNG"
             redirect(action: "register")
         }
         else if (user.validate()) {
@@ -131,6 +135,16 @@ class UserController {
 
     def register() {
         respond new User(params)
+    }
+
+    def profile(User user){
+        respond user, model: [user:user]
+    }
+
+    def showUserImage(){
+        def user = User.get(params.id)
+        response.outputStream << user.userImage
+        response.outputStream.flush()
     }
 
     protected void notFound() {
