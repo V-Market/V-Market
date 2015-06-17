@@ -51,6 +51,7 @@
                             <sec:username /> <span class="glyphicon glyphicon-user"></span></a>
                         <ul class="dropdown-menu" role="menu">
                             <li><g:link controller="user" action="profile" id="${sec.loggedInUserInfo(field: 'id')}">Ver perfil</g:link></li>
+                            <li><g:link controller="product" action="newProduct" >Crear producto</g:link></li>
                             <li><g:link controller="carrito" action="show" >Carrito</g:link></li>
                             <li class="divider"></li>
                             <li><g:link controller="logout">Log out <span class="glyphicon glyphicon-log-out"></span></g:link></li>

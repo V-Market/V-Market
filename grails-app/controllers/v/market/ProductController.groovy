@@ -240,9 +240,9 @@ class ProductController {
     def addProductToCarrito(){
         def productInstance = Product.findById(params.id)
         session.carrito.addToProducts(productInstance).save(flush: true)
-        def targetUri = params.targetUri ?: "/"
-        redirect(uri: targetUri)
-        //redirect(controller: 'product', action: 'list_product')
+        //def targetUri = params.targetUri ?: "/"
+        //redirect(uri: targetUri)
+        redirect(controller: params.mycontroller, action: params.myaction)
     }
 
     def removeProductFromCarrito(){
@@ -256,9 +256,7 @@ class ProductController {
             }
         }
         session.carrito = carrito;
-        def targetUri = params.targetUri ?: "/"
-        redirect(uri: targetUri)
-        //redirect(controller: 'product', action: 'list_product')
+        redirect(controller: params.mycontroller, action: params.myaction)
     }
 
     def Salud_y_Aseo(){

@@ -23,8 +23,10 @@
     <br>
     <g:form class="text-center">
         <g:hiddenField name="id" value="${productInstance.id}"/>
+        <g:hiddenField name="mycontroller" value="${controllerName}"/>
+        <g:hiddenField name="myaction" value="${actionName}"/>
         <g:if test="${session.carrito.products.find{it.id==productInstance.id} == null}">
-            <g:actionSubmit action="addProductToCarrito" class="btn btn-success" value="Agregar Producto"><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>
+            <g:actionSubmit action="addProductToCarrito" class="btn btn-success" value="Agregar Producto" ><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>
         </g:if>
         <g:else>
             <g:actionSubmit action="removeProductFromCarrito"  class="btn btn-danger" value="Eliminar Producto"><span class="glyphicon glyphicon-cart-tick"></span></g:actionSubmit>

@@ -84,6 +84,14 @@
         google.maps.event.addDomListener(window, 'load', initialize);
 
         $(document).ready(function(){
+
+            $(".arribaButton").click(function(){
+                scrollToID("#container",750,0,0);
+            });
+            $(".arribaButton2").click(function(){
+                scrollToID("#containerMap",750,0,0);
+            });
+
             $("#almacenId0").click(function(){
                 $("#idAlmacen").val($("#almacenId0").val());
             });
@@ -210,8 +218,9 @@
             });
 
             $('.buttonsucess').click(function () {
-                var or = []
-                var des = []
+
+                var or = [];
+                var des = [];
                 for(var h=0; h<${classes};h++) {
                     var string = '.field' + h;
                     var value = $(string).val();
@@ -229,6 +238,7 @@
                                 travelMode: google.maps.TravelMode.DRIVING
 
                             }, function (response, status) {
+                                var string = "";
                                 if (status == google.maps.DistanceMatrixStatus.OK) {
                                     var origins = response.originAddresses;
                                     var destinations = response.destinationAddresses;
@@ -240,15 +250,34 @@
                                             var distance = element.distance.text;
                                             var duration = element.duration.text;
                                             var distance = distance.split(" ");
-                                            $('.field'+j).val(distance[0]);
+                                            string = string + $('#fieldid'+j).val() + "/" + distance[0] + "-";
                                         }
                                     }
                                 }
+                                string = string.substr(0,string.length-1);
+                                $('#statusAlmacenes').val(string);
+                                $.ajax({
+                                    method: "GET",
+                                    url:"${createLink(controller: 'carrito', action: 'sortStores')}",
+                                    data: { productos: JSON.stringify(${session.carrito.products.collect{it.id}}), distances: string, cPrecio: parseInt($("#valueprogress1").val()),cCalidad: parseInt($("#valueprogress2").val()), cDistancia: parseInt($("#valueprogress3").val())}
+                                }).done(function(data){
+                                    <g:set var="string" value="data"/>
+                                    var h = ${string};
+                                    h = h.replaceAll("[","");
+                                    h = h.replaceAll("]","");
+                                    h = h.replaceAll(" ","");
+                                    arrays = h.split(",").map(Number);
+                                    arrays = $.unique(arrays);
+                                    val = 3;
+                                    if(arrays.length<3) val = arrays.length;
+                                    for(var i=0; i<val;i++) {
+                                        $("#almacenId"+i).val(arrays[i]);
+                                    }
+                                    $("#actualizar").val()
+                                })
                             });
                             $('.myrow').css('opacity','1');
-                            $.get("${createLink(action:'renderDistances',controller: 'carrito', params:'${params}')}").done(function(data){
-                                $(".distances").html(data);
-                            });
+
 
 
                 });
@@ -260,11 +289,11 @@
 
 <g:render template="/layouts/navbar"></g:render>
 
-<div id="container">
-    <div class="row" style="height: 80%">
+<div id="container" style="position: relative; width:100%; height: 100%; padding: 0; margin:0">
+    <div class="row" style="height: 80%; width:100%; overflow: auto; overflow-x: hidden; position: absolute; margin:0">
         <div class="col-md-12">
             <div class="row" style="height: 14%; width:100%"></div>
-            <div class="container">
+            <div class="container" style="overflow: auto">
                 <div class="row" style="width:100%">
                     <div class="h_line"></div>
                     <g:each in="${session.carrito.products}" status="i" var="productInstance">
@@ -276,18 +305,20 @@
             </div>
         </div>
     </div>
-    <div class="row" style="height: 20%">
-        <div class="col-lg-12" style="text-align: center    ">
-            <div class="btn btn-default"><div class="buttonMap">Verificar Opciones</div></div>
+    <div class="row" style="height: 20%; position: absolute; bottom:0; text-align: center; width: 100%">
+        <div class="col-lg-12" style="text-align: center;position: relative; top:35%">
+            <div class="buttonMap btn btn-default">Verificar Opciones</div>
         </div>
     </div>
+
 </div>
 <div id="containerMap">
-    <div class="titulo">Selecciona un punto de referencia    <button class="mybutton btn btn-default">Continuar</button></div>
+
+    <div class="titulo">Selecciona un punto de referencia    <button class="mybutton btn btn-default">Continuar</button> <div class="arribaButton btn btn-default">Volver</div></div>
     <div id="map-canvas"></div>
 </div>
 <div id="opciones">
-    <div class="titulo">Criterios de Selección</div>
+    <div class="titulo">Criterios de Selección <div class="arribaButton2 btn btn-default">Volver</div> </div>
     <br>
     <br>
     <div class="row" style="padding-left: 30px; padding-right: 30px;">
@@ -325,28 +356,44 @@
         </div>
         <div class="col-md-4"></div>
     </div>
-    <div id="resultados" style="width: 100%; height: 100%">
+    <div id="resultados" style="width: 100%">
 
         <g:hiddenField  id="lat" name="lat"/>
         <g:hiddenField  id="lng" name="lng"/>
         <br>
         <br>
         <div class="myrow row" style="opacity:0;">
+            <g:hiddenField name="myalmacen" value=" " id="statusAlmacenes"/>
         <g:each in="${almacenes}" var="almacenInstance" status="it">
             <g:hiddenField name="field${it}" value="${almacenInstance.lat}/${almacenInstance.lng}" class="field${it}"/>
-
-                <div class="col-md-4">
-                    <td style="text-align: center" >
-                        <img  class="img-thumbnail" src="https://maps.googleapis.com/maps/api/staticmap?center=${almacenInstance.lat},${almacenInstance.lng}&zoom=14&size=200x200&markers=size:tiny%7label:S%7C${almacenInstance.lat},${almacenInstance.lng}" width="200" height="200"/>
-                        <br>
-                        ${almacenInstance.toString()}
-                        <br>
-                        <g:radio name="almacenId" value="${almacenInstance.id}" id="almacenId${it}"/>
-                    </td>
-                </div>
-
+            <g:hiddenField name="fieldid${it}" value="${almacenInstance.id}" class="field${it}" id="fieldid${it}"/>
         </g:each>
+            <div class="col-md-4">
+                <td style="text-align: center" >
+                    <g:include controller="carrito" action="getCenter" id="33"/>
+                    <br>
+                    <br>
+                    <g:radio name="almacenId" value="" id="almacenId0"/>
+                </td>
+            </div>
+            <div class="col-md-4">
+                <td style="text-align: center" >
+                    <g:include controller="carrito" action="getCenter" id="1"/>
+                    <br>
+                    <br>
+                    <g:radio name="almacenId" value="" id="almacenId1"/>
+                </td>
+            </div>
+            <div class="col-md-4">
+                <td style="text-align: center" >
+                    <g:include controller="carrito" action="getCenter" id="33"/>
+                    <br>
+                    <br>
+                    <g:radio name="almacenId" value="" id="almacenId2"/>
+                </td>
+            </div>
         </div>
+        <br>
         <br>
         <div class="row">
         <div class="col-md-4"></div>

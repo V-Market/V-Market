@@ -23,3 +23,7 @@
 html{
     overflow: hidden;
 }
+
+.arribaButton{
+    display: inline-block;
+}
